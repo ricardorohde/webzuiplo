@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'kiny',
-	'database' => 'zuiplo',
+	'hostname' => '103.27.206.159',
+	'username' => 'alfajar',
+	'password' => 'sdsmpsmkalfajar321@@',
+	'database' => 'zuiplodb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
