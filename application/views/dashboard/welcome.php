@@ -27,7 +27,7 @@
             <p class="lead">
               <a href="#join"  class=" btn btn-lg btn-default">JOIN</a>
 
-              <a href="#" target="_blank" class="btn btn-lg btn-default">FIND</a>
+              <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="btn btn-lg btn-default">FIND</a>
             </p><br><br><br><br><br><br>
           </div>
 
