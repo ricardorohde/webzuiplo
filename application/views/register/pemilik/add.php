@@ -17,7 +17,7 @@
 			</div>
 			<div class="view-form">
 				<div class="button-register">
-					  <a href="#register"  class=" btn btn-lg btn-default">REGISTER</a><br><br><p><br><br><p><br><br><p><br><br><p><br><br><br><br><br><br><br><br><br><br><br><br>
+					  <a href="#register"  class="btn btn-lg btn-default button-cover">REGISTER</a><br><br><p><br><br><p><br><br><p><br><br><p><br><br><br><br><br><br><br><br><br><br><br><br>
 				</div>
 			</div>
 		</div>

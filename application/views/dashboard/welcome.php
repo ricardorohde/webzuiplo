@@ -23,11 +23,11 @@
   <nav><br><br><br>
           <div class="inner cover">
             <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
-            <p class="lead">We will be holding a meetup every month. If you're interested to participate, please fill in the survey form first.</p>
+            <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <p class="lead">
-              <a href="#join"  class=" btn btn-lg btn-default">JOIN</a>
+              <a href="#join"  class=" btn btn-lg btn-default button-cover">JOIN</a>
 
-              <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="btn btn-lg btn-default">FIND</a>
+              <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="btn btn-lg btn-default button-cover">FIND</a>
             </p><br><br><br><br><br><br>
           </div>
 

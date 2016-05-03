@@ -3,6 +3,43 @@
       <div id="map">
 
       </div>
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <div class="col-md-12 coba">
+            <div class="col-md-12 skip"></div>
+
+                    <div class="col-md-12 find-next">
+                      <div class="col-md-12 ex">  </div>
+                      <div class="col-md-12 xe">
+                        <div class="col-md-6 skips"></div>
+                        <div class="col-md-2 near">
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-danger">Action</button>
+                              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" >
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-4 qa"></div>
+                        </div>
+                </div>
+                <div class="col-md-4 price">
+
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+
         <div id="floating-panel" class="col-md-12 float">
           <div class="col-md-1"></div>
             <!-- <div class="col-md-1"></div> -->
@@ -13,7 +50,32 @@
           <div>
         </div>
       </div>
-        <div class="col-md-12 tes">
+      <!-- <div class="form-search-wrapper col-sm-3">
+        <form method="post" action="?" class="form-horizontal form-search">
+          <div class="form-group has-feedback no-margin">
+            <input type="text" class="form-control" placeholder="Find Here">
+            <span class="form-control-feedback">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+        </form>
+      </div> -->
+      <div id="floating-panel2" class="col-md-12 ">
+          <div class="col-md-12 logo-find">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4 test">
+              <div class="input-group">
+                 <input type="text" class="form-control control-find" placeholder="Find Here">
+                 <span class="input-group-btn">
+                   <button class="control-find find-button" type="button"><i class="fa fa-search find-button"></i></button>
+                 </span>
+               </div>
+            </div>
+          <div>
+      </div>
+    </div>
+        <!-- <div class="col-md-12 tes">
           <div class="col-md-4"></div>
           <div class="col-md-4 test">
             <div class="input-group">
@@ -21,43 +83,13 @@
                <span class="input-group-btn">
                  <button class="btn btn-default control-find" type="button"><i class="fa fa-search"></i></button>
                </span>
-             </div><!-- /input-group -->
+             </div>
           </div>
           <div class="col-md-4"></div>
         </div>
       </div>
 
-    </div>
-<div class="col-md-12">
-  <div class="col-md-12">
-    <div class="col-md-12">
-
-        <div class="col-md-12 find-next">
-          <div class="col-md-6"></div>
-          <div class="col-md-2 near">
-            <div class="btn-group">
-                <button type="button" class="btn btn-danger">Action</button>
-                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" >
-                  <span class="caret"></span>
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </div>
-          </div>
-          <div class="col-md-4 price">
-
-          </div>
-        </div>
-
-    </div>
-  </div>
-</div>
+    </div> -->
 
 
     <script>
