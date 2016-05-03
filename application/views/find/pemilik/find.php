@@ -1,65 +1,17 @@
-  </head>
-  <body>
+
       <div id="map">
 
       </div>
-      <div class="col-md-12">
-        <div class="col-md-12">
-          <div class="col-md-12 coba">
-            <div class="col-md-12 skip"></div>
-
-                    <div class="col-md-12 find-next">
-                      <div class="col-md-12 ex">  </div>
-                      <div class="col-md-12 xe">
-                        <div class="col-md-6 skips"></div>
-                        <div class="col-md-2 near">
-                          <div class="btn-group">
-                              <button type="button" class="btn btn-danger">Action</button>
-                              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" >
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                              </button>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-4 qa"></div>
-                        </div>
-                </div>
-                <div class="col-md-4 price">
-
-                </div>
-              </div>
-
+      <div id="floating-panel" class="col-md-12 float">
+        <div class="col-md-1"></div>
+          <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-6 logo-find">
+          <div class="col-md-2">
+            <img src="<?php echo base_url('assets/image/srikandev.png');?> ">
           </div>
-        </div>
+        <div>
       </div>
-
-        <div id="floating-panel" class="col-md-12 float">
-          <div class="col-md-1"></div>
-            <!-- <div class="col-md-1"></div> -->
-          <div class="col-md-6 logo-find">
-            <div class="col-md-2">
-              <img src="<?php echo base_url('assets/image/srikandev.png');?> ">
-            </div>
-          <div>
-        </div>
       </div>
-      <!-- <div class="form-search-wrapper col-sm-3">
-        <form method="post" action="?" class="form-horizontal form-search">
-          <div class="form-group has-feedback no-margin">
-            <input type="text" class="form-control" placeholder="Find Here">
-            <span class="form-control-feedback">
-              <i class="fa fa-search"></i>
-            </span>
-          </div>
-        </form>
-      </div> -->
       <div id="floating-panel2" class="col-md-12 ">
           <div class="col-md-12 logo-find">
             <div class="col-md-2"></div>
@@ -75,24 +27,201 @@
           <div>
       </div>
     </div>
-        <!-- <div class="col-md-12 tes">
-          <div class="col-md-4"></div>
-          <div class="col-md-4 test">
-            <div class="input-group">
-               <input type="text" class="form-control control-find" placeholder="Find Here">
-               <span class="input-group-btn">
-                 <button class="btn btn-default control-find" type="button"><i class="fa fa-search"></i></button>
-               </span>
-             </div>
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <div class="col-md-12 coba">
+            <div class="col-md-12 skip"></div>
+
+                    <div class="col-md-12 find-next">
+                      <div class="col-md-12 ex">  </div>
+                      <div class="col-md-12 xe">
+                        <div class="col-md-6 skips"></div>
+                        <div class="col-md-2 near">
+                          <div class="btn-group btn-set">
+                              <button type="button" class="btn btn-danger btn-dropdown">Action</button>
+                              <button type="button" class="btn btn-danger dropdown-toggle btn-dropdown" data-toggle="dropdown" >
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Near</a></li>
+                                <li><a href="#">Far</a></li>
+
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-4 qa">
+                            <div class="col-md-12 btn-set">
+                                   <div class="input-group">
+                                     <input type="text" class="form-control form-input" aria-label="..." placeholder="Price IDR.">
+                                     <div class="input-group-btn">
+                                       <button type="button" class="btn btn-danger dropdown-toggle form-input-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sure<span class="caret"></span></button>
+                                       <ul class="dropdown-menu dropdown-menu-right">
+                                         <li><a href="#">Sure</a></li>
+                                         <li><a href="#">Below</a></li>
+                                         <li><a href="#">Above</a></li>
+
+                                       </ul>
+                                     </div><!-- /btn-group -->
+                                   </div><!-- /input-group -->
+                                 </div><!-- /.col-lg-6 -->
+                                </div><!-- /.row -->
+                          </div>
+                          <div class="col-md-12 tab"> </div>
+                                <div class="col-md-12 tabs">
+                                  <div class="col-md-12">
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 con"></div>
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+                                        <div class="col-md-12 con"></div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-12 con"></div>
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+                                        <div class="col-md-12 con"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 con"></div>
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+                                        <div class="col-md-12 con"></div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-12 con"></div>
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+                                        <div class="col-md-12 con"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-12 con"></div>
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+                                        <div class="col-md-12 con"></div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-12 con"></div>
+                                    <div clas="col-md-12">
+                                      <div clas="col-md-12">
+                                        <div class="col-md-12 tab-ch">
+                                          <div class="col-md-3 ch">Nama</div>
+                                          <div class="col-md-2 ch">House</div>
+                                          <div class="col-md-4 ch">Price / Month,
+                                           Week, Days</div>
+                                           <div class="col-md-2 ch">Ways 21m </div>
+                                           <div class="col-md-1">
+                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
+                                           </div>
+                                        <div class="col-md-12 con"></div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+
+                                </div>
+
+                              </div>
+
+                              </div>
+
+              </div>
+
           </div>
-          <div class="col-md-4"></div>
+
+
         </div>
+
       </div>
+  <div class="col-md-12 pagination">
+    <div class="col-md-4"></div>
+    <div class="col-md-4"></div>
+            <nav>
+              <ul class="pagination pag-ch">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+              </nav>
+    </div>
+  </div>
 
-    </div> -->
 
-
-    <script>
+        <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
@@ -177,5 +306,3 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
     </script>
-  </body>
-</html>

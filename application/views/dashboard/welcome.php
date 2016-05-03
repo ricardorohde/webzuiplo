@@ -39,7 +39,7 @@
 
     </div>
 				<div class="col-md-12" >
-					<h1 id="join">LET'S JOIN</h1><br>
+					<h1 id="join" class="join">LET'S JOIN</h1><br>
           <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
             <div class="col-md-12 bar-free">
               <div class="col-md-12 top-free">FREE</div>
@@ -84,3 +84,7 @@
 		background-image : url('assets/image/bg.jpg');
 	}
 	</style>
+
+
+
+  

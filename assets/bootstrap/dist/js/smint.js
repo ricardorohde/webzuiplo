@@ -1,15 +1,15 @@
 // Scroll page with easing effect
-    $('.button-cover a[href*=#]').bind('click', function(e) {
+    $('.join  a[href*=#]').bind('click', function(e) {
         e.preventDefault();
         target = this.hash;
         $.scrollTo(target, 1500, {
             easing: 'easeOutCubic'
         });
 
-        $(".btn-navbar").click();
+        $(".btn-default .button-cover").click();
     });
 
-
+        // Scroll page with easing effect
     $('#footerMenu a[href*=#]').bind('click', function(e) {
         e.preventDefault();
         target = this.hash;
@@ -22,7 +22,7 @@
 
 
 
-
+    // Show/Hide Sticky "Go top" button
     $(window).scroll(function(){
         if($(this).scrollTop()>200){
             $(".go-top").fadeIn(200);
@@ -32,7 +32,7 @@
         }
     });
 
-
+    // Scroll Page to Top when clicked on "go top" button
     $(".brand, .go-top").click(function(event){
         event.preventDefault();
 
