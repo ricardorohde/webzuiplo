@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/webzuiplo/';
+$config['base_url'] = 'http://103.27.206.159/zuiplo/';
 
 /*
 |--------------------------------------------------------------------------
