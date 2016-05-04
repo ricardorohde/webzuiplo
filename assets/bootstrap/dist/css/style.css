@@ -1042,19 +1042,19 @@ height: 100px;
   height: 45px;
 }
 .button-cover{
-  font-size: large;
+  font-size: 16pt;
 
 }
 .button-cover{
-  background: #39b54a;
-  border: 3px solid #39b54a;
+  background: #0FB9DB;
+  border: 3px solid #0FB9DB;
   display: inline-block;
   color: #fff;
   line-height: 40px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16pt;
+  font-size: 16px;
   border-radius: 30px;
   padding: 0 25px;
   position: relative;
