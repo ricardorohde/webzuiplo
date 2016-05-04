@@ -82,6 +82,7 @@
 
 
 	<style>
+
   .site-wrapper {
     display: table;
     width: 100%;
@@ -89,7 +90,7 @@
     min-height: 100%;
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-    background-image: url(../img/bg.jpg);
+  	background-image : url('assets/image/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
