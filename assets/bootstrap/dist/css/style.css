@@ -1111,7 +1111,7 @@ height: 100px;
   content: '';
   position: absolute;
   border: #39b54a solid 6px;
-  border-radius: 30px;
+  border-radius: 10px;
   top: 0;
   right: 0;
   bottom: 0;
