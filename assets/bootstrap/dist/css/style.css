@@ -1046,8 +1046,8 @@ height: 100px;
 
 }
 .button-cover{
-    background-color: #428f9e;
-    border: 3px solid #0FB9DB;
+    background-color: #39b54a;
+    border: 3px solid #39b54a;
     display: inline-block;
     color: #fff;
     line-height: 40px;
@@ -1061,8 +1061,8 @@ height: 100px;
     z-index: 0;
 }
 .button-cover:hover{
-    background: #0FB9DB;
-    border: 3px solid #0FB9DB;
+    background: #39b54a;
+    border: 3px solid #39b54a;
     display: inline-block;
     color: #fff;
     line-height: 40px;
@@ -1100,7 +1100,7 @@ height: 100px;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px #39b54a;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
