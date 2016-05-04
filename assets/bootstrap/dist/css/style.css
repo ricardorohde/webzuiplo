@@ -1061,8 +1061,8 @@ height: 100px;
     z-index: 0;
 }
 .button-cover:hover{
-    background: #4dc25d;
-    /*border: 3px solid ##4dc25d;*/
+    background: #39b54a;
+    border: 3px solid #39b54a;
     display: inline-block;
     color: #fff;
     line-height: 40px;
@@ -1122,7 +1122,6 @@ height: 100px;
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
   -webkit-animation-name: hvr-ripple-out;
   animation-name: hvr-ripple-out;
-    border-radius: 30px;
 }
 
 .price{
