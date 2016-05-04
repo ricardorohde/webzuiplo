@@ -4,9 +4,9 @@
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
-
-        <div class="cover-container">
   <img src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand">
+        <div class="cover-container">
+
           <div class="masthead clearfix">
 
 
