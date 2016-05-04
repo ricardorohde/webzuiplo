@@ -1105,11 +1105,13 @@ height: 100px;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+    border-radius: 30px;
 }
 .hvr-ripple-out:before {
   content: '';
   position: absolute;
   border: #39b54a solid 6px;
+  border-radius: 30px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1120,6 +1122,7 @@ height: 100px;
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
   -webkit-animation-name: hvr-ripple-out;
   animation-name: hvr-ripple-out;
+    border-radius: 30px;
 }
 
 .price{
