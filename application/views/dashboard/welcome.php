@@ -8,8 +8,10 @@
         <div class="cover-container">
 
           <div class="masthead clearfix">
+            <img src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand">
+
             <div class="inner">
-              <img src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand">
+
               <nav>
                 <ul class="nav masthead-nav">
 
@@ -21,7 +23,7 @@
             </div>
           </div>
 
-    <!-- <br><br><br> -->
+  
           <div class="inner cover">
             <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
