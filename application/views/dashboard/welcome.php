@@ -43,7 +43,7 @@
     </div>
 </div>
 
-				<div class="col-md-12 submenu" >
+				<div class="col-md-12 subMenu" >
 					<h1 id="join" class="join">LET'S JOIN</h1><br>
           <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
             <div class="col-md-12 bar-free">
@@ -99,3 +99,27 @@
     background-position: center;
 }
 	</style>
+
+
+  <!-- <div class="subMenu" >
+    <div class="inner">
+      <a href="#sTop" class="subNavBtn">Home</a>
+      <a href="#s1" class="subNavBtn">Section 1</a>
+    </div>
+  </div>
+
+
+  <div class="section s1">
+		<div class="inner ">
+			<h1>Section 1</h1>
+		</div>
+	</div> -->
+
+
+  <script type="text/javascript">
+  $(document).ready( function() {
+      $('.subMenu').smint({
+      	'scrollSpeed' : 1000
+      });
+  });
+  </script>
