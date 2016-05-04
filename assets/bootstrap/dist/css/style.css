@@ -865,7 +865,20 @@ body {
 .cover {
   padding: 0 20px;
 }
-
+ .btn-lg {
+  margin-top: 10px;
+  padding: 16px 34px;
+  border-radius: 4px;
+  background-color: #39b54a;
+  color: #fff;
+  border-color: #39b54a;
+}
+.btn-lg:hover:active {
+  /*background-color: #2d9f3c;
+  transition: .3;
+  color: #fff;
+  border-color: #2d9f3c ;*/
+}
 .button-reg{
   width: 100%;
   background-color: #2d9f3c;
@@ -877,7 +890,7 @@ body {
   color: #fff;
   border: none;
 }
- .cover .btn-lg{
+ /*.cover .btn-lg{
   background-color: #0FB9DB;
   border: 3px solid #0FB9DB;
   display: inline-block;
@@ -899,7 +912,7 @@ body {
   position: relative;
   z-index: 0;
 
-}
+}*/
 .textarea-wrap-reg{
   width: 100%;
 height: 100px;
