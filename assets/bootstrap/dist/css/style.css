@@ -1061,8 +1061,8 @@ height: 100px;
     z-index: 0;
 }
 .button-cover:hover{
-    background: #39b54a;
-    border: 3px solid #39b54a;
+    background: #4dc25d;
+    border: 3px solid ##4dc25d;
     display: inline-block;
     color: #fff;
     line-height: 40px;
@@ -1110,7 +1110,7 @@ height: 100px;
 .hvr-ripple-out:before {
   content: '';
   position: absolute;
-  border: #4ec75e solid 6px;
+  border: #39b54a solid 6px;
   border-radius: 30px;
   top: 0;
   right: 0;
