@@ -1041,7 +1041,7 @@ height: 100px;
   background-color: #39b54a;
   height: 45px;
 }
-.button-cover{
+/*.button-cover{
   font-size: 16pt;
 
 }
@@ -1074,7 +1074,7 @@ height: 100px;
     padding: 0 25px;
     position: relative;
     z-index: 0;
-}
+}*/
 @-webkit-keyframes hvr-ripple-out {
   100% {
     top: -12px;
