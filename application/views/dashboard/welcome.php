@@ -28,7 +28,7 @@
             <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <p class="lead">
-              <a href="#join"  class="submenu btn btn-lg btn-default hvr-ripple-out button-cover">JOIN</a>
+              <a href="#join"  class=".submenu btn btn-lg btn-default hvr-ripple-out button-cover">JOIN</a>
 
               <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="btn btn-lg btn-default hvr-ripple-out button-cover">FIND</a>
             <!-- </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
@@ -43,7 +43,7 @@
     </div>
 </div>
 
-				<div class="col-md-12" >
+				<div class="col-md-12 submenu" >
 					<h1 id="join" class="join">LET'S JOIN</h1><br>
           <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
             <div class="col-md-12 bar-free">
