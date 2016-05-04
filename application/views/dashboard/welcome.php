@@ -6,9 +6,9 @@
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
-
+  <img src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand">
           <div class="masthead clearfix">
-            <img src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand">
+
 
             <div class="inner">
 
@@ -23,7 +23,7 @@
             </div>
           </div>
 
-  
+
           <div class="inner cover">
             <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
