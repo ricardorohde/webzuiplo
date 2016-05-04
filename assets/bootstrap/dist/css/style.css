@@ -1062,7 +1062,7 @@ height: 100px;
 }
 .button-cover:hover{
     background: #4dc25d;
-    border: 3px solid ##4dc25d;
+    /*border: 3px solid ##4dc25d;*/
     display: inline-block;
     color: #fff;
     line-height: 40px;
