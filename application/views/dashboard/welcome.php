@@ -10,7 +10,7 @@
           <div class="masthead clearfix">
             <div class="inner">
               <img src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand">
-
+              <nav>
                 <ul class="nav masthead-nav">
 
                   <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -20,7 +20,7 @@
               </nav>
             </div>
           </div>
-  <nav>
+
     <!-- <br><br><br> -->
           <div class="inner cover">
             <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
