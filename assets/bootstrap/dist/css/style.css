@@ -1042,12 +1042,12 @@ height: 100px;
   height: 45px;
 }
 .button-cover{
-  font-size: 16pt;
+  font-size: large;
 
 }
 .button-cover{
-  background: #0FB9DB;
-  border: 3px solid #0FB9DB;
+  background: #39b54a;
+  border: 3px solid #39b54a;
   display: inline-block;
   color: #fff;
   line-height: 40px;
