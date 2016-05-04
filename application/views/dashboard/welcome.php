@@ -38,6 +38,7 @@
       </div>
 
     </div>
+  </div>
 				<div class="col-md-12" >
 					<h1 id="join" class="join">LET'S JOIN</h1><br>
           <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
