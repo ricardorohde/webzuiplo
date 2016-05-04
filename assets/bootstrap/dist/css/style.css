@@ -1109,7 +1109,7 @@ height: 100px;
 .hvr-ripple-out:before {
   content: '';
   position: absolute;
-  border: #e1e1e1 solid 6px;
+  border: #39b54a solid 6px;
   top: 0;
   right: 0;
   bottom: 0;
