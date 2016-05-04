@@ -1119,6 +1119,18 @@ height: 100px;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
+.hvr-ripple-out:active {
+  content: '';
+  position: absolute;
+  border: #39b54a solid 6px;
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
   -webkit-animation-name: hvr-ripple-out;
   animation-name: hvr-ripple-out;
