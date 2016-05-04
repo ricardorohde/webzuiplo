@@ -873,12 +873,7 @@ body {
   color: #fff;
   border-color: #39b54a;
 }
-.btn-lg:hover:active {
-  /*background-color: #2d9f3c;
-  transition: .3;
-  color: #fff;
-  border-color: #2d9f3c ;*/
-}
+
 .button-reg{
   width: 100%;
   background-color: #2d9f3c;
@@ -1120,7 +1115,7 @@ height: 100px;
   animation-duration: 1s;
 }
 
-.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before .hvr-ripple-out:active:after {
   -webkit-animation-name: hvr-ripple-out;
   animation-name: hvr-ripple-out;
 }
