@@ -41,7 +41,7 @@
     </div>
 </div>
 
-				<div class="col-md-12 div" >
+				<div class="col-md-12" >
 					<h1 id="join" class="join">LET'S JOIN</h1><br>
           <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
             <div class="col-md-12 bar-free">
@@ -87,7 +87,7 @@
   .site-wrapper {
     display: table;
     width: 100%;
-    height: 100%;
+    height: 400px;
     min-height: 100%;
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
