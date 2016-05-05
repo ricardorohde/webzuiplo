@@ -414,7 +414,7 @@ a, a:focus, a:hover {
 
 html, body {
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: #252525;
   font-family: 'Raleway', 'Arial', sans-serif;
 }
 .lb{
@@ -773,7 +773,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color:#fff ;
+  background-color:#252525 ;
 }
 body {
   color: #fff;
