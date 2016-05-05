@@ -175,11 +175,11 @@
           </div>
 
 
-          <div class="col-md-12 footer-cover">
-            &copy;2016 Zuiplo. Created by JICOS
-          </div>
-        </div>
 
+        </div>
+        <div class="col-md-12 footer-cover">
+          &copy;2016 Zuiplo. Created by JICOS
+        </div>
 
 
 
