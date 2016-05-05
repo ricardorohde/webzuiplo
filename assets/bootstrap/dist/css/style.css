@@ -693,6 +693,9 @@ body {
   margin-bottom: 35px;
   color: #252525;
 }
+.footer-cover{
+  height: 40px;
+}
 .logo{
   text-align: center;
   margin-top: 85px;
