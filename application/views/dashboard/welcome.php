@@ -46,6 +46,9 @@
 
         <!-- <div class="planning-area"> -->
           <div id="join" class="npt-format-2 npt-hex-hover">
+            <div class="col-md-12 title">
+              LET'S JOIN
+            </div>
             <div class="col-sm-4 col-xs-6">
               <div class="npt-item npt-item-1">
                 <div class="npt-plan-top">

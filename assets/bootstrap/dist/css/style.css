@@ -690,11 +690,20 @@ body {
   font-size: 14pt;
   margin-top:15px;
   font-family: 'Raleway', sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   color: #252525;
 }
 .footer-cover{
   height: 40px;
+}
+.title{
+  height: 30px;
+  text-align: center;
+  font-size: 14pt;
+  margin-top:5px;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 15px;
+  color: #252525;
 }
 .logo{
   text-align: center;
