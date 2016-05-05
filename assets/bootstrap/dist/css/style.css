@@ -684,13 +684,14 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 .footer-cover{
-  background-color: #252525;
+  background-color: #fff;
   height: 30px;
   text-align: center;
   font-size: 14pt;
-  margin-top:30px;
+  margin-top:5px;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 35px;
+  color: #252525;
 }
 .logo{
   text-align: center;
@@ -772,7 +773,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color:#252525 ;
+  background-color:#fff ;
 }
 body {
   color: #fff;
@@ -914,7 +915,8 @@ height: 100px;
 }
 .cover .lead {
   padding-top: 5px;
-      text-align: center;
+  text-align: center;
+  color: #fff;
 }
 .find-group{
   position: relative;

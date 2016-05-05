@@ -43,38 +43,137 @@
     </div>
 </div>
 
-				<div class="col-md-12 subMenu" >
-					<h1 id="join" class="join">LET'S JOIN</h1><br>
-          <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
-            <div class="col-md-12 bar-free">
-              <div class="col-md-12 top-free">FREE</div>
-              <div class="col-md-12 top-child-free">
-                    <img src="assets/image/free.png" width="135px" height="135px;"></img>
-              </div>
-              <div class="col-md-12 text-top-free">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
-            </div>
-          </div>
-        </div>
-              <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
-                <div class="col-md-12 bar-pre">
-                  <div class="col-md-12 top-pre">PREMIUM</div>
-                  <div class="col-md-12 top-child-pre">
-                        <img src="assets/image/free.png" width="135px" height="135px;"></img>
+
+        <!-- <div class="planning-area"> -->
+          <div id="join" class="npt-format-2 npt-hex-hover">
+            <div class="col-sm-4 col-xs-6">
+              <div class="npt-item npt-item-1">
+                <div class="npt-plan-top">
+                  <h3 class="npt-plan-name">FREE</h3>
+                  <div class="npt-hex">
+                    <div class="npt-plan-cost">
+                      <span class="npt-currency">$</span>
+                      <span class="npt-cost">29</span>
+                      <span class="npt-duration">Monthly</span>
+                    </div>
                   </div>
-                  <div class="col-md-12 text-top-pre">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                </div>
+                <div class="npt-plan-details">
+                  <ul>
+                    <li>
+                      <p>Disk usage</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 11 </span>
+                        GB
+                      </div>
+                    </li>
+                    <li>
+                      <p>Subdomains Limit</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 10 </span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Bandwidth Usage Limit</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 1 </span>
+                        TB
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="npt-plan-bottom">
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Select</a>
                 </div>
               </div>
             </div>
-            <div class="col-md-4"><a class="link" href="<?php echo base_url('Register/owner');?>">
-              <div class="col-md-12 bar-gold">
-                <div class="col-md-12 top-gold">GOLD</div>
-                <div class="col-md-12 top-child-gold">
-                      <img src="assets/image/free.png" width="135px" height="135px;"></img>
+
+            <div class="col-sm-4 col-xs-6">
+              <div class="npt-item npt-item-2">
+                <div class="npt-plan-top">
+                  <h3 class="npt-plan-name">PREMIUM</h3>
+                              <div class="npt-hex">
+                    <div class="npt-plan-cost">
+                      <span class="npt-currency">$</span>
+                      <span class="npt-cost">69</span>
+                      <span class="npt-duration">Monthly</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-12 text-top-gold">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                <div class="npt-plan-details">
+                  <ul>
+                    <li>
+                      <p>Disk usage</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count">15 </span>
+                        GB
+                      </div>
+                    </li>
+                    <li>
+                      <p>Subdomains Limit</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 15 </span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Bandwidth Usage Limit</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 2 </span>
+                        TB
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="npt-plan-bottom">
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Select</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-xs-6">
+              <div class="npt-item npt-item-3">
+                  <span class="npt-ribbon npt-ribbon-right">Best</span>
+                <div class="npt-plan-top">
+                  <h3 class="npt-plan-name">GOLD</h3>
+                  <div class="npt-hex">
+                    <div class="npt-plan-cost">
+                      <span class="npt-currency">$</span>
+                      <span class="npt-cost">99</span>
+                      <span class="npt-duration">Monthly</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="npt-plan-details">
+                  <ul>
+                    <li>
+                      <p>Disk usage</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 21 </span>
+                        GB
+                      </div>
+                    </li>
+                    <li>
+                      <p>Subdomains Limit</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 20 </span>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Bandwidth Usage Limit</p>
+                      <div class="npt-offer-limit">
+                        <span class="npt-count"> 3 </span>
+                        TB
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="npt-plan-bottom">
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Select</a>
+                </div>
               </div>
             </div>
           </div>
+
 
           <div class="col-md-12 footer-cover">
             &copy;2016 Zuiplo. Created by JICOS

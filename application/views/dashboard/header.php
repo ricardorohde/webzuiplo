@@ -20,6 +20,22 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/smint/css/style.css');?>">
     <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/css.css');?>"> -->
+    <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
+
+  	<!-- Import Line icons -->
+  	<link href="<?php echo base_url('assets/css/simple-line-icons.css');?>" rel="stylesheet">
+
+  	<!-- Demo Page Styles -->
+  	<link href="<?php echo base_url('assets/css/demo-style.css');?>" rel="stylesheet">
+
+  	<!-- Pricing Table Styles -->
+  	<link href="<?php echo base_url('assets/css/neela-pricing-style.css');?>" rel="stylesheet">
+
+  	<!-- Pricing Table Color Styles -->
+  	<link href="assets/css/colors/default.css" rel="stylesheet">
+
+  	<!-- Include modernizr-2.8.3.min.js -->
+  	<script src="<?php echo base_url('assets/js/modernizr-2.8.3.min.js');?>"></script>
 
     <script src="<?php base_url('assets/bootstrap/dist/js/bootstrap.js');?>"></script>
     <script src="<?php base_url('assets/bootstrap/dist/js/bootstrap.min.js');?>"></script>
