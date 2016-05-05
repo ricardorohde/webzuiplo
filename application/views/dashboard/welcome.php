@@ -177,7 +177,7 @@
 
 
         </div>
-        <div class="col-md-12 footer-cover">
+        <div class="col-md-12 footer">
           &copy;2016 Zuiplo. Created by JICOS
         </div>
 
@@ -200,19 +200,7 @@
 	</style>
 
 
-  <!-- <div class="subMenu" >
-    <div class="inner">
-      <a href="#sTop" class="subNavBtn">Home</a>
-      <a href="#s1" class="subNavBtn">Section 1</a>
-    </div>
-  </div>
 
-
-  <div class="section s1">
-		<div class="inner ">
-			<h1>Section 1</h1>
-		</div>
-	</div> -->
 
 
   <script type="text/javascript">
