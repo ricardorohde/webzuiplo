@@ -4,7 +4,7 @@
 		<div class="content">
 			<div class="media">
 				<div class="attachment" data-attachment='{"image":"https:\/\/d4z6dx8qrln4r.cloudfront.net\/image-570a35d7ab151-default.png","width":250,"height":54,"video_source":"","video_id":""}'>
-						<img src="<?php echo base_url('assets/image/srikandev.png');?>" data-original="" />
+						<img src="<?php echo base_url('assets/image/zuiplo.png');?>" data-original="" />
 				</div>
 			</div>
 
