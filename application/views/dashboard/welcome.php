@@ -54,7 +54,7 @@
                   <h3 class="npt-plan-name">FREE</h3>
                   <div class="npt-hex">
                     <div class="npt-plan-cost">
-                      <span class="npt-currency">Rp</span>
+
                       <span class="npt-cost">29</span>
                           <span class="npt-currency"><sup><sup>.000</sup></sup></span>
                       <span class="npt-duration">Monthly</span>
@@ -141,7 +141,7 @@
                   <h3 class="npt-plan-name">GOLD</h3>
                   <div class="npt-hex">
                     <div class="npt-plan-cost">
-                      <span class="npt-currency">$</span>
+                
                       <span class="npt-cost">99</span>
                           <span class="npt-currency"><sup><sup>.000</sup></sup></span>
                       <span class="npt-duration">Monthly</span>
