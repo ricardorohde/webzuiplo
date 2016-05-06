@@ -31,7 +31,7 @@
               <a href="#join"  class=".submenu btn btn-lg btn-default hvr-ripple-out button-cover">JOIN</a>
 
               <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="btn btn-lg btn-default hvr-ripple-out button-cover">FIND</a>
-            <!-- </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
           </div>
 
 
@@ -44,7 +44,6 @@
 </div>
 
 
-        <!-- <div class="planning-area"> -->
           <div id="join" class="npt-format-2 npt-hex-hover">
             <div class="col-md-12 title">
               LET'S JOIN
