@@ -8,7 +8,7 @@
 				</div>
 			</div>
 
-			  <img class="logo" src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand"><br><br><br><br><br><br><br><br>
+			  <img class="logo" src="<?php echo base_url('assets/image/srikandev.png');?>" class="masthead-brand"><br><br><br><br><br><br><br><br>
 			<div class="text">
 						Thank you for agreeing to take part in srikandev event planning survey!
 			</div>
