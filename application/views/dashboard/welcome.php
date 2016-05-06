@@ -7,9 +7,9 @@
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
+          <!-- <div class="masthead clearfix"> -->
 
-  <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
+              <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
             <div class="inner">
 
               <nav>
@@ -38,7 +38,7 @@
 
         </div>
 
-      </div>
+      <!-- </div> -->
 
     </div>
 </div>
