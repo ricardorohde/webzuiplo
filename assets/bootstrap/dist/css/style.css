@@ -414,7 +414,7 @@ a, a:focus, a:hover {
 
 html, body {
   height: 100%;
-  background-color: #252525;
+  background-color: #fff;
   font-family: 'Raleway', 'Arial', sans-serif;
 }
 .lb{
@@ -437,7 +437,7 @@ html, body {
 
 }
 body {
-  color: #252525;
+  color: #fff;
   /*text-align: center;*/
   /*background-color: rgba(37,37,37,0.9);*/
 
@@ -506,7 +506,7 @@ body {
   padding-left: 0;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: #252525;
   /* IE8 proofing */
   color: rgba(255, 255, 255, 1);
   border-bottom: 2px solid transparent;
