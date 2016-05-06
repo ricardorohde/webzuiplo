@@ -1,6 +1,6 @@
 <section class="content">
 
-<div id="cover">
+
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -42,7 +42,7 @@
 
     </div>
 </div>
-</div>
+
 
           <div id="join"   class="npt-format-2 npt-hex-hover">
             <div class="col-md-12 title">
@@ -189,7 +189,7 @@
 
 	<style>
 
-  /*.site-wrapper {
+  .site-wrapper {
     display: table;
     width: 100%;
     height: 780px;
@@ -200,19 +200,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}*/
-#cover {
-    display: table;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-    background-image: url('assets/image/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
+
 	</style>
 
 
