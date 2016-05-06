@@ -1,6 +1,6 @@
 <section class="content">
 
-
+<div id="cover">
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -42,7 +42,7 @@
 
     </div>
 </div>
-
+</div>
 
           <div id="join"   class="npt-format-2 npt-hex-hover">
             <div class="col-md-12 title">
@@ -201,7 +201,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }*/
-.site-wrapper {
+#cover {
     display: table;
     width: 100%;
     height: 100%;
