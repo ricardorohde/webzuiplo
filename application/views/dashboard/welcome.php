@@ -1,45 +1,7 @@
 <section class="content">
 
-  <div class="site-wrapper">
 
-    <div class="site-wrapper-inner">
-
-      <div class="cover-container">
-
-        <div class="masthead clearfix">
-          <div class="inner">
-            <img src="img/logo.svg" class="masthead-brand">
-            <nav>
-              <ul class="nav masthead-nav">
-                <li><a href="http://meetup.com/Srikandev" alt="Meetup.com" target="_blank"><i class="fa fa-group" aria-hidden="true"></i></span></a></li>
-                <li><a href="http://twitter.com/srikandev" alt="Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="http://github.com/srikandevID" alt="Github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div class="inner cover">
-          <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
-          <p class="lead">We will be holding a meetup every month. If you're interested to participate, please fill in the survey form first.</p>
-          <p class="lead">
-            <a href="http://bit.ly/srkndv1" target="_blank" class="btn btn-lg btn-default">Yes, I want to participate</a>
-          </p>
-        </div>
-
-        <div class="mastfoot">
-          <div class="inner">
-            <p>&copy; 2016 <a href="http://srikandev.com">Srikandev</a>. Created with <a href="https://getbootstrap.com">Bootstrap</a>.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-    <!-- <div class="site-wrapper">
+    <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
@@ -79,7 +41,7 @@
       </div>
 
     </div>
-</div> -->
+</div>
 
 
           <div id="join"   class="npt-format-2 npt-hex-hover">

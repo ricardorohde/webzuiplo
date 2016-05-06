@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-     <link rel="shortcut icon" href="<?php echo base_url('assets/image/icon.ico');?>">
+     <link rel="shortcut icon" href="<?php echo base_url('assets/image/icon.png');?>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
