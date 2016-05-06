@@ -98,7 +98,7 @@
                     <div class="npt-plan-cost">
 
                       <span class="npt-cost">69</span>
-                          <span class="npt-currency"><sup>.000</sup></span>
+                          <span class="npt-currency"><sup><sup>.000</sup></sup></span>
                       <span class="npt-duration">Monthly</span>
                     </div>
                   </div>
