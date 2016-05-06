@@ -64,7 +64,7 @@
                   <ul>
                     <li>
                       <p>Disk usage</p>
-                      <div class="npt-offer-limit">
+                       <div class="npt-offer-limit">
                         <span class="npt-count"> 11 </span>
                         GB
                       </div>

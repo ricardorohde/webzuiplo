@@ -700,6 +700,7 @@ body {
 }
 .title{
   height: 40px;
+  padding-top: 5px;
   text-align: center;
   font-size: 1.43em;
   font-weight:700;
