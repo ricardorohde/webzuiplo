@@ -552,7 +552,9 @@ body {
   line-height: 36px;
     text-align: center;
 }
-
+.title-cover{
+  color:#fff;
+}
 .screen .attachment {
   margin: 0 auto;
 }

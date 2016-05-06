@@ -25,7 +25,7 @@
 
 
           <div class="inner cover">
-            <h1 class="cover-heading">Let's meet and build<br>a supportive network<br>for women in tech</h1>
+            <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <p class="lead">
               <a href="#join"  class=".submenu btn btn-lg btn-default hvr-ripple-out button-cover">JOIN</a>
@@ -141,7 +141,7 @@
                   <h3 class="npt-plan-name">GOLD</h3>
                   <div class="npt-hex">
                     <div class="npt-plan-cost">
-                
+
                       <span class="npt-cost">99</span>
                           <span class="npt-currency"><sup><sup>.000</sup></sup></span>
                       <span class="npt-duration">Monthly</span>
