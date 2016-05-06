@@ -687,7 +687,7 @@ body {
   /*background-color: #fff;*/
   /*height: 10px;*/
   text-align: center;
-  font-size: 1.43em;
+  font-size: .875em;
   /*margin-top:15px;*/
   font-family: 'Raleway', sans-serif;
   /*margin-bottom: 0px;*/
@@ -700,7 +700,8 @@ body {
 .title{
   height: 30px;
   text-align: center;
-  font-size: 18pt;
+  font-size: 1.43em;
+  font-weight:700;
   margin-top:5px;
   font-family: 'Raleway', sans-serif;
   margin-bottom: 15px;
