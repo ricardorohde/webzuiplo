@@ -435,12 +435,12 @@
 .npt-format-2 .npt-item:hover .npt-plan-cost {}
 
 .npt-format-2 .npt-currency {
-  font-size: 2.43em;
+  font-size: 1.20em;
   line-height: 20px;
 }
 
 .npt-format-2 .npt-cost {
-  font-size: 3.43em;
+  font-size: 3.15em;
   font-family: "Poiret One", sans-serif;
   font-weight: 700;
   line-height: 45px;
