@@ -1,7 +1,8 @@
 html, body {
-  background: #252525;
+  background: #fff;
   font-family: 'Open Sans' sans-serif;
   font-size: 16px;
+  color:#252525;
 }
 
 a {
