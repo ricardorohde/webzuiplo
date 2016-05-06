@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+     <link rel="shortcut icon" href="<?php echo base_url('assets/image/icon.ico');?>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -11,7 +12,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-     <link href="<?php echo base_url('assets/image/icon.ico');?>" rel="shortcut icon">
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.theme.css');?>">
