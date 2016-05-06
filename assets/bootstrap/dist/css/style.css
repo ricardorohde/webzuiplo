@@ -437,7 +437,7 @@ html, body {
 
 }
 body {
-  color: #fff;
+  color: #252525;
   /*text-align: center;*/
   /*background-color: rgba(37,37,37,0.9);*/
 
@@ -790,10 +790,10 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color:#252525 ;
+  background-color:#fff ;
 }
 body {
-  color: #fff;
+  color: #252525;
   /*text-align: center;*/
 }
 
