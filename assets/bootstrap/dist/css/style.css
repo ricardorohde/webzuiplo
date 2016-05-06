@@ -380,7 +380,7 @@ height: 45px;
 
 .screen .content-wrapper .content .description {
   margin: 20px 0 10px;
-  color:#fff;
+  color:#252525;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 19px;
   line-height: 145%;
@@ -546,7 +546,7 @@ body {
 }
 
 .screen .content-wrapper .content .text {
-  color:#fff ;
+  color:#252525 ;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
   line-height: 36px;
