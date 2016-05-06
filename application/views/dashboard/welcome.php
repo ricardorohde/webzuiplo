@@ -96,8 +96,9 @@
                   <h3 class="npt-plan-name">PREMIUM</h3>
                               <div class="npt-hex">
                     <div class="npt-plan-cost">
-                      <span class="npt-currency">$</span>
+
                       <span class="npt-cost">69</span>
+                          <span class="npt-currency">00</span>
                       <span class="npt-duration">Monthly</span>
                     </div>
                   </div>
