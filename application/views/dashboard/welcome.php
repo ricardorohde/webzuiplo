@@ -85,7 +85,7 @@
                   </ul>
                 </div>
                 <div class="npt-plan-bottom">
-                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Select</a>
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@
                   </ul>
                 </div>
                 <div class="npt-plan-bottom">
-                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Select</a>
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@
                   </ul>
                 </div>
                 <div class="npt-plan-bottom">
-                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Select</a>
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Sign Up</a>
                 </div>
               </div>
             </div>
