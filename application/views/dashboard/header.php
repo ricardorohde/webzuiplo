@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/smint/css/style.css');?>">
-    <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/css.css');?>"> -->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/form-register.css');?>">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
 
   	<!-- Import Line icons -->
