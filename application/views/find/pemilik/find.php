@@ -1,5 +1,5 @@
-<section class="content">
-<body class="footer-top-dark">
+
+<!-- <body class="footer-top-dark">
 
 <div id="page">
     <div id="header-wrapper">
@@ -37,7 +37,7 @@
 
   </div>
 </div>
-</div>
+</div> -->
   <div class="map"></div>
 
         <script>
