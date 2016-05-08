@@ -35,31 +35,7 @@
     </div>
 
 
-    <div id="map">
-
-    </div>
-    <div id="main-wrapper">
-        <div id="main">
-            <div id="main-inner"><div class="breadcrumb-wrapper">
-    <div class="container">
-        <ol class="breadcrumb pull-left">
-
-            <li><a href="#">
-              <form method="post"action="#">
-                <div class="form-group select-find">
-                  <select class="form-control option" name="#" id="#">
-                    <option value="All"></option>
-                    <option value="Near"></option>
-                    <option value="Far"></option>
-                  </select>
-                </div>
-              </form>
-            </a></li>
-            <li><a href="#">Proin era</a></li>
-        </ol>
-
-    </div>
-</div>
+  </div>
 
         <script>
       function initMap() {
@@ -145,8 +121,8 @@
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
-    </script> 
-
+    </script>
+<div id="map"> </div>
 <!-- <section class="featured-items-section">
   <div class="container">
     <div class="col-sm-12">
