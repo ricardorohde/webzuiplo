@@ -48,7 +48,7 @@
     </div>
 </div>
 
-    <div id="map">
+    <!-- <div id="map">
 
     </div>
     <div id="main-wrapper">
@@ -72,7 +72,7 @@
         </ol>
 
     </div>
-</div> 
+</div>  -->
 
 <!-- <section class="featured-items-section">
   <div class="container">
