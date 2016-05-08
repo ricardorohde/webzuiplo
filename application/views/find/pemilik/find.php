@@ -34,10 +34,8 @@
 
   </div>
 </div>
-  <div class="map">
-
-  </div>
-
+  <div class="map"><div>
+<div id="map"> </div>
         <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -123,7 +121,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
     </script>
-<div id="map"> </div>
+
 <!-- <section class="featured-items-section">
   <div class="container">
     <div class="col-sm-12">
