@@ -3,6 +3,7 @@
     <div id="map">
 
     </div>
+    <div id="page">
     <div id="main-wrapper">
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
@@ -208,6 +209,7 @@
       </div>
     </div>
   </div>
+</div>
 </section>
   </div>
   <div class="footer-bottom">
