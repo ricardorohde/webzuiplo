@@ -37,7 +37,7 @@
     <div id="map">
 
     </div>
-    <div id="main-wrapper">
+    <!-- <div id="main-wrapper">
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
     <div class="container">
@@ -55,10 +55,10 @@
               </form>
             </a></li>
             <li><a href="#">Proin era</a></li>
-        </ol><!-- /.breadcrumb -->
+        </ol>
 
-    </div><!-- /.container -->
-</div><!-- /.breadcrumb-wrapper -->
+    </div>
+</div> -->
 
 <section class="featured-items-section">
   <div class="container">
