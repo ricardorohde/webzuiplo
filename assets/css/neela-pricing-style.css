@@ -4,7 +4,7 @@
 
 
 .npt-format-1, .npt-format-2, .npt-format-3 {
-  font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
   font-size: 16px;
 }
 
@@ -14,7 +14,7 @@
 
 .npt-plan-details p {
   color: #737373;
-  font-family: 'Open Sans';
+font-family: 'Raleway', sans-serif;
   font-size: 0.875em;
   font-weight: 300;
   line-height: 22px;
@@ -119,7 +119,8 @@
   border: 1px solid #39b54a;
   border-radius: 0px;
   color: #39b54a;
-  font-family: 'Open Sans';
+font-family: 'Raleway', sans-serif;
+
   font-size: .8125em;
   margin-top: 10px;
   padding: 7px 20px;
@@ -370,7 +371,7 @@
 
 .npt-format-1 .npt-cost {
   font-size: 3.43em;
-  font-family: "Poiret One", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 
@@ -441,7 +442,7 @@
 
 .npt-format-2 .npt-cost {
   font-size: 2.8em;
-  font-family: "Poiret One", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-weight: 700;
   line-height: 45px;
 }
@@ -555,7 +556,7 @@
 .npt-format-3 .npt-plan-cost {
   background: #f5f9fa;
   color: #39b54a;
-  font-family: 'Open Sans';
+font-family: 'Raleway', sans-serif;
 }
 
 .npt-format-3 .npt-currency {
@@ -564,7 +565,7 @@
 
 .npt-format-3 .npt-cost {
   font-size: 3.4em;
-  font-family: "Poiret One", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 

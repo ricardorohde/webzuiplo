@@ -164,24 +164,16 @@ img.get-reg {
 
 
 
-/*.free {
-  font-size: 20pt;
-  font-family: sans-serif;
-  padding-top: 15px;
-  text-align: center;
-  background-color: blue;
-}*/
-
 .gold {
   font-size: 20pt;
-  font-family: sans-serif;
+font-family: 'Raleway', sans-serif;
   padding-top: 15px;
   text-align: center;
 }
 
 .pre {
   font-size: 20pt;
-  font-family: sans-serif;
+font-family: 'Raleway', sans-serif;
   padding-top: 15px;
   text-align: center;
 }
@@ -236,7 +228,7 @@ img.get-reg {
     transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
 }
 input, button, select, textarea {
-    font-family: inherit;
+font-family: 'Raleway', sans-serif;
     font-size: inherit;
     line-height: inherit;
 }
@@ -281,7 +273,7 @@ button, input, optgroup, select, textarea {
     transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
 }
 input, button, select, textarea {
-    font-family: inherit;
+font-family: 'Raleway', sans-serif;
     font-size: inherit;
     line-height: inherit;
 }
@@ -430,7 +422,7 @@ height: 45px;
 .screen .content-wrapper .content .description {
   margin: 20px 0 10px;
   color:#252525;
-  font-family: "Source Sans Pro", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-size: 19px;
   line-height: 145%;
   opacity: .8;
@@ -440,7 +432,7 @@ height: 45px;
 
 .screen .content-wrapper .content {
   color:  #fff;
-  font-family: "Source Sans Pro", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-size: 24px;
   line-height: 36px;
   /*background-color: rgba(37,37,37,0.9);*/
@@ -490,10 +482,6 @@ body {
 
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat-SemiBold.otf);
-}
 
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -596,7 +584,7 @@ body {
 
 .screen .content-wrapper .content .text {
   color:#252525 ;
-  font-family: "Source Sans Pro", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-size: 24px;
   line-height: 36px;
     text-align: center;
@@ -610,7 +598,7 @@ body {
 
 .screen .content-wrapper .content .description {
   margin: 20px 0 10px;
-  font-family: "Source Sans Pro", sans-serif;
+font-family: 'Raleway', sans-serif;
   font-size: 19px;
   line-height: 145%;
   opacity: .8;

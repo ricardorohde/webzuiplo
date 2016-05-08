@@ -1,3 +1,5 @@
+
+
 @media print {
   /* line 8, ../../libraries/bootstrap/stylesheets/bootstrap/_print.scss */
   * {
@@ -2019,7 +2021,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
   color: #5a5a5a;
-  font-family: "Exo 2", sans-serif;
+
   font-size: 16px;
   font-weight: 300;
   height: 100%;
@@ -2161,20 +2163,20 @@ h2 {
 
 /* line 85, ../../scss/helpers/_structure.scss */
 h3 {
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 300;
   margin-bottom: 36px;
 }
 @media (min-width: 767px) and (max-width: 992px) {
   /* line 85, ../../scss/helpers/_structure.scss */
   h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
 /* line 95, ../../scss/helpers/_structure.scss */
 h3 {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
 }
 @media (min-width: 767px) and (max-width: 992px) {
