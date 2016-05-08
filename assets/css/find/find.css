@@ -3,6 +3,11 @@
 header.carousel {
     height: 50%;
 }
+.logo-maps{
+  margin-top: 20px;
+  background-color: none;
+  
+}
 header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
@@ -26,7 +31,9 @@ header.carousel .fill {
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+.logo-maps{
 
+}
 .featured-items-section {
 
     padding: 30px 0 50px 0;

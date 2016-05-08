@@ -1,6 +1,5 @@
+  <img class="logo-maps" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
 
-                                              <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
-                                  
     <div id="map">
 
     </div>
