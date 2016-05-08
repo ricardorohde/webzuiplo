@@ -3,7 +3,7 @@
     <div id="map">
 
     </div>
-    <!-- <div id="main-wrapper">
+    <div id="main-wrapper">
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
     <div class="container">
@@ -24,9 +24,9 @@
         </ol>
 
     </div>
-</div> -->
+</div>
 
-<!-- <section class="featured-items-section">
+<section class="featured-items-section">
   <div class="container">
     <div class="col-sm-12">
       <div class=" caption-slide-up">
@@ -217,14 +217,14 @@
                   <li><a href="#">Lorem</a></li>
                   <li><a href="#">Lorem</a></li>
                   <li><a href="#">Lorem</a></li>
-              </ul><!-- /.nav -->
+              </ul>
           </nav>
 
           <div class="copyright">
             &copy;2016 Zuiplo. Created by JICOS
           </div>
-      </div><!-- /.container -->
-  </div><!-- /.footer-bottom --> -->
+      </div>
+  </div>
 
   <script>
 function initMap() {
