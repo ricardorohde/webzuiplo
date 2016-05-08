@@ -1,4 +1,77 @@
+<div id="header-inner">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="row">
+                        <div class="span4">
+                            <a href="#nav" class="hidden-desktop" id="btn-nav">Toggle navigation</a>
 
+                                                                    <div class="logo">
+                                    <a href="/drupal/realia/" title="Home">
+                                        <img src="http://preview.byaviators.com/drupal/realia/sites/default/themes/realia/logo.png" alt="Home"/>
+                                    </a>
+                                </div><!-- /.logo -->
+
+                                                                    <div class="site-name">
+                                    <a href="/drupal/realia/" title="Home" class="brand">
+                                        Realia                                            </a>
+                                </div><!-- /.site-name -->
+
+                                                                  <div class="site-slogan">
+                                  <span>Real estate &amp; Rental<br>made easy</span>
+                              </div><!-- /.site-slogan -->
+                                                            </div>
+
+                                                            <div class="span3 pull-right">
+                                  <div class="region region-header-right">
+<div id="block-search-form" class="block block-search site-search">
+<div class="title">
+      </div><!-- /.title -->
+
+<div class="content">
+<form class="form-search content-search" action="/drupal/realia/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+<h2 class="element-invisible">Search form</h2>
+<div class="input-append"><input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" /><button type="submit" class="btn"><i class="icon-search"></i><span class="element-invisible">Search</span></button></div><button class="element-invisible btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
+<input type="hidden" name="form_build_id" value="form-qJ49TTSRXS-VHb_4IN65ZJN33mE1bQaiW4t7yGnfeUM" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div><!-- /.content -->
+</div><!-- /.block -->
+</div>
+                            </div>
+
+                                                            <div class="span5">
+                                  <div class="region region-header-middle">
+<div id="block-realia-blocks-header-contact" class="block block-realia-blocks">
+<div class="title">
+      </div><!-- /.title -->
+
+<div class="content">
+
+<div class="info">
+  <div class="site-email">
+  <a href="mailto:info@byaviators.com">info@byaviators.com</a>
+</div>
+<!-- /.site-email -->
+  <div class="site-phone">
+  <span>333-666-777</span>
+</div>
+<!-- /.site-phone -->
+</div>  </div><!-- /.content -->
+</div><!-- /.block -->
+</div>
+                            </div>
+                                                    </div>
+
+                </div>
+                <!-- /.navbar-inner -->
+            </div>
+            <!-- /.navbar -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#header-inner -->
+    
 <!--
       <div id="map">
 
