@@ -1,6 +1,3 @@
-
-<!-- <body class="footer-top-dark">
-
 <div id="page">
     <div id="header-wrapper">
         <div id="header">
@@ -37,7 +34,7 @@
 
   </div>
 </div>
-</div> -->
+</div>
   <div class="map"></div>
 
         <script>
