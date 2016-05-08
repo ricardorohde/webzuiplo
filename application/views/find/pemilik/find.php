@@ -209,7 +209,7 @@
       </div>
     </div>
   </div>
-</div>
+
 </section>
   </div>
   <div class="footer-bottom">
@@ -227,7 +227,7 @@
           </div>
       </div>
   </div>
-
+</div>
   <script>
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
