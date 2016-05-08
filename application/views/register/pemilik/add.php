@@ -43,9 +43,10 @@
             <div id="main-inner"><div class="breadcrumb-wrapper">
     <div class="container">
         <ol class="breadcrumb pull-left">
+
+            <li class="active">Register</li>
             <li><a href="#">Vivamus</a></li>
             <li><a href="#">Proin era</a></li>
-            <li class="active">Fusce accumsan</li>
         </ol><!-- /.breadcrumb -->
 
     </div><!-- /.container -->
@@ -54,39 +55,36 @@
 	<div class="block-content">
     	<div class="block-content-inner">
 			<div class="page-header page-header-no-rules center">
-				<h1>Register</h1>
+				<h2 class="title-reg">Register</h2>
 			</div><!-- /.page-header -->
 
 			<div class="row">
     <div class="col-sm-4 col-sm-offset-4">
         <form method="post" action="?">
+          <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" class="form-control">
+          </div><!-- /.form-group -->
+
             <div class="form-group">
                 <label>E-mail</label>
                 <input type="email" class="form-control">
             </div><!-- /.form-group -->
 
+
             <div class="form-group">
-                <label>First Name</label>
+                <label>Contact</label>
                 <input type="text" class="form-control">
             </div><!-- /.form-group -->
 
+
             <div class="form-group">
-                <label>Surname</label>
-                <input type="text" class="form-control">
+                <label>Address</label>
+                <textarea  class="form-control"></textarea>
             </div><!-- /.form-group -->
 
             <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control">
-            </div><!-- /.form-group -->
-
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" class="form-control">
-            </div><!-- /.form-group -->
-
-            <div class="form-group">
-                <input type="submit" value="Register" class="cover-btn-lg ">
+                <input type="submit" value="Register" class="btn-lg btn-inversed-primary">
             </div><!-- /.form-group -->
         </form>
     </div>
@@ -126,14 +124,14 @@
                     <div class="container">
                         <nav class="clearfix">
                             <ul class="nav navbar-nav footer-nav">
-                                <li><a href="../../demo/automotive/index.html">Automotive</a></li>
-                                <li><a href="../../demo/directory/index.html">Directory</a></li>
-                                <li><a href="../../demo/real-estate/index.html">Real Estate</a></li>
+                                <li><a href="#">Lore</a></li>
+                                <li><a href="#">Lorem</a></li>
+                                <li><a href="#">Lorem</a></li>
                             </ul><!-- /.nav -->
                         </nav>
 
                         <div class="copyright">
-                            Designed by <a href="http://themeforest.com/user/themefire">ThemeFire</a> / Assembled in <a href="http://pragmaticmates.com">Pragmatic Mates</a>
+                          &copy; Zuiplo. Created by JICOS
                         </div>
                     </div><!-- /.container -->
                 </div><!-- /.footer-bottom -->
