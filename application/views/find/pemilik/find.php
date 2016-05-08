@@ -8,7 +8,13 @@
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
     <div class="container">
-    
+        <ol class="breadcrumb pull-left">
+
+            <li><a href="#">
+
+            </a></li>
+            <li><a href="#"></a></li>
+        </ol>
 
     </div>
 </div>
