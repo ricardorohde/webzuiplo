@@ -1,41 +1,4 @@
-<div id="page">
-    <div id="header-wrapper">
-        <div id="header">
-            <div id="header-inner  col-md-12">
-                <nav class="navbar navbar-default">
-                    <div class="header-secondary">
-
-								    </div>
-
-                    <div class="container">
-                        <div class="navbar-header">
-
-
-                            <a class="navbar-brand" href="#">
-                                <span class="logo-styled">
-                                    <span class="logo-title">
-                                        <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
-                                          <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
-                                            <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
-                                              <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-
-                        <div class="collapse navbar-collapse" id="navbar-main">
-
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-
-
-  </div>
-</div>
-  <div class="map"><div>
-<div id="map"> </div>
+<div class="map"><div>
         <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
