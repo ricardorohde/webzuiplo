@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/smint/css/style.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/form-register.css');?>">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/find/find.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/find/style.css');?>" rel="stylesheet">
 
   	<!-- Import Line icons -->
   	<link href="<?php echo base_url('assets/css/simple-line-icons.css');?>" rel="stylesheet">
