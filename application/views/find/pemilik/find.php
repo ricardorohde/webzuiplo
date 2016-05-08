@@ -51,7 +51,7 @@
     <div id="map">
 
     </div>
-    <!-- <div id="main-wrapper">
+    <div id="main-wrapper">
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
     <div class="container">
@@ -72,7 +72,7 @@
         </ol>
 
     </div>
-</div> -->
+</div> 
 
 <!-- <section class="featured-items-section">
   <div class="container">
@@ -272,7 +272,7 @@
             &copy;2016 Zuiplo. Created by JICOS
           </div>
       </div>
-  </div>-->
+  </div>
 
   <script>
 function initMap() {
