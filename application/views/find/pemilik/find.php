@@ -312,8 +312,7 @@ var image2= 'assets/images/lokasi_sekitar.png';
 </script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
-</script> -->
-
+</script>
 <!--
       <div id="map">
 
