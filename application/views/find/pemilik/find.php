@@ -60,7 +60,7 @@
     </div>
 </div> -->
 
-<section class="featured-items-section">
+<!-- <section class="featured-items-section">
   <div class="container">
     <div class="col-sm-12">
       <div class=" caption-slide-up">
@@ -258,7 +258,8 @@
             &copy;2016 Zuiplo. Created by JICOS
           </div>
       </div><!-- /.container -->
-  </div><!-- /.footer-bottom -->
+  </div><!-- /.footer-bottom --> -->
+
   <script>
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
