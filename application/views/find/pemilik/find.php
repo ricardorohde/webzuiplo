@@ -1,9 +1,10 @@
+<div id="map">
+
+</div>
 <div class="col-md-12 logo-inner">
   <img class="logo-maps" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
 </div>
-    <div id="map">
 
-    </div>
     <div id="page">
     <div id="main-wrapper">
         <div id="main">
