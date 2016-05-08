@@ -36,6 +36,7 @@
 
 
   </div>
+  <div class="map"></div>
 
         <script>
       function initMap() {
