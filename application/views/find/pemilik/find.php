@@ -252,7 +252,7 @@
           </nav>
 
           <div class="copyright">
-            &copy; Zuiplo. Created by JICOS
+            &copy;2016 Zuiplo. Created by JICOS
           </div>
       </div><!-- /.container -->
   </div><!-- /.footer-bottom -->
