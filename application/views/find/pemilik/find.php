@@ -36,6 +36,8 @@
 
 
   </div>
+</div>
+</div>
   <div class="map"> ini maps man , bismillah</div>
 
         <script>
