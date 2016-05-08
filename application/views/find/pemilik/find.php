@@ -8,21 +8,7 @@
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
     <div class="container">
-        <ol class="breadcrumb pull-left">
-
-            <li><a href="#">
-              <form method="post"action="#">
-                <div class="form-group select-find">
-                  <select class="form-control option" name="#" id="#">
-                    <option value="All"></option>
-                    <option value="Near"></option>
-                    <option value="Far"></option>
-                  </select>
-                </div>
-              </form>
-            </a></li>
-            <li><a href="#">Proin era</a></li>
-        </ol>
+    
 
     </div>
 </div>
