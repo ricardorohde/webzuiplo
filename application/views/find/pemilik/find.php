@@ -1,6 +1,4 @@
-<div id="map">
 
-</div>
 <body class="footer-top-dark">
 
 <div id="page">
@@ -36,7 +34,9 @@
             </div><!-- /#header-inner -->
         </div><!-- /#header -->
     </div><!-- /#header-wrapper -->
+    <div id="map">
 
+    </div>
     <div id="main-wrapper">
         <div id="main">
             <div id="main-inner"><div class="breadcrumb-wrapper">
