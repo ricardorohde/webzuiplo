@@ -1,3 +1,4 @@
+<div id="page">
     <div id="header-wrapper">
         <div id="header">
             <div id="header-inner  col-md-12">
@@ -30,9 +31,12 @@
         </div>
     </div>
 
+
+  </div>
 </div>
-</div>
-  <div class="map"></div>
+  <div class="map">
+
+  </div>
 
         <script>
       function initMap() {
