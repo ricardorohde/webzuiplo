@@ -23,7 +23,7 @@
                                             <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
                                               <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
                                     </span><!-- /.logo-title -->
-                                    <span class="logo-subtitle hidden-sm">Real Estate <br/> Template</span>
+                                    <!-- <span class="logo-subtitle hidden-sm">Real Estate <br/> Template</span> -->
                                 </span><!-- /.logo-styled -->
                             </a>
                         </div>
@@ -137,5 +137,3 @@
         </div><!-- /#footer -->
     </div><!-- /#footer-wrapper -->
 </div><!-- /#page -->
-
-
