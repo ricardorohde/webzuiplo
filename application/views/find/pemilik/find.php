@@ -1,3 +1,4 @@
+<section class="content">
 <body class="footer-top-dark">
 
 <div id="page">
