@@ -8,7 +8,7 @@
                 <nav class="navbar navbar-default">
                     <div class="header-secondary">
 
-								    </div><!-- /.header-secondary -->
+								    </div>
 
                     <div class="container">
                         <div class="navbar-header">
@@ -21,19 +21,18 @@
                                           <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
                                             <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
                                               <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
-                                    </span><!-- /.logo-title -->
-                                    <!-- <span class="logo-subtitle hidden-sm">Real Estate <br/> Template</span> -->
-                                </span><!-- /.logo-styled -->
+                                    </span>
+                                </span>
                             </a>
                         </div>
 
                         <div class="collapse navbar-collapse" id="navbar-main">
-                      <!-- /.nav -->                        </div><!-- /.navbar-collapse -->
+
                     </div>
                 </nav>
-            </div><!-- /#header-inner -->
-        </div><!-- /#header -->
-    </div><!-- /#header-wrapper -->
+            </div>
+        </div>
+    </div>
 
     <div id="main-wrapper">
         <div id="main">
@@ -44,10 +43,10 @@
             <li class="active">Register</li>
             <li><a href="#">Vivamus</a></li>
             <li><a href="#">Proin era</a></li>
-        </ol><!-- /.breadcrumb -->
+        </ol>
 
-    </div><!-- /.container -->
-</div><!-- /.breadcrumb-wrapper -->
+    </div>
+</div>
 
     <div id="map">
 
@@ -266,14 +265,14 @@
                   <li><a href="#">Lorem</a></li>
                   <li><a href="#">Lorem</a></li>
                   <li><a href="#">Lorem</a></li>
-              </ul><!-- /.nav -->
+              </ul>
           </nav>
 
           <div class="copyright">
             &copy;2016 Zuiplo. Created by JICOS
           </div>
-      </div><!-- /.container -->
-  </div><!-- /.footer-bottom --> -->
+      </div>
+  </div>-->
 
   <script>
 function initMap() {
