@@ -1,3 +1,4 @@
+
 <body class="footer-top-dark">
 
 <div id="page">
@@ -56,7 +57,34 @@
 
     </div><!-- /.container -->
 </div><!-- /.breadcrumb-wrapper -->
+<div id="map">
 
+</div>
+<div id="floating-panel" class="col-md-12 float">
+  <div class="col-md-1"></div>
+
+  <div class="col-md-6 logo-find">
+    <div class="col-md-2">
+      <img src="<?php echo base_url('assets/image/srikandev.png');?> ">
+    </div>
+  <div>
+</div>
+</div>
+<div id="floating-panel2" class="col-md-12 ">
+    <div class="col-md-12 logo-find">
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-4 test">
+        <div class="input-group">
+           <input type="text" class="form-control control-find" placeholder="Find Here">
+           <span class="input-group-btn">
+             <button class="control-find find-button" type="button"><i class="fa fa-search find-button"></i></button>
+           </span>
+         </div>
+      </div>
+    <div>
+</div>
+</div>
 <section class="featured-items-section">
   <div class="container">
     <div class="col-sm-12">
