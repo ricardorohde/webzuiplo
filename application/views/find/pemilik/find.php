@@ -1,4 +1,45 @@
-<div class="map"><div>
+<section class="content">
+<body class="footer-top-dark">
+
+<div id="page">
+    <div id="header-wrapper">
+        <div id="header">
+            <div id="header-inner  col-md-12">
+                <nav class="navbar navbar-default">
+                    <div class="header-secondary">
+
+								    </div>
+
+                    <div class="container">
+                        <div class="navbar-header">
+
+
+                            <a class="navbar-brand" href="#">
+                                <span class="logo-styled">
+                                    <span class="logo-title">
+                                        <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
+                                          <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
+                                            <img class="logo-reg" src="<?php echo base_url('assets/image/zuiploo.png');?>" alt="" width="150px;" height="50px;">
+                                              <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="navbar-main">
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+  <div class="map"></div>
+
         <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -84,7 +125,7 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
     </script>
-
+<div id="map"> </div>
 <!-- <section class="featured-items-section">
   <div class="container">
     <div class="col-sm-12">
