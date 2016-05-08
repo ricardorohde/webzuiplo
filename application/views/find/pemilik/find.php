@@ -38,7 +38,7 @@
   </div>
 </div>
 </div>
-  <div class="map"> ini maps man , bismillah</div>
+  <div class="map"></div>
 
         <script>
       function initMap() {
