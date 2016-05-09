@@ -2943,12 +2943,12 @@ blockquote:after {
 
 /* line 1, ../../scss/helpers/_breadcrumb.scss */
 .breadcrumb-wrapper {
-  background-color: #39b54a;
-  border-bottom: 1px solid #39b54a;
+  background-color: #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
 }
 /* line 5, ../../scss/helpers/_breadcrumb.scss */
 .breadcrumb-white .breadcrumb-wrapper {
-  background-color: #39b54;
+  background-color: #E3E3E3;
 }
 /* line 9, ../../scss/helpers/_breadcrumb.scss */
 .breadcrumb-wrapper .btn {
