@@ -71,5 +71,9 @@ $(document).ready( function() {
 });
 
 </script>
+
+<script type="text/javascript" src="<?php echo base_url('assets/smint/js/jquerysmint.min.js');?>"></script>
+
+<script	src="<?php echo base_url('assets/smint/js/jquery.smint.js');?>" type="text/javascript" ></script>
   </head>
 </html>

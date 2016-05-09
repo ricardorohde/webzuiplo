@@ -1,8 +1,48 @@
+<!-- <body class="footer-top-dark">
+
+<div id="page">
+    <div id="header-wrapper">
+        <div id="header">
+            <div id="header-inner  col-md-12">
+                <nav class="navbar navbar-default">
+                    <div class="header-secondary">
+
+								    </div><!-- /.header-secondary -->
+
+                    <div class="container">
+                        <div class="navbar-header">
+
+
+                            <a class="navbar-brand" href="#">
+                                <span class="logo-styled">
+                                    <span class="logo-title">
+
+                                              <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
+                                    </span><!-- /.logo-title -->
+                                    <!-- <span class="logo-subtitle hidden-sm">Real Estate <br/> Template</span> -->
+                                </span><!-- /.logo-styled -->
+                                <input type="text" class="form-control" placeholder="Search">
+
+                               <span class="form-control-feedback">
+                                   <i class="fa fa-search"></i>
+                               </span><!-- /.form-control-feedback -->
+                             </input>
+                            </a>
+
+                        </div>
+
+                          <div class="collapse navbar-collapse" id="navbar-main">
+                      <!-- /.nav -->                        </div><!-- /.navbar-collapse -->
+                    </div>
+
+                </nav>
+            </div><!-- /#header-inner -->
+        </div><!-- /#header -->
+    </div><!-- /#header-wrapper -->
+</body>
+
 <div id="map">
 
-</div>
-<div class="col-md-12 logo-inner">
-  <img class="logo-maps" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
 </div>
 
     <div id="page">

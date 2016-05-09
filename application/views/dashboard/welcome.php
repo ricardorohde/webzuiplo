@@ -23,16 +23,26 @@
             </div>
           </div>
 
-
+  <div class="wrap ">
+    <div class="section sTop">
+        <div class="inner">
           <div class="inner cover">
             <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <p class="lead">
-              <a href="#join"  class="cover-btn-lg ">JOIN</a>
+              <div class="subMenu" >
+                <!-- <div class="inner"> -->
+                    <a href="#s1"  class="cover-btn-lg">JOIN</a>
+                <!-- </div> -->
+              </div>
 
               <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="cover-btn-lg ">FIND</a>
-
+            </p>
           </div>
+        </div>
+      </div>
+
+
 
 
 
@@ -44,10 +54,13 @@
 </div>
 
 
-          <div id="join"   class="npt-format-2 npt-hex-hover">
-            <div class="col-md-12 title">
-              LET'S JOIN
-            </div>
+          <div class="npt-format-2 npt-hex-hover">
+
+                <div class="s1 col-md-12 title">
+                  LET'S JOIN
+                </div>
+
+
             <div class="col-sm-4 col-xs-6">
               <div class="npt-item npt-item-1">
                 <div class="npt-plan-top">
@@ -212,9 +225,13 @@
 
 
   <script type="text/javascript">
+
+
   $(document).ready( function() {
       $('.subMenu').smint({
       	'scrollSpeed' : 1000
       });
   });
+
+
   </script>

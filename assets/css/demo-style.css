@@ -5,7 +5,7 @@ font-family: 'Raleway', sans-serif;
   color:#252525;
 }
 
-a {
+/*a {
   text-decoration: none;
   -webkit-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
@@ -24,7 +24,7 @@ a:hover {
   color: #0FB9DB;
   text-decoration: none;
   font-size: 10pt;
-}
+}*/
 
 
 .pricing-tables {
