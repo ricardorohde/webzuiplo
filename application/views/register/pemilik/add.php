@@ -34,8 +34,8 @@
 				<h2 class="title-text">
 					<p class="lead">
 
-									<a href="#s1"  class="cover-btn-lg">JOIN</a>
-						
+									<a href="#s1"  class="cover-btn-lg">REGISTER</a>
+
 					</p>
 				</h2>
 
