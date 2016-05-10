@@ -1875,21 +1875,7 @@ var settings = {
 </div><!-- /.block-content -->                        </div><!-- /.container -->
                     </div><!-- /.footer-top -->
 
-                <div class="footer-bottom">
-                    <div class="container">
-                        <nav class="clearfix">
-                            <ul class="nav navbar-nav footer-nav">
-                                <li><a href="#">Lore</a></li>
-                                <li><a href="#">Lorem</a></li>
-                                <li><a href="#">Lorem</a></li>
-                            </ul><!-- /.nav -->
-                        </nav>
 
-                        <div class="copyright">
-                          &copy;2016 Zuiplo. Created by JICOS
-                        </div>
-                    </div><!-- /.container -->
-                </div><!-- /.footer-bottom -->
             </div><!-- /#footer-inner -->
         </div><!-- /#footer -->
     </div><!-- /#footer-wrapper -->
