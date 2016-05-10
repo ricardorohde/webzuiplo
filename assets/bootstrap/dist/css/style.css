@@ -3,7 +3,9 @@
   padding: 10px;
   color: #fff;
 }
-
+.logo-head{
+  margin-top: 90px;
+}
 .reg {
   /*background-color: rgba(37,37,37,0.9);*/
 }
