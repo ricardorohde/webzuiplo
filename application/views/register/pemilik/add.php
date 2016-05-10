@@ -1,6 +1,10 @@
 <section class="content">
 
-
+<div class="col-md-12">
+	<div class="col-md-6 zu">
+		ZUIPLO
+	</div>
+</div>
 <!-- srikandev -->
 
 </div>

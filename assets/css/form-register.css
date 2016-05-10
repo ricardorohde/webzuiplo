@@ -40,7 +40,9 @@ img {
 .img-rounded {
   border-radius: 6px;
 }
-
+.zu{
+  background-color: #2c3e50;
+}
 /* line 93, ../../libraries/bootstrap/stylesheets/bootstrap/_scaffolding.scss */
 .img-thumbnail {
   padding: 4px;
