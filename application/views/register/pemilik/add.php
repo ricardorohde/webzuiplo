@@ -27,6 +27,23 @@
 		</div>
 	</div>
 </div>
+<div class="container">
+	<div class="block-content">
+    	<div class="block-content-inner">
+			<div class="page-header page-header-no-rules center">
+				<h2 class="title-text">
+					<p class="lead">
+
+									<a href="#s1"  class="cover-btn-lg">JOIN</a>
+						
+					</p>
+				</h2>
+
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- srikandev -->
 
 
