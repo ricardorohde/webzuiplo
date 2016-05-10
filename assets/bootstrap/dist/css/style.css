@@ -21,6 +21,10 @@
   font-size:16px;
       font-family: "Source Sans Pro",sans-serif;
 }
+.pages{
+  background-color: #252525;
+  height: 90px;
+}
 .full {
   height: auto;
 }
