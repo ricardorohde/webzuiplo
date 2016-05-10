@@ -12,7 +12,13 @@
 .title-text{
   text-align: center;
   color: #423d38;
-  font-size: 1.2em;
+  font-size: 1.9em;
+  font-family: "Raleway", sans-serif;
+}
+.title-desc{
+  text-align: center;
+  color: #423d38;
+  font-size: 1.3em;
   font-family: "Raleway", sans-serif;
 }
 .full {
