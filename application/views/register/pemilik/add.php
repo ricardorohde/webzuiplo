@@ -8,6 +8,9 @@
 				<h2 class="title-reg">
 					<img src="<?php echo base_url('assets/image/zuiplo.png');?>" width="250px;" height="100px;" class="logo-head">
 				</h2>
+				<h2 class="title-text">
+					Thank you for agreeing to take part in srikandev event planning survey!
+				</h2>
 			</div>
 		</div>
 	</div>
