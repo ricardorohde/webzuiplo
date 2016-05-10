@@ -2,19 +2,7 @@
 
 
 <!-- srikandev -->
-    <!-- <div id="main-wrapper">
-        <div id="main">
-            <div id="main-inner"><div class="breadcrumb-wrapper"> -->
 
-	  <div class="container">
-        <ol class="breadcrumb pull-left">
-
-            <li class="active">Register</li>
-            <li><a href="#">Vivamus</a></li>
-            <li><a href="#">Proin era</a></li>
-        </ol>
-
-    </div>
 </div>
 <div class="container">
 	<div class="block-content">
