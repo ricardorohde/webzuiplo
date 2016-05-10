@@ -9,8 +9,12 @@
 .reg {
   /*background-color: rgba(37,37,37,0.9);*/
 }
-.title-text{
+.title-reg{
+  text-align: center;
   color: #252525;
+  font-size: 1.9em;
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
 }
 .full {
   height: auto;
