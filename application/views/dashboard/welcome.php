@@ -30,9 +30,10 @@
             <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <p class="lead">
+                <a href="#s1"  class="cover-btn-lg">JOIN</a>
               <div class="subMenu" >
                 <!-- <div class="inner"> -->
-                    <a href="#s1"  class="cover-btn-lg">JOIN</a>
+
                 <!-- </div> -->
               </div>
 
