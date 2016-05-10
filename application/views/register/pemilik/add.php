@@ -5,7 +5,9 @@
 	<div class="block-content">
     	<div class="block-content-inner">
 			<div class="page-header page-header-no-rules center">
-				<h2 class="title-reg">Register</h2>
+				<h2 class="title-reg">
+					<img src="<?php echo base_url('assets/image/zuiplo.png');?>">
+				</h2>
 			</div>
 		</div>
 	</div>
