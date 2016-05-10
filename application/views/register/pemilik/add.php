@@ -47,7 +47,7 @@
 			<div class="page-header page-header-no-rules center">
 				<h2 class="title-text">
 					<p class="lead">
-							<a href="#s1"  class="cover-btn-lg"></a>
+							<!-- <a href="#s1"  class="cover-btn-lg"></a> -->
 					</p>
 				</h2>
 
