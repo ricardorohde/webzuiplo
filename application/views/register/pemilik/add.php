@@ -8,6 +8,15 @@
 				<h2 class="title-reg">
 					<img src="<?php echo base_url('assets/image/zuiplo.png');?>" width="250px;" height="100px;" class="logo-head">
 				</h2>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="block-content">
+    	<div class="block-content-inner">
+			<div class="page-header page-header-no-rules center">
 				<h2 class="title-text">
 					Thank you for agreeing to take part in srikandev event planning survey!
 				</h2>
@@ -16,6 +25,7 @@
 	</div>
 </div>
 <!-- srikandev -->
+
 
 </div>
 <div class="container">
