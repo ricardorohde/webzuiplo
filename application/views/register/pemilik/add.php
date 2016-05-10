@@ -6,7 +6,7 @@
     	<div class="block-content-inner">
 			<div class="page-header page-header-no-rules center">
 				<h2 class="title-reg">
-					<img src="<?php echo base_url('assets/image/zuiplo.png');?>" width="50px;" height="50px;">
+					<img src="<?php echo base_url('assets/image/zuiplo.png');?>" width="150px;" height="100px;">
 				</h2>
 			</div>
 		</div>
