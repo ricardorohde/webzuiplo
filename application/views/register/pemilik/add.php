@@ -2,10 +2,11 @@
 
 
 <!-- srikandev -->
-    <div id="main-wrapper">
+    <!-- <div id="main-wrapper">
         <div id="main">
-            <div id="main-inner"><div class="breadcrumb-wrapper">
-    <div class="container">
+            <div id="main-inner"><div class="breadcrumb-wrapper"> -->
+
+	  <div class="container">
         <ol class="breadcrumb pull-left">
 
             <li class="active">Register</li>
