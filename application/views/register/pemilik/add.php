@@ -20,6 +20,9 @@
 				<h2 class="title-text">
 					Thank you for agreeing to take part in srikandev event planning survey!
 				</h2>
+				<h3 class="title-text">
+					In this survey, we'll seek for your thoughts and opinions in order to ensure our event is as useful as possible. This survey should only take 2-3 minutes to complete. Psst...! We assured that all answers you provide will be kept in the strictest confidentiality ;)
+				</h3>
 			</div>
 		</div>
 	</div>
