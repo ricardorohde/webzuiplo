@@ -1,657 +1,424 @@
-<!-- <body class="footer-top-dark">
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aviators - byaviators.com">
 
-<div id="page">
-    <div id="header-wrapper">
-        <div id="header">
-            <div id="header-inner  col-md-12">
-                <nav class="navbar navbar-default">
-                    <div class="header-secondary">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="<?php echo base_url('assets/find/img/faviconpng');?>" type="image/png">
+    <link rel="stylesheet" href="<?php echo base_url('assets/find/css/bootstrap.css');?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/find/css/bootstrap-responsive.css');?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/chosen/chosen.css');?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/bootstrap-fileupload/bootstrap-fileupload.css');?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/jquery-ui-1.10.2.custom/css/ui-lightness/jquery-ui-1.10.2.custom.min.css');?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/find/css/realia-blue.css');?>" type="text/css" id="color-variant-default">
+    <link rel="stylesheet" href="#" type="text/css" id="color-variant">
 
-								    </div><!-- /.header-secondary -->
+      <link rel="stylesheet" href="<?php echo base_url('assets/find/font-awesome/css/font-awesome.css');?>" type="text/css">
+      <link rel="stylesheet" href="<?php echo base_url('assets/find/font-awesome/css/font-awesome.min.css');?>" type="text/css">
+</head>
+<body>
+<div id="wrapper-outer" >
+    <div id="wrapper">
+        <div id="wrapper-inner">
+            <!-- BREADCRUMB -->
+            <div class="breadcrumb-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <ul class="breadcrumb pull-left">
+                                <li><a href="index.html"></a></li>
+                            </ul><!-- /.breadcrumb -->
 
-                    <div class="container">
-                        <div class="navbar-header">
-
-
-                            <a class="navbar-brand" href="#">
-                                <span class="logo-styled">
-                                    <span class="logo-title">
-
-                                              <img class="logo-reg" src="<?php echo base_url('assets/image/zuiplo.png');?>" alt="" width="150px;" height="50px;">
-                                    </span><!-- /.logo-title -->
-                                    <!-- <span class="logo-subtitle hidden-sm">Real Estate <br/> Template</span> -->
-                                </span><!-- /.logo-styled -->
-                                <input type="text" class="form-control" placeholder="Search">
-
-                               <span class="form-control-feedback">
-                                   <i class="fa fa-search"></i>
-                               </span><!-- /.form-control-feedback -->
-                             </input>
-                            </a>
-
-                        </div>
-
-                          <div class="collapse navbar-collapse" id="navbar-main">
-                      <!-- /.nav -->                        </div><!-- /.navbar-collapse -->
-                    </div>
-
-                </nav>
-            </div><!-- /#header-inner -->
-        </div><!-- /#header -->
-    </div><!-- /#header-wrapper -->
-</body>
-
-<div id="map">
-
-</div>
-
-    <div id="page">
-    <div id="main-wrapper">
-        <div id="main">
-            <div id="main-inner"><div class="breadcrumb-wrapper">
-    <div class="container">
-        <ol class="breadcrumb pull-left">
-
-            <li><a href="#">
-
-            </a></li>
-            <li><a href="#"></a></li>
-        </ol>
-
-    </div>
-</div>
-
-<section class="featured-items-section">
-  <div class="container">
-    <div class="col-sm-12">
-      <div class=" caption-slide-up">
-        <div class="col-lg-4 col-sm-6 col-md-6 featured-item">
-          <div class="labels">
-            <div class="label-rent"></div>
-            <div class="label-sale"></div>
-          </div>
-          <div class="category">
-            Home
-          </div>
-          <ul class="list-inline featured-item-header text-center">
-            <li><strong>
-              Price </strong><small>1.200.000 @ Month</small>
-            </li>
-          </ul>
-          <figure>
-            <img class="img-responsive" src="<?php echo base_url('assets/image/pictures/property-20150921052144.png');?>" alt="Amber Cottage">
-            <figcaption>
-              <h3>
-                Komp. Sqadron
-              </h3>
-              <p>
-                Jakarta                <br>
-                Halim PK                ,
-                81082 , 21 m<sup>2</sup>
-              </p>
-              <a href="#" class="button high_device_link"><span>&#10004;</span>View Detail</a>
-              <a href="#" class="small_device_link" >View Detail</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-md-6 featured-item">
-          <div class="labels">
-            <div class="label-rent"></div>
-            <div class="label-sale"></div>
-          </div>
-          <div class="category">
-            Home
-          </div>
-          <ul class="list-inline featured-item-header text-center">
-            <li><strong>
-              Price </strong><small>1.200.000 @ Month</small>
-            </li>
-          </ul>
-          <figure>
-            <img class="img-responsive" src="<?php echo base_url('assets/image/pictures/property-20150921052144.png');?>" alt="Amber Cottage">
-            <figcaption>
-              <h3>
-                Komp. Sqadron
-              </h3>
-              <p>
-                Jakarta                <br>
-                Halim PK                ,
-                81082 , 21 m<sup>2</sup>
-              </p>
-              <a href="#" class="button high_device_link"><span>&#10004;</span>View Detail</a>
-              <a href="#" class="small_device_link" >View Detail</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-md-6 featured-item">
-          <div class="labels">
-            <div class="label-rent"></div>
-            <div class="label-sale"></div>
-          </div>
-          <div class="category">
-            Home
-          </div>
-          <ul class="list-inline featured-item-header text-center">
-            <li><strong>
-              Price </strong><small>1.200.000 @ Month</small>
-            </li>
-          </ul>
-          <figure>
-            <img class="img-responsive" src="<?php echo base_url('assets/image/pictures/property-20150921052144.png');?>" alt="Amber Cottage">
-            <figcaption>
-              <h3>
-                Komp. Sqadron
-              </h3>
-              <p>
-                Jakarta                <br>
-                Halim PK                ,
-                81082 , 21 m<sup>2</sup>
-              </p>
-              <a href="#" class="button high_device_link"><span>&#10004;</span>View Detail</a>
-              <a href="#" class="small_device_link" >View Detail</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-md-6 featured-item">
-          <div class="labels">
-            <div class="label-rent"></div>
-            <div class="label-sale"></div>
-          </div>
-          <div class="category">
-            Home
-          </div>
-          <ul class="list-inline featured-item-header text-center">
-            <li><strong>
-              Price </strong><small>1.200.000 @ Month</small>
-            </li>
-          </ul>
-          <figure>
-            <img class="img-responsive" src="<?php echo base_url('assets/image/pictures/property-20150921052144.png');?>" alt="Amber Cottage">
-            <figcaption>
-              <h3>
-                Komp. Sqadron
-              </h3>
-              <p>
-                Jakarta                <br>
-                Halim PK                ,
-                81082 , 21 m<sup>2</sup>
-              </p>
-              <a href="#" class="button high_device_link"><span>&#10004;</span>View Detail</a>
-              <a href="#" class="small_device_link" >View Detail</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-md-6 featured-item">
-          <div class="labels">
-            <div class="label-rent"></div>
-            <div class="label-sale"></div>
-          </div>
-          <div class="category">
-            Home
-          </div>
-          <ul class="list-inline featured-item-header text-center">
-            <li><strong>
-              Price </strong><small>1.200.000 @ Month</small>
-            </li>
-          </ul>
-          <figure>
-            <img class="img-responsive" src="<?php echo base_url('assets/image/pictures/property-20150921052144.png');?>" alt="Amber Cottage">
-            <figcaption>
-              <h3>
-                Komp. Sqadron
-              </h3>
-              <p>
-                Jakarta                <br>
-                Halim PK                ,
-                81082 , 21 m<sup>2</sup>
-              </p>
-              <a href="#" class="button high_device_link"><span>&#10004;</span>View Detail</a>
-              <a href="#" class="small_device_link" >View Detail</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-md-6 featured-item">
-          <div class="labels">
-            <div class="label-rent"></div>
-            <div class="label-sale"></div>
-          </div>
-          <div class="category">
-            Home
-          </div>
-          <ul class="list-inline featured-item-header text-center">
-            <li><strong>
-              Price </strong><small>1.200.000 @ Month</small>
-            </li>
-          </ul>
-          <figure>
-            <img class="img-responsive" src="<?php echo base_url('assets/image/pictures/property-20150921052144.png');?>" alt="Amber Cottage">
-            <figcaption>
-              <h3>
-                Komp. Sqadron
-              </h3>
-              <p>
-                Jakarta                <br>
-                Halim PK                ,
-                81082 , 21 m<sup>2</sup>
-              </p>
-              <a href="#" class="button high_device_link"><span>&#10004;</span>View Detail</a>
-              <a href="#" class="small_device_link" >View Detail</a>
-            </figcaption>
-          </figure>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</section>
-  </div>
-  <div class="footer-bottom">
-      <div class="container">
-          <nav class="clearfix">
-              <ul class="nav navbar-nav footer-nav">
-                  <li><a href="#">Lorem</a></li>
-                  <li><a href="#">Lorem</a></li>
-                  <li><a href="#">Lorem</a></li>
-              </ul>
-          </nav>
-
-          <div class="copyright">
-            &copy;2016 Zuiplo. Created by JICOS
-          </div>
-      </div>
-  </div>
-</div>
-  <script>
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: {lat: -6.204831, lng: 106.840848}
-  });
-
-  var geocoder = new google.maps.Geocoder();
-
-  document.getElementById('submit').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
-  });
-}
-
-function geocodeAddress(geocoder, resultsMap) {
-  var address = document.getElementById('address').value;
-  geocoder.geocode({'address': address}, function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      resultsMap.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: resultsMap,
-        position: results[0].geometry.location
-      });
-      var lat = results[0].geometry.location.lat();
-      var lng = results[0].geometry.location.lng();
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-    document.getElementById('lat').value = lat;
-    document.getElementById('lng').value=lng;
-  });
-}
-var marker = null;
-function initialize() {
-var mapOptions = {
-  center: new google.maps.LatLng(-6.175486, 106.825407),
-  zoom: 15
-};
-var map = new google.maps.Map(document.getElementById("map-canvas"),
-    mapOptions);
-google.maps.event.addListener(map, 'click', function(event) {
-  if (marker != undefined){
-    marker.setMap(null);
-    marker=null;
-  }
-  if (marker == null) {
-    marker = new google.maps.Marker({
-      position: event.latLng,
-      map: map,
-      title: 'Your base',
-
-      draggable: true,
-      animation: google.maps.Animation.DROP
-    });
-    updateFieldsAndCenter(map, marker);
-    google.maps.event.addListener(marker, 'dragend', function() {
-      updateFieldsAndCenter(map, marker);
-    });
-  }
-});
-}
-
-function updateMapAndCenter(map, marker) {
-
-window.setTimeout(function() {
-  map.panTo(marker.getPosition());
-}, 3000);
-}
-function updateFieldsAndCenter(map, marker) {
-
-window.setTimeout(function() {
-  map.panTo(marker.getPosition());
-}, 3000);
-
-document.getElementById("_lat").value = marker.getPosition().lat();
-document.getElementById("_lng").value = marker.getPosition().lng();
-}
-var image = 'assets/images/property.png';
-var image2= 'assets/images/lokasi_sekitar.png';
-
-
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
-</script>
-<!--
-      <div id="map">
-
-      </div>
-      <div id="floating-panel" class="col-md-12 float">
-        <div class="col-md-1"></div>
-
-        <div class="col-md-6 logo-find">
-          <div class="col-md-2">
-            <img src="<?php echo base_url('assets/image/srikandev.png');?> ">
-          </div>
-        <div>
-      </div>
-      </div>
-      <div id="floating-panel2" class="col-md-12 ">
-          <div class="col-md-12 logo-find">
-            <div class="col-md-2"></div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4 test">
-              <div class="input-group">
-                 <input type="text" class="form-control control-find" placeholder="Find Here">
-                 <span class="input-group-btn">
-                   <button class="control-find find-button" type="button"><i class="fa fa-search find-button"></i></button>
-                 </span>
-               </div>
-            </div>
-          <div>
-      </div>
-    </div>
-      <div class="col-md-12">
-        <div class="col-md-12">
-          <div class="col-md-12 coba">
-            <div class="col-md-12 skip"></div>
-
-                    <div class="col-md-12 find-next">
-                      <div class="col-md-12 ex">  </div>
-                      <div class="col-md-12 xe">
-                        <div class="col-md-6 skips"></div>
-                        <div class="col-md-2 near">
-                          <div class="btn-group btn-set">
-                              <button type="button" class="btn btn-danger btn-dropdown">Action</button>
-                              <button type="button" class="btn btn-danger dropdown-toggle btn-dropdown" data-toggle="dropdown" >
-                                <span class="caret"></span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                              </button>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">All</a></li>
-                                <li><a href="#">Near</a></li>
-                                <li><a href="#">Far</a></li>
-
-                              </ul>
+                            <div class="account pull-right">
+                                <ul class="nav nav-pills">
+                                    <li><a href="login.html"></a></li>
+                                    <li><a href="registration.html"></a></li>
+                                </ul>
                             </div>
-                          </div>
-                          <div class="col-md-4 qa">
-                            <div class="col-md-12 btn-set">
-                                   <div class="input-group">
-                                     <input type="text" class="form-control form-input" aria-label="..." placeholder="Price IDR.">
-                                     <div class="input-group-btn">
-                                       <button type="button" class="btn btn-danger dropdown-toggle form-input-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sure<span class="caret"></span></button>
-                                       <ul class="dropdown-menu dropdown-menu-right">
-                                         <li><a href="#">Sure</a></li>
-                                         <li><a href="#">Below</a></li>
-                                         <li><a href="#">Above</a></li>
+                        </div><!-- /.span12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.breadcrumb-wrapper -->
 
-                                       </ul>
-                                     </div>
-                                   </div>
-                                 </div>
-                                </div>
-                          </div>
-                          <div class="col-md-12 tab"> </div>
-                                <div class="col-md-12 tabs">
-                                  <div class="col-md-12">
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
+            <!-- HEADER -->
+            <div id="header-wrapper">
+                <div id="header">
+                    <div id="header-inner">
+                        <div class="container">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <div class="row">
+                                        <div class="logo-wrapper span4">
+                                            <a href="#nav" class="hidden-desktop" id="btn-nav">Toggle navigation</a>
 
-                                      </div>
-                                    </div>
-                                    <div class="col-md-12 con"></div>
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
-                                        <div class="col-md-12 con"></div>
-                                      </div>
-                                    </div>
+                                            <div class="logo">
+                                                <a href="index.html" title="Home">
+                                                    <img src="<?php echo base_url('assets/find/img/zuiplo.png');?>" class="zuiplo-logo-find" alt="Home" width="150px;" height="100px;">
+                                                </a>
+                                            </div><!-- /.logo -->
 
-                                    <div class="col-md-12 con"></div>
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
-                                        <div class="col-md-12 con"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-12 con"></div>
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
-                                        <div class="col-md-12 con"></div>
-                                      </div>
-                                    </div>
+                                            <div class="site-name">
+                                                <a href="/" title="Home" class="brand"></a>
+                                            </div><!-- /.site-name -->
 
-                                    <div class="col-md-12 con"></div>
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
-                                        <div class="col-md-12 con"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-12 con"></div>
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
-                                        <div class="col-md-12 con"></div>
-                                      </div>
-                                    </div>
+                                            <div class="site-slogan">
+                                                <span>Real estate &amp; Rental<br>made easy</span>
+                                            </div><!-- /.site-slogan -->
+                                        </div><!-- /.logo-wrapper -->
 
-                                    <div class="col-md-12 con"></div>
-                                    <div clas="col-md-12">
-                                      <div clas="col-md-12">
-                                        <div class="col-md-12 tab-ch">
-                                          <div class="col-md-3 ch">Nama</div>
-                                          <div class="col-md-2 ch">House</div>
-                                          <div class="col-md-4 ch">Price / Month,
-                                           Week, Days</div>
-                                           <div class="col-md-2 ch">Ways 21m </div>
-                                           <div class="col-md-1">
-                                                 <a href="#" class="btn btn-primary btn-sm button-view">View</a>
-                                           </div>
-                                        <div class="col-md-12 con"></div>
-                                      </div>
-                                    </div>
+                                        <div class="info">
+                                            <div class="site-email">
 
-                                  </div>
-
-                                </div>
-
-                              </div>
-
-                              </div>
-
-              </div>
-
-          </div>
+                                            </div><!-- /.site-email -->
 
 
+                                        </div><!-- /.info -->
+                                        <a class="list-your-property arrow-right">
+                                        <form method="get" class="site-search" action="?">
+                                           <div class="input-append">
+                                               <input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="Search" type="text" name="">
+                                               <button type="submit" class="btn">
+                                                  <i class="fa fa-search" aria-hidden="true"></i></button>
+                                           </div><!-- /.input-append -->
+                                       </form><!-- /.site-search -->
+                                       </a>
+                                    </div><!-- /.row -->
+                                </div><!-- /.navbar-inner -->
+                            </div><!-- /.navbar -->
+                        </div><!-- /.container -->
+                    </div><!-- /#header-inner -->
+                </div><!-- /#header -->
+            </div><!-- /#header-wrapper -->
+
+            <div id="map">
+
+            </div>
+
+            <div id="content">
+
+<div class="container col-md-12" >
+      <div class="col-md-12">
+        <div id="main" class="col-md-12">
+            <div class="row">
+                <div class="span12">
+                    <h1 class="page-header"></h1>
+
+                    <div class="properties-rows">
+    <div class="filter">
+        <form action="?" method="get" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="inputSortBy">
+                    Price IDR.
+                    <span class="form-required" title="This field is required.">*</span>
+                </label>
+                <div class="controls">
+                    <select id="inputSortBy">
+                        <option id="price">Sure</option>
+                        <option id="published">Below</option>
+                        <option id="published">Above</option>
+                    </select>
+                </div><!-- /.controls -->
+            </div><!-- /.control-group -->
+
+            <div class="control-group">
+                <label class="control-label" for="inputOrder">
+                    Near
+                    <span class="form-required" title="This field is required.">*</span>
+                </label>
+                <div class="controls">
+                    <select id="inputOrder">
+                        <option id="asc">All</option>
+                        <option id="desc">Near</option>
+                        <option id="desc">Far</option>
+                    </select>
+                </div><!-- /.controls -->
+            </div><!-- /.control-group -->
+        </form>
+    </div><!-- /.filter -->
+    </div><!-- /.properties-rows -->                <div class="properties-rows">
+        <div class="row">
+
+            <div class="property span12">
+                <div class="row">
+                  <div class="span1"></div>
+                    <div class="image span3">
+                        <div class="content">
+                            <a href="detail.html"></a>
+                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
+                        </div><!-- /.content -->
+                    </div><!-- /.image -->
+
+                    <div class="body span7">
+                        <div class="title-price row">
+                            <div class="title span4">
+                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
+                            </div><!-- /.title -->
+
+                            <div class="price">
+                                1 250 000€
+                            </div><!-- /.price -->
+                        </div><!-- /.title -->
+
+                        <div class="location">Palo Alto CA</div><!-- /.location -->
+                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
+                        <div class="area">
+                            <span class="key">Area:</span><!-- /.key -->
+                            <span class="value">120</span><!-- /.value -->
+                        </div><!-- /.area -->
+                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
+                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
+                    </div><!-- /.body -->
+                </div><!-- /.property -->
+            </div><!-- /.row -->
+            <div class="property span12">
+                <div class="row">
+                  <div class="span1"></div>
+                    <div class="image span3">
+                        <div class="content">
+                            <a href="detail.html"></a>
+                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
+                        </div><!-- /.content -->
+                    </div><!-- /.image -->
+
+                    <div class="body span7">
+                        <div class="title-price row">
+                            <div class="title span4">
+                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
+                            </div><!-- /.title -->
+
+                            <div class="price">
+                                1 250 000€
+                            </div><!-- /.price -->
+                        </div><!-- /.title -->
+
+                        <div class="location">Palo Alto CA</div><!-- /.location -->
+                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
+                        <div class="area">
+                            <span class="key">Area:</span><!-- /.key -->
+                            <span class="value">120</span><!-- /.value -->
+                        </div><!-- /.area -->
+                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
+                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
+                    </div><!-- /.body -->
+                </div><!-- /.property -->
+            </div><!-- /.row -->
+            <div class="property span12">
+                <div class="row">
+                  <div class="span1"></div>
+                    <div class="image span3">
+                        <div class="content">
+                            <a href="detail.html"></a>
+                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
+                        </div><!-- /.content -->
+                    </div><!-- /.image -->
+
+                    <div class="body span7">
+                        <div class="title-price row">
+                            <div class="title span4">
+                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
+                            </div><!-- /.title -->
+
+                            <div class="price">
+                                1 250 000€
+                            </div><!-- /.price -->
+                        </div><!-- /.title -->
+
+                        <div class="location">Palo Alto CA</div><!-- /.location -->
+                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
+                        <div class="area">
+                            <span class="key">Area:</span><!-- /.key -->
+                            <span class="value">120</span><!-- /.value -->
+                        </div><!-- /.area -->
+                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
+                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
+                    </div><!-- /.body -->
+                </div><!-- /.property -->
+            </div><!-- /.row -->
+            <div class="property span12">
+                <div class="row">
+                  <div class="span1"></div>
+                    <div class="image span3">
+                        <div class="content">
+                            <a href="detail.html"></a>
+                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
+                        </div><!-- /.content -->
+                    </div><!-- /.image -->
+
+                    <div class="body span7">
+                        <div class="title-price row">
+                            <div class="title span4">
+                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
+                            </div><!-- /.title -->
+
+                            <div class="price">
+                                1 250 000€
+                            </div><!-- /.price -->
+                        </div><!-- /.title -->
+
+                        <div class="location">Palo Alto CA</div><!-- /.location -->
+                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
+                        <div class="area">
+                            <span class="key">Area:</span><!-- /.key -->
+                            <span class="value">120</span><!-- /.value -->
+                        </div><!-- /.area -->
+                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
+                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
+                    </div><!-- /.body -->
+                </div><!-- /.property -->
+            </div><!-- /.row -->
+
+        </div><!-- /.row -->
+    </div><!-- /.properties-rows -->
+                    <div class="pagination pagination-centered">
+        <ul>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li ><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">next</a></li>
+            <li><a href="#">last</a></li>
+        </ul>
+    </div><!-- /.pagination -->            </div>
+
+                </div>
+            </div>
         </div>
-
-      </div>
-  <div class="col-md-12 pagination">
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
-            <nav>
-              <ul class="pagination pag-ch">
-                <li>
-                  <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                  <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-              </nav>
     </div>
-  </div>
+
+        </div><!-- /#content -->
+    </div><!-- /#wrapper-inner -->
+
+    <div id="footer-wrapper">
 
 
-        <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: {lat: -6.204831, lng: 106.840848}
+        <div id="footer" class="footer container">
+            <div id="footer-inner">
+                <div class="row">
+                    <div class="span6 copyright">
+                        <p>&copy;2016 Zuiplo. Created by JICOS <a>
+                    </div><!-- /.copyright -->
+
+
+                </div><!-- /.row -->
+            </div><!-- /#footer-inner -->
+        </div><!-- /#footer -->
+    </div><!-- /#footer-wrapper -->
+    </div><!-- /#wrapper -->
+    </div><!-- /#wrapper-outer -->
+</div>
+
+  </body>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=true"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.ezmark.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.currency.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.cookie.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/retina.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/bootstrap.min.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/carousel.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/gmap3.min.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/gmap3.infobox.min.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/libraries/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/libraries/chosen/chosen.jquery.min.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/libraries/bootstrap-fileupload/bootstrap-fileupload.js');?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('assets/find/js/realia.js');?>"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40414414-1', 'byaviators.com');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: {lat: -6.204831, lng: 106.840848}
+    });
+
+    var geocoder = new google.maps.Geocoder();
+
+    document.getElementById('submit').addEventListener('click', function() {
+      geocodeAddress(geocoder, map);
+    });
+  }
+
+  function geocodeAddress(geocoder, resultsMap) {
+    var address = document.getElementById('address').value;
+    geocoder.geocode({'address': address}, function(results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        resultsMap.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: resultsMap,
+          position: results[0].geometry.location
         });
-
-        var geocoder = new google.maps.Geocoder();
-
-        document.getElementById('submit').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
-        });
+        var lat = results[0].geometry.location.lat();
+        var lng = results[0].geometry.location.lng();
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
       }
+      document.getElementById('lat').value = lat;
+      document.getElementById('lng').value=lng;
+    });
+  }
+  var marker = null;
+  function initialize() {
+  var mapOptions = {
+    center: new google.maps.LatLng(-6.175486, 106.825407),
+    zoom: 15
+  };
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
+  google.maps.event.addListener(map, 'click', function(event) {
+    if (marker != undefined){
+      marker.setMap(null);
+      marker=null;
+    }
+    if (marker == null) {
+      marker = new google.maps.Marker({
+        position: event.latLng,
+        map: map,
+        title: 'Your base',
 
-      function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({'address': address}, function(results, status) {
-          if (status === google.maps.GeocoderStatus.OK) {
-            resultsMap.setCenter(results[0].geometry.location);
-            var marker = new google.maps.Marker({
-              map: resultsMap,
-              position: results[0].geometry.location
-            });
-            var lat = results[0].geometry.location.lat();
-            var lng = results[0].geometry.location.lng();
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          }
-          document.getElementById('lat').value = lat;
-          document.getElementById('lng').value=lng;
-        });
-      }
-      var marker = null;
-    function initialize() {
-      var mapOptions = {
-        center: new google.maps.LatLng(-6.175486, 106.825407),
-        zoom: 15
-      };
-      var map = new google.maps.Map(document.getElementById("map-canvas"),
-          mapOptions);
-      google.maps.event.addListener(map, 'click', function(event) {
-        if (marker != undefined){
-          marker.setMap(null);
-          marker=null;
-        }
-        if (marker == null) {
-          marker = new google.maps.Marker({
-            position: event.latLng,
-            map: map,
-            title: 'Your base',
-
-            draggable: true,
-            animation: google.maps.Animation.DROP
-          });
-          updateFieldsAndCenter(map, marker);
-          google.maps.event.addListener(marker, 'dragend', function() {
-            updateFieldsAndCenter(map, marker);
-          });
-        }
+        draggable: true,
+        animation: google.maps.Animation.DROP
+      });
+      updateFieldsAndCenter(map, marker);
+      google.maps.event.addListener(marker, 'dragend', function() {
+        updateFieldsAndCenter(map, marker);
       });
     }
+  });
+  }
 
-    function updateMapAndCenter(map, marker) {
+  function updateMapAndCenter(map, marker) {
 
-      window.setTimeout(function() {
-        map.panTo(marker.getPosition());
-      }, 3000);
-    }
-    function updateFieldsAndCenter(map, marker) {
+  window.setTimeout(function() {
+    map.panTo(marker.getPosition());
+  }, 3000);
+  }
+  function updateFieldsAndCenter(map, marker) {
 
-      window.setTimeout(function() {
-        map.panTo(marker.getPosition());
-      }, 3000);
+  window.setTimeout(function() {
+    map.panTo(marker.getPosition());
+  }, 3000);
 
-      document.getElementById("_lat").value = marker.getPosition().lat();
-      document.getElementById("_lng").value = marker.getPosition().lng();
-    }
-    var image = 'assets/images/property.png';
-    var image2= 'assets/images/lokasi_sekitar.png';
+  document.getElementById("_lat").value = marker.getPosition().lat();
+  document.getElementById("_lng").value = marker.getPosition().lng();
+  }
+  var image = 'assets/find/images/property.png';
+  var image2= 'assets/find/images/lokasi_sekitar.png';
 
 
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
-    </script> -->
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
+  </script>
+
+  </html>
