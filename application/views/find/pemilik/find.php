@@ -30,7 +30,7 @@
             <!-- HEADER -->
             <div id="header-wrapper">
                 <div id="header">
-                    <div id="header-inner span12">
+                    <div id="header-inner">
                         <div class="container">
                             <div class="navbar">
                                 <div class="navbar-inner">
