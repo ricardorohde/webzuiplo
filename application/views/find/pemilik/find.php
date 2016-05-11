@@ -30,10 +30,10 @@
             <!-- HEADER -->
             <div id="header-wrapper">
                 <div id="header">
-                    <div id="header-inner">
+                    <div id="header-inner span12">
                         <div class="container">
                             <div class="navbar">
-                                <div class="navbar-inner span12">
+                                <div class="navbar-inner">
                                     <div class="row ">
                                         <div class="logo-wrapper span4">
                                             <a href="#nav" class="hidden-desktop" id="btn-nav">Toggle navigation</a>
