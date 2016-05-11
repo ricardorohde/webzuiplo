@@ -24,7 +24,7 @@
         <div id="wrapper-inner">
             <!-- BREADCRUMB -->
             <div class="breadcrumb-wrapper">
-              
+
             </div><!-- /.breadcrumb-wrapper -->
 
             <!-- HEADER -->
@@ -34,7 +34,7 @@
                         <div class="container">
                             <div class="navbar">
                                 <div class="navbar-inner">
-                                    <div class="row">
+                                    <div class="row span12">
                                         <div class="logo-wrapper span4">
                                             <a href="#nav" class="hidden-desktop" id="btn-nav">Toggle navigation</a>
 
