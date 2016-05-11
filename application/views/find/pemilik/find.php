@@ -122,7 +122,8 @@
             </div><!-- /.control-group -->
         </form>
     </div><!-- /.filter -->
-    </div><!-- /.properties-rows -->                <div class="properties-rows">
+    </div><!-- /.properties-rows -->
+                   <div class="properties-rows">
         <div class="row">
 
             <div class="property span12">
