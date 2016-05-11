@@ -24,22 +24,7 @@
         <div id="wrapper-inner">
             <!-- BREADCRUMB -->
             <div class="breadcrumb-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="span12">
-                            <ul class="breadcrumb pull-left">
-                                <li><a href="index.html"></a></li>
-                            </ul><!-- /.breadcrumb -->
-
-                            <div class="account pull-right">
-                                <ul class="nav nav-pills">
-                                    <li><a href="login.html"></a></li>
-                                    <li><a href="registration.html"></a></li>
-                                </ul>
-                            </div>
-                        </div><!-- /.span12 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
+              
             </div><!-- /.breadcrumb-wrapper -->
 
             <!-- HEADER -->
