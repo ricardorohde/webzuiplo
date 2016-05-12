@@ -88,8 +88,8 @@
         <div id="main" class="col-md-12">
             <div class="row">
                 <div class="span12">
-                    
 
+<div class="properties-rows"></div>
                     <div class="properties-rows">
     <div class="filter">
         <form action="?" method="get" class="form-horizontal">
