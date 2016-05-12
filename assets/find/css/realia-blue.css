@@ -10,7 +10,9 @@ form label.checkbox {
   margin: 0px;
   padding: 0px
 }
-
+.create-jicos{
+  color: #fff;
+}
 form .form-actions {
   background-color: transparent;
   border: 0px;

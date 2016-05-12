@@ -88,7 +88,7 @@
         <div id="main" class="col-md-12">
             <div class="row">
                 <div class="span12">
-                    <h1 class="page-header"></h1>
+                    
 
                     <div class="properties-rows">
     <div class="filter">
@@ -282,9 +282,9 @@
         <div id="footer" class="footer container">
             <div id="footer-inner">
                 <div class="row">
-                    <div class="span6 copyright">
+                    <div class="span6 copyright create-jicos">
                         <p>&copy;2016 Zuiplo. Created by JICOS <a>
-                    </div><!-- /.copyright -->
+                    </div>
 
 
                 </div><!-- /.row -->
