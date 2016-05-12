@@ -2423,7 +2423,7 @@ iframe.map {
 }
 
 .properties-rows .property .bedrooms {
-  background-image: url("../img/icons/bedrooms.png");
+  background-image: url("assets/img/icons/bedrooms.png");
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 21px 12px;
