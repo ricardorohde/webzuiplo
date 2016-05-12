@@ -407,3 +407,14 @@
   </script>
 
   </html>
+  <style>
+  .properties-rows .property .bedrooms {
+    background-image:url('assets/find/img/icon/bedrooms.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 21px 12px;
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 30px
+  }
+  </style>
