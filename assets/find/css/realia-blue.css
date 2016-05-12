@@ -19,7 +19,9 @@ form .form-actions {
   margin: 0px;
   padding: 0px
 }
-
+.jar{
+  margin-top: 50px;
+}
 form .fileupload .uneditable-input {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

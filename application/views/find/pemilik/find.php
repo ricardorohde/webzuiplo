@@ -89,8 +89,7 @@
             <div class="row">
                 <div class="span12">
 
-<div class="properties-rows"></div>
-                    <div class="properties-rows">
+                    <div class="properties-rows jar">
     <div class="filter">
         <form action="?" method="get" class="form-horizontal">
             <div class="control-group">
