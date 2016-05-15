@@ -319,7 +319,7 @@
         <li class="header">MAIN NAVIGATION</li>
         <li>
           <a href="#">
-            <i class="fa fa-th"></i> <span>Activity</span>
+            <i class="fa fa-dashboard"></i> <span>Activity</span>
 
           </a>
         </li>
