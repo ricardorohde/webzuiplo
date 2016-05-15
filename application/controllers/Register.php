@@ -16,4 +16,7 @@ class Register extends CI_Controller
     $this->general->load('register/pemilik/add');
 
     }
+    public function tenant(){
+      $this->general->load('register/pencari/add');
+    }
 }
