@@ -1,6 +1,6 @@
+
 <section class="content">
 
-</div>
 <div class="container">
 	<div class="block-content">
     	<div class="block-content-inner">
@@ -33,25 +33,27 @@
 			<div class="page-header page-header-no-rules center">
 				<h2 class="title-text">
 					<p class="lead">
-							<a href="#s1"  class="cover-btn-lg">REGISTER</a>
-							<div class="col-md-12 pages"></div>
+							<div class="subMenu">
+								<!-- <div class="inner"> -->
+										<a href="#s1"  class="cover-btn-lg">REGISTER</a>
+								<!-- </div> -->
+							</div>
+
+
 					</p>
 				</h2>
-
+					<div class="col-md-12 pages-skip"></div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<!-- srikandev -->
 
-
-</div>
 <div class="container">
 	<div class="block-content">
     	<div class="block-content-inner">
 			<div class="page-header page-header-no-rules center">
-				<h2 class="title-reg">Register</h2>
+				<h2 class=" title-reg">Register</h2>
 			</div>
 
 			<div class="row">
@@ -74,7 +76,7 @@
             </div>
 
 
-            <div class="form-group">
+            <div class=" form-group">
                 <label>Address</label>
                 <textarea  class="form-control"></textarea>
             </div>
@@ -85,39 +87,161 @@
         </form>
     </div>
 </div>	    </div>
-	</div>
+<div class="col-md-12 footer-form-reg"></div>
+<div class="s1 col-md-12 footer-reg">
+	&copy;2016 Zuiplo. Created by JICOS
 </div>
 
-            </div>
-        </div>
-    </div>
-
-    <div id="footer-wrapper">
-        <div id="footer">
-            <div id="footer-inner">
 
 
-<div class="block-content block-content-medium-padding fullwidth background-primary-dark">
-    <div class="block-content-inner">
-        <div class="social-stripe center">
+  <script type="text/javascript">
 
-            <a href="#" class="twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
+  $(document).ready( function() {
+      $('.subMenu').smint({
+      	'scrollSpeed' : 1000
+      });
+  });
 
-            <a href="#" class="instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <a href="#" class="instagram">
-                <i class="fa fa-group"></i>
-            </a>
-        </div>
-    </div>
-</div>                 </div>
-                    </div>
+  </script>
+
+<script>
+(function(){
 
 
-            </div>
-        </div>
-    </div>
-</div>
+	$.fn.smint = function( options ) {
+
+		var settings = $.extend({
+			'scrollSpeed'  : 500,
+			'mySelector'     : 'div'
+		}, options);
+
+		$(this).addClass('smint');
+
+		var optionLocs = new Array(),
+			lastScrollTop = 0,
+			menuHeight = $(".smint").height(),
+			smint = $('.smint'),
+        	smintA = $('.smint a'),
+        	myOffset = smint.height();
+
+		if ( settings.scrollSpeed ) {
+				var scrollSpeed = settings.scrollSpeed
+			}
+
+		if ( settings.mySelector ) {
+				var mySelector = settings.mySelector
+		};
+		return smintA.each( function(index) {
+			var id = $(this).attr('href').split('#')[1];
+			if (!$(this).hasClass("extLink")) {
+				$(this).attr('id', id);
+			}
+			optionLocs.push(Array(
+				$(mySelector+"."+id).position().top-menuHeight,
+				$(mySelector+"."+id).height()+$(mySelector+"."+id).position().top, id)
+			);
+
+			var stickyTop = smint.offset().top;
+			var stickyMenu = function(direction){
+
+				var scrollTop = $(window).scrollTop()+myOffset;
+
+				if (scrollTop > stickyTop+myOffset) {
+					smint.css({ 'position': 'relative', 'top':0,'left':0 }).addClass('fxd');
+
+					$('body').css('padding-top', menuHeight );
+				} else {
+					smint.css( 'position', 'relative').removeClass('fxd');
+
+					$('body').css('padding-top', '0' );
+				}
+
+				if(optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){
+					if(direction == "up"){
+						$("#"+id).addClass("active");
+						$("#"+optionLocs[index+1][2]).removeClass("active");
+					} else if(index > 0) {
+						$("#"+id).addClass("active");
+						$("#"+optionLocs[index-1][2]).removeClass("active");
+					} else if(direction == undefined){
+						$("#"+id).addClass("active");
+					}
+					$.each(optionLocs, function(i){
+						if(id != optionLocs[i][2]){
+
+							$("#"+optionLocs[i][2]).removeClass("active");
+						}
+					});
+				}
+			};
+
+			stickyMenu();
+
+			$(window).scroll(function() {
+				var st = $(this).scrollTop()+myOffset;
+				if (st > lastScrollTop) {
+				    direction = "down";
+				} else if (st < lastScrollTop ){
+				    direction = "up";
+				}
+				lastScrollTop = st;
+				stickyMenu(direction);
+
+				if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	       			smintA.removeClass('active')
+	       			$(".smint a:not('.extLink'):last").addClass('active')
+
+   				} else {
+   					smintA.last().removeClass('active')
+   				}
+			});
+
+        	$(this).on('click', function(e){
+
+				var myOffset = smint.height();
+
+				e.preventDefault();
+
+				var hash = $(this).attr('href').split('#')[1];
+
+				var goTo =  $(mySelector+'.'+ hash).offset().top-myOffset;
+
+				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
+
+				if ($(this).hasClass("extLink"))
+                {
+                    return false;
+                }
+
+			});
+
+
+			$('.intLink').on('click', function(e){
+				var myOffset = smint.height();
+
+				e.preventDefault();
+
+				var hash = $(this).attr('href').split('#')[1];
+
+				if (smint.hasClass('fxd')) {
+					var goTo =  $(mySelector+'.'+ hash).position().top-myOffset;
+				} else {
+					var goTo =  $(mySelector+'.'+ hash).position().top-myOffset*2;
+				}
+
+				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
+
+				if ($(this).hasClass("extLink"))
+                {
+                    return false;
+                }
+
+			});
+		});
+
+	};
+
+	$.fn.smint.defaults = { 'scrollSpeed': 500, 'mySelector': 'div'};
+})(jQuery);
+
+</script>

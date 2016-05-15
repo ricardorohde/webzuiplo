@@ -207,7 +207,6 @@ td, th {
     box-shadow: none!important
   }
   a, a:visited {
-    text-decoration: underline
   }
   a[href]:after {
     content: " (" attr(href) ")"
@@ -1362,7 +1361,6 @@ a {
 
 a:focus, a:hover {
   color: #23527c;
-  text-decoration: underline
 }
 
 a:focus {
@@ -2254,7 +2252,7 @@ pre code {
   }
   .col-md-4 {
     width: 33.33333333%
-    
+
   }
   .col-md-3 {
     width: 25%
@@ -3534,7 +3532,6 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-link:focus, .btn-link:hover {
   color: #23527c;
-  text-decoration: underline;
   background-color: transparent
 }
 

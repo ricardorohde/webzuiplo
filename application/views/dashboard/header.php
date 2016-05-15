@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/style.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/smint/css/style.css');?>">
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/form-register.css');?>">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/find/find.css');?>" rel="stylesheet">
@@ -40,11 +40,11 @@
 
   	<!-- Include modernizr-2.8.3.min.js -->
   	<script src="<?php echo base_url('assets/js/modernizr-2.8.3.min.js');?>"></script>
-
+    <script type="text/javascript" src="<?php echo base_url('assets/smint/js/jquerysmint.min.js');?>"></script>
     <script src="<?php base_url('assets/bootstrap/dist/js/bootstrap.js');?>"></script>
     <script src="<?php base_url('assets/bootstrap/dist/js/bootstrap.min.js');?>"></script>
     <script src="<?php base_url('assets/bootstrap/dist/js/npm.js');?>"></script>
-    <script src="<?php base_url('assets/smint/js/jquery.smint.js');?>"></script>
+
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -62,18 +62,6 @@
   })();
 
 </script>
-<script type="text/javascript">
 
-$(document).ready( function() {
-    $('.subMenu').smint({
-    	'scrollSpeed' : 1000
-    });
-});
-
-</script>
-
-<script type="text/javascript" src="<?php echo base_url('assets/smint/js/jquerysmint.min.js');?>"></script>
-
-<script	src="<?php echo base_url('assets/smint/js/jquery.smint.js');?>" type="text/javascript" ></script>
   </head>
 </html>

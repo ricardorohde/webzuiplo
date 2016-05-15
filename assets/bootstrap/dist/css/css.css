@@ -2105,7 +2105,6 @@ var.tag {
 }
 
 .header {
-  position: fixed;
   width: 100%;
   z-index: 6;
   border-bottom-style: solid;
@@ -2261,7 +2260,6 @@ var.tag {
 
 .header .close {
   display: none;
-  position: fixed;
   top: 10px;
   right: 30px;
   width: 30px;
@@ -2822,7 +2820,6 @@ var.tag {
 
 #fixed-footer .content .phishing-notice a {
   color: #ff2151;
-  text-decoration: underline;
   border-bottom: 0
 }
 
@@ -3270,7 +3267,6 @@ var.tag {
 
 #unfixed-footer .content .phishing-notice a {
   color: #ff2151;
-  text-decoration: underline;
   border-bottom: 0
 }
 
@@ -3391,7 +3387,6 @@ var.tag {
 }
 
 .scroll-overlay {
-  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -6258,7 +6253,6 @@ textarea {
   font-weight: 400;
   font-style: normal;
   display: inline-block;
-  text-decoration: inherit
 }
 
 .rating .icons li .icon.back {

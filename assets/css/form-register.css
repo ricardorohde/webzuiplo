@@ -586,6 +586,17 @@ input[type="button"].btn-block {
   color: #5e5e5e;
   background-color: transparent;
 }
+.pages-skip{
+  background-color: #fff;
+  height: 240px;
+}
+.footer-reg{
+  color: #5c5c5c;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.20em;
+}
 /* line 396, ../../libraries/bootstrap/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-text {
   color: #777777;
@@ -2081,7 +2092,8 @@ h1, h2, h3, h4, h5, h6 {
 .title-reg{
   text-align: center;
   color: #39b54a;
-  font-size: 1.9em;
+  font-size: 19pt;
+  font-weight: bold;
   margin-top: 20px;
   font-family: "Raleway", sans-serif;
 }
@@ -4243,7 +4255,6 @@ blockquote:after {
 /* line 43, ../../scss/helpers/_footer.scss */
 .footer-top .nav-pills > li > a:hover {
   background-color: transparent;
-  text-decoration: underline;
 }
 @media (max-width: 767px) {
   /* line 32, ../../scss/helpers/_footer.scss */
@@ -4268,7 +4279,6 @@ blockquote:after {
 /* line 67, ../../scss/helpers/_footer.scss */
 .footer-bottom a {
   color: #fff;
-  text-decoration: underline;
 }
 /* line 72, ../../scss/helpers/_footer.scss */
 .footer-bottom-dark .footer-bottom {

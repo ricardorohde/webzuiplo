@@ -1,3 +1,4 @@
+
 <section class="content">
     <div class="site-wrapper">
 
@@ -27,38 +28,30 @@
           <div class="inner cover">
             <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
-            <p class="lead">
-              <div class="subMenu" >
-                <!-- <div class="inner"> -->
-                    <a href="#s1"  class="cover-btn-lg">JOIN</a>
-                <!-- </div> -->
-              </div>
+            <h2 class="title-text">
+    					<p class="lead">
+    							<div class="subMenu">
+    										<a href="#s1"  class="cover-btn-lg">JOIN</a>
+                        <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="cover-btn-lg ">FIND</a>
+    							</div>
 
-              <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="cover-btn-lg ">FIND</a>
-            </p>
+              </p>
+    				</h2>
+
           </div>
-        </div>
-      </div>
-
-
-
-
 
         </div>
 
       </div>
-
+    </div>
+      </div>
     </div>
 </div>
 
-
           <div class="npt-format-2 npt-hex-hover">
-
                 <div class="s1 col-md-12 title">
                   LET'S JOIN
                 </div>
-
-
             <div class="col-sm-4 col-xs-6">
               <div class="npt-item npt-item-1">
                 <div class="npt-plan-top">
@@ -193,14 +186,7 @@
               &copy;2016 Zuiplo. Created by JICOS
             </div>
           </div>
-
-
-
         </div>
-
-
-
-
 	<style>
 
   .site-wrapper {
@@ -218,12 +204,7 @@
 
 	</style>
 
-
-
-
-
   <script type="text/javascript">
-
 
   $(document).ready( function() {
       $('.subMenu').smint({
@@ -231,5 +212,146 @@
       });
   });
 
-
   </script>
+
+<script>
+(function(){
+
+
+	$.fn.smint = function( options ) {
+
+		var settings = $.extend({
+			'scrollSpeed'  : 500,
+			'mySelector'     : 'div'
+		}, options);
+
+		$(this).addClass('smint');
+
+		var optionLocs = new Array(),
+			lastScrollTop = 0,
+			menuHeight = $(".smint").height(),
+			smint = $('.smint'),
+        	smintA = $('.smint a'),
+        	myOffset = smint.height();
+
+		if ( settings.scrollSpeed ) {
+				var scrollSpeed = settings.scrollSpeed
+			}
+
+		if ( settings.mySelector ) {
+				var mySelector = settings.mySelector
+		};
+		return smintA.each( function(index) {
+			var id = $(this).attr('href').split('#')[1];
+			if (!$(this).hasClass("extLink")) {
+				$(this).attr('id', id);
+			}
+			optionLocs.push(Array(
+				$(mySelector+"."+id).position().top-menuHeight,
+				$(mySelector+"."+id).height()+$(mySelector+"."+id).position().top, id)
+			);
+
+			var stickyTop = smint.offset().top;
+			var stickyMenu = function(direction){
+
+				var scrollTop = $(window).scrollTop()+myOffset;
+
+				if (scrollTop > stickyTop+myOffset) {
+					smint.css({ 'position': 'relative', 'top':0,'left':0 }).addClass('fxd');
+
+					$('body').css('padding-top', menuHeight );
+				} else {
+					smint.css( 'position', 'relative').removeClass('fxd');
+
+					$('body').css('padding-top', '0' );
+				}
+
+				if(optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){
+					if(direction == "up"){
+						$("#"+id).addClass("active");
+						$("#"+optionLocs[index+1][2]).removeClass("active");
+					} else if(index > 0) {
+						$("#"+id).addClass("active");
+						$("#"+optionLocs[index-1][2]).removeClass("active");
+					} else if(direction == undefined){
+						$("#"+id).addClass("active");
+					}
+					$.each(optionLocs, function(i){
+						if(id != optionLocs[i][2]){
+
+							$("#"+optionLocs[i][2]).removeClass("active");
+						}
+					});
+				}
+			};
+
+			stickyMenu();
+
+			$(window).scroll(function() {
+				var st = $(this).scrollTop()+myOffset;
+				if (st > lastScrollTop) {
+				    direction = "down";
+				} else if (st < lastScrollTop ){
+				    direction = "up";
+				}
+				lastScrollTop = st;
+				stickyMenu(direction);
+
+				if($(window).scrollTop() + $(window).height() == $(document).height()) {
+	       			smintA.removeClass('active')
+	       			$(".smint a:not('.extLink'):last").addClass('active')
+
+   				} else {
+   					smintA.last().removeClass('active')
+   				}
+			});
+
+        	$(this).on('click', function(e){
+
+				var myOffset = smint.height();
+
+				e.preventDefault();
+
+				var hash = $(this).attr('href').split('#')[1];
+
+				var goTo =  $(mySelector+'.'+ hash).offset().top-myOffset;
+
+				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
+
+				if ($(this).hasClass("extLink"))
+                {
+                    return false;
+                }
+
+			});
+
+
+			$('.intLink').on('click', function(e){
+				var myOffset = smint.height();
+
+				e.preventDefault();
+
+				var hash = $(this).attr('href').split('#')[1];
+
+				if (smint.hasClass('fxd')) {
+					var goTo =  $(mySelector+'.'+ hash).position().top-myOffset;
+				} else {
+					var goTo =  $(mySelector+'.'+ hash).position().top-myOffset*2;
+				}
+
+				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
+
+				if ($(this).hasClass("extLink"))
+                {
+                    return false;
+                }
+
+			});
+		});
+
+	};
+
+	$.fn.smint.defaults = { 'scrollSpeed': 500, 'mySelector': 'div'};
+})(jQuery);
+
+</script>
