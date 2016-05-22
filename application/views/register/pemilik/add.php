@@ -114,7 +114,7 @@
                 <div class="span4">
                     <h3><strong>2.</strong> <span>Property info</span></h3>
 
-                    <div class="property-type control-group">
+										<div class="property-type control-group">
 											<label class="control-label" for="inputPropertyArea">
 													Area
 													<span class="form-required" title="This field is required.">*</span>
@@ -123,7 +123,8 @@
 													<input type="text" id="inputPropertyArea">
 											</div><!-- /.controls -->
                     </div><!-- /.control-group -->
-										<div class="property-type control-group">
+
+                    <div class="contract-type control-group">
 											<label class="control-label" for="inputPropertyArea">
 													Area
 													<span class="form-required" title="This field is required.">*</span>
