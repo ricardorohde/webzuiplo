@@ -196,7 +196,7 @@
                     <div class="fileupload fileupload-new control-group" data-provides="fileupload">
                         <label class="control-label" for="inputPropertyPrice">
                             Image files
-                        </label>
+                        </label><br>
 
                         <div class="input-append">
                             <div class="uneditable-input">
