@@ -14,4 +14,9 @@ class General extends CI_Model
   // $this->general->logdata($page,$data);
 
   }
+  public  function get()
+    {
+        $query = $this->db->get('polsek');
+        return $query;
+    }
 }

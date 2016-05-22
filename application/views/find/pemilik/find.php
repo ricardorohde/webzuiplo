@@ -1,420 +1,618 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Aviators - byaviators.com">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="<?php echo base_url('assets/find/img/faviconpng');?>" type="image/png">
-    <link rel="stylesheet" href="<?php echo base_url('assets/find/css/bootstrap.css');?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/find/css/bootstrap-responsive.css');?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/chosen/chosen.css');?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/bootstrap-fileupload/bootstrap-fileupload.css');?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/jquery-ui-1.10.2.custom/css/ui-lightness/jquery-ui-1.10.2.custom.min.css');?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url('assets/find/css/realia-blue.css');?>" type="text/css" id="color-variant-default">
-    <link rel="stylesheet" href="#" type="text/css" id="color-variant">
+<section class="content">
+        <div class="col-md-12 conj"></div>
+        <div clas="col-md-12 find-first">
+        <div class="col-md-2"></div>
+        </div class="col-md-3"></div>
+        <div class="col-md-3 find-logo">
+          <img src="<?php echo base_url('assets/image/zuiplo.png');?>" width="150px;" height="75px;" class="logo-head-find">
+        </div>
 
-      <link rel="stylesheet" href="<?php echo base_url('assets/find/font-awesome/css/font-awesome.css');?>" type="text/css">
-      <link rel="stylesheet" href="<?php echo base_url('assets/find/font-awesome/css/font-awesome.min.css');?>" type="text/css">
-</head>
-<body>
-<div id="wrapper-outer" >
-    <div id="wrapper">
-        <div id="wrapper-inner">
-            <!-- BREADCRUMB -->
-            <div class="breadcrumb-wrapper">
+        <div class="col-md-6 search-loc">
+          <div class="col-md-12 title-find-location">Fill in the short form below to find the right location for you<span class="form-required" title="This field is required.">*</span></div>
+              <div class="input-group margin-bottom-sm">
+                <div class="col-md-4 class-find">
+                  <input class="form-control find-loc" type="text" placeholder="Salary" id="salary">
+                </div>
+                  <div class="col-md-4 class-find">
+                   <input  id="address" class="form-control find-loc" type="text" placeholder="Here">
+                 </div>
 
-            </div><!-- /.breadcrumb-wrapper -->
+                 <div class="col-md-4 class-find">
+                   <span class="input-group-btn">
+                     <a class="btn btn-success btn-lg-find" id="submit" >
+                       Find Location &nbsp;
+                       <i class="fa fa-search" aria-hidden="true"></i>
 
-            <!-- HEADER -->
-            <div id="header-wrapper">
-                <div id="header">
-                    <div id="header-inner">
-                        <div class="container">
-                            <div class="navbar">
-                                <div class="navbar-inner">
-                                    <div class="row ">
-                                        <div class="logo-wrapper span4">
-                                            <a href="#nav" class="hidden-desktop" id="btn-nav">Toggle navigation</a>
+                     </a>
+                   </span>
+                 </div>
 
-                                            <div class="logo">
-                                                <a href="index.html" title="Home">
-                                                    <img src="<?php echo base_url('assets/find/img/zuiplo.png');?>" class="zuiplo-logo-find" alt="Home" width="150px;" height="100px;">
-                                                </a>
-                                            </div><!-- /.logo -->
+               </div>
 
-                                            <div class="site-name">
-                                                <a href="/" title="Home" class="brand"></a>
-                                            </div><!-- /.site-name -->
+        </div>
+				</div>
 
-                                            <div class="site-slogan">
-                                                <span>Real estate &amp; Rental<br>made easy</span>
-                                            </div><!-- /.site-slogan -->
-                                        </div><!-- /.logo-wrapper -->
+        <div id="map"></div>
 
-                                        <div class="info">
-                                            <div class="site-email">
+        <script>
+        var infowindow;
+        var circle;
 
-                                            </div><!-- /.site-email -->
+          function initMap()
+           {
+              var map = new google.maps.Map(document.getElementById('map'),
+               {
+                zoom: 10,
+                center: {lat: -6.204831, lng: 106.840848}
+                });
+
+            var geocoder = new google.maps.Geocoder();
+
+            document.getElementById('submit').addEventListener('click', function()
+              {
+                geocodeAddress(geocoder, map);
+
+              });
 
 
-                                        </div><!-- /.info -->
-                                        <a class="list-your-property arrow-right">
-                                        <form method="get" class="site-search" action="?">
-                                           <div class="input-append">
-                                               <input title="Enter the terms you wish to search for." class="search-query span2 form-text" placeholder="Search" type="text" name="">
-                                               <button type="submit" class="btn">
-                                                  <i class="fa fa-search" aria-hidden="true"></i></button>
-                                           </div><!-- /.input-append -->
-                                       </form><!-- /.site-search -->
-                                       </a>
-                                    </div><!-- /.row -->
-                                </div><!-- /.navbar-inner -->
-                            </div><!-- /.navbar -->
-                        </div><!-- /.container -->
-                    </div><!-- /#header-inner -->
-                </div><!-- /#header -->
-            </div><!-- /#header-wrapper -->
+          }
 
-            <div id="map">
+          function geocodeAddress(geocoder, resultsMap) {
+            var address = document.getElementById('address').value;
+            geocoder.geocode({'address': address}, function(results, status) {
+              if (status === google.maps.GeocoderStatus.OK) {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                  map: resultsMap,
+                  position: results[0].geometry.location,
+                  animation:google.maps.Animation.BOUNCE
+                });
 
+                var lat = results[0].geometry.location.lat();// mendapatkan latitude
+                var lng = results[0].geometry.location.lng();// mendapatkan longitude
+                circle = new google.maps.Circle({
+                  strokeColor: '#FF0000',
+                  strokeOpacity: 0,
+                  strokeWeight: 2,
+                  fillColor: '#FF0000',
+
+                  fillOpacity: 0,
+                  map: resultsMap,
+                  center: results[0].geometry.location,
+                  radius: 8000
+
+
+                });
+
+                <?php foreach ($view->result() as $key => $row) {  ?>
+                    var gaji = '<?php echo $row->gaji ?>';
+                    var penghasilanBulanan = $("#salary").val();
+
+                    var latview = '<?php echo $row->lat ?>';
+                    var longview = '<?php echo $row->lang ?>';
+                    var messview = '<?php echo $row->nama ?>';
+                      var image = '<?php echo base_url('assets/image/zuiplo/ico.png');?>';
+                    var latLng = new google.maps.LatLng(latview,longview);
+                    var marker = new google.maps.Marker({
+                      position: latLng,
+                        icon: image,
+                      map: resultsMap
+                    });
+                    var distanceInMetres = google.maps.geometry.spherical.computeDistanceBetween(circle.center, latLng);
+                    // alert(distanceInMetres);
+                    console.log("gaji :"+gaji);
+                    console.log("penghasilanBulanan :"+penghasilanBulanan);
+                    if(distanceInMetres > circle.radius){
+                      marker.setMap(null);
+                    }
+                    if(gaji <= (penghasilanBulanan * 30) / 100){
+                      marker.setMap(null);
+                    }
+
+                  //  createMarker2(latview, longview,messview);
+            <?php } ?>
+
+              } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+              }
+              document.getElementById('lat').value = lat;
+              document.getElementById('lng').value=lng;
+            });
+          }
+          var marker = null;
+        function initialize() {
+          var mapOptions = {
+            center: new google.maps.LatLng(-6.175486, 106.825407),
+            zoom: 15
+          };
+          var map = new google.maps.Map(document.getElementById("map-canvas"),
+              mapOptions);
+          google.maps.event.addListener(map, 'click', function(event)
+          {
+            if (marker != undefined){
+              marker.setMap(null);
+              marker=null;
+            }
+            if (marker == null) {
+              marker = new google.maps.Marker({
+                position: event.latLng,
+                map: map,
+                title: 'Your base',
+                // Allowing to move the marker
+                draggable: true,
+                animation: google.maps.Animation.DROP
+              });
+              updateFieldsAndCenter(map, marker);
+              google.maps.event.addListener(marker, 'dragend', function() {
+                updateFieldsAndCenter(map, marker);
+                 map.setZoom(18);
+              });
+            }
+
+          });
+        }
+        function callback(results, status)
+        {
+          if (status === google.maps.GeocoderStatus.OK) {
+              if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                  createMarker(results[i]);
+                  console.log('a');
+
+                }
+              }
+            }
+        }
+        function createMarker(place) {
+          var placeLoc = place.geometry.location;
+          var marker = new google.maps.Marker({
+            map: resultsMap,
+            position: place.geometry.location
+          });
+
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent(place.name);
+            infowindow.open(resultsMap, this);
+          });
+        }
+        //==triger map jika ada perubahan lat - long
+        function updateMapAndCenter(map, marker) {
+          // Center to marker position
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 3000);
+        }
+        function updateFieldsAndCenter(map, marker) {
+          // Center to marker position
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 3000);
+          // Change the value
+          document.getElementById("_lat").value = marker.getPosition().lat();
+          document.getElementById("_lng").value = marker.getPosition().lng();
+      }
+
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap"></script>
+        <div id="content">
+
+        <div class="container col-md-12" >
+              <div class="col-md-12">
+                <div id="main" class="col-md-12">
+                    <div class="row">
+                        <div class="span12">
+
+                            <div class="properties-rows jar">
+            <div class="filter">
+                <form action="?" method="get" class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputSortBy">
+                            Price IDR.
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <select id="inputSortBy">
+                                <option id="price">Sure</option>
+                                <option id="published">Below</option>
+                                <option id="published">Above</option>
+                            </select>
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputOrder">
+                            Near
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <select id="inputOrder">
+                                <option id="asc">All</option>
+                                <option id="desc">Near</option>
+                                <option id="desc">Far</option>
+                            </select>
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
+                </form>
+            </div><!-- /.filter -->
+            </div><!-- /.properties-rows -->
+                           <div class="properties-rows">
+                <div class="row">
+
+                    <div class="property span12">
+                        <div class="row">
+                          <div class="span1"></div>
+                            <div class="image span3">
+                                <div class="content">
+                                    <a href="" data-toggle="modal" data-target="#myModal"></a>
+                                    <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
+                                </div><!-- /.content -->
+                            </div><!-- /.image -->
+
+                            <div class="body span7">
+                                <div class="title-price row">
+                                    <div class="title span4">
+                                        <h2><a href="" data-toggle="modal" data-target="#myModal">27523 Pacific Coast</a></h2>
+                                    </div><!-- /.title -->
+
+                                    <div class="price">
+                                        1 250 000€
+                                    </div><!-- /.price -->
+                                </div><!-- /.title -->
+
+                                <div class="location">Palo Alto CA</div><!-- /.location -->
+                                <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
+                                <div class="area">
+                                    <span class="key">Area:</span><!-- /.key -->
+                                    <span class="value">120</span><!-- /.value -->
+                                </div><!-- /.area -->
+                                <div class="bedrooms">
+                                  <div class="content">
+
+        <i class="fa fa-bed" aria-hidden="true"></i>4</div></div><!-- /.bedrooms -->
+                                <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
+                            </div><!-- /.body -->
+                        </div><!-- /.property -->
+                    </div><!-- /.row -->
+
+                </div><!-- /.row -->
+            </div><!-- /.properties-rows -->
+            <div class="pagination pagination-centered">
+                  <ul>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li ><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">next</a></li>
+                      <li><a href="#">last</a></li>
+                  </ul>
+              </div><!-- /.pagination -->
+              <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <title>Bootstrap Example</title>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+              <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            </head>
+            <body>
+
+            <div class="container">
+              <h2>Large Modal</h2>
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Large Modal</button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>  <!-- CONTENT -->
+            <div id="content">
+<div class="container">
+    <div id="main">
+        <div class="row">
+            <div class="span9">
+                <h1 class="page-header">27523 Pacific Coast</h1>
+
+                <div class="carousel property">
+                    <div class="preview">
+                        <img src="assets/img/tmp/property-large-1.jpg" alt="">
+                    </div><!-- /.preview -->
+
+                    <div class="content">
+
+                        <a class="carousel-prev" href="#">Previous</a>
+                        <a class="carousel-next" href="#">Next</a>
+                        <ul>
+                            <li class="active">
+                                <img src="assets/img/tmp/property-large-1.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-2.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-3.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-4.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-1.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-2.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-3.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-4.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-1.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-2.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-3.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-4.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-1.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="assets/img/tmp/property-large-2.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.content -->
+                </div>
+                <!-- /.carousel -->
+
+                <div class="property-detail">
+                    <div class="pull-left overview">
+                        <div class="row">
+                            <div class="span3">
+                                <h2>Overview</h2>
+
+                                <table>
+                                    <tr>
+                                        <th>Price:</th>
+                                        <td>€2 300 000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Contract type:</th>
+                                        <td>Rent</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Type:</th>
+                                        <td>Condo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Location:</th>
+                                        <td>Palo Alto CA</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bathrooms:</th>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Bedrooms:</th>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Area:</th>
+                                        <td>750m<sup>2</sup></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- /.span2 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+
+                    <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper libero sed
+                        ante auctor vel gravida nunc placerat. Suspendisse molestie posuere sem, in viverra dolor
+                        venenatis sit amet. Aliquam gravida nibh quis justo pulvinar luctus. Phasellus a malesuada
+                        massa. Mauris elementum tempus nisi, vitae ullamcorper sem ultricies vitae. Nullam consectetur
+                        lacinia nisi, quis laoreet magna pulvinar in. Class aptent taciti sociosqu ad litora torquent
+                        per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Cum sociis natoque
+                        penatibus et magnis dis parturient montes, nascetur ridiculus mus.</strong> Morbi eu sapien ac
+                        diam facilisis vehicula nec sit amet odio. Vivamus quis dui ac nulla molestie blandit eu in
+                        nunc. In justo erat, lacinia in vulputate non, tristique eu mi. Aliquam tristique dapibus
+                        tempor. Vivamus malesuada tempor urna, in convallis massa lacinia sed. Phasellus gravida auctor
+                        vestibulum. Suspendisse potenti. In tincidunt felis bibendum nunc tempus sagittis. Praesent elit
+                        dolor, ultricies interdum porta sit amet, iaculis in neque. Nullam urna ante, tempus vel iaculis
+                        nec, rutrum sit amet nulla. Morbi vestibulum ante in turpis ultricies in tincidunt sapien
+                        iaculis. Aenean feugiat rhoncus arcu, at luctus libero blandit tempus. Vivamus rutrum tellus
+                        quis leo placerat eu adipiscing purus vehicula.</p>
+
+                    <h2>General amenities</h2>
+
+                    <div class="row">
+                        <ul class="span2">
+                            <li class="checked">
+                                Air conditioning
+                            </li>
+                            <li class="checked">
+                                Balcony
+                            </li>
+                            <li class="checked">
+                                Bedding
+                            </li>
+                            <li class="checked">
+                                Cable TV
+                            </li>
+                            <li class="plain">
+                                Cleaning after exit
+                            </li>
+                            <li class="plain">
+                                Cofee pot
+                            </li>
+                            <li class="plain">
+                                Computer
+                            </li>
+                            <li class="checked">
+                                Cot
+                            </li>
+                        </ul>
+                        <ul class="span2">
+                            <li class="checked">
+                                Dishwasher
+                            </li>
+                            <li class="checked">
+                                DVD
+                            </li>
+                            <li class="checked">
+                                Fan
+                            </li>
+                            <li class="checked">
+                                Fridge
+                            </li>
+                            <li class="checked">
+                                Grill
+                            </li>
+                            <li class="checked">
+                                Hairdryer
+                            </li>
+                            <li class="plain">
+                                Heating
+                            </li>
+                            <li class="checked">
+                                Hi-fi
+                            </li>
+                        </ul>
+                        <ul class="span2">
+                            <li class="plain">
+                                Internet
+                            </li>
+                            <li class="checked">
+                                Iron
+                            </li>
+                            <li class="checked">
+                                Juicer
+                            </li>
+                            <li class="checked">
+                                Lift
+                            </li>
+                            <li class="plain">
+                                Microwave
+                            </li>
+                            <li class="plain">
+                                Oven
+                            </li>
+                            <li class="checked">
+                                Parking
+                            </li>
+                            <li class="plain">
+                                Parquet
+                            </li>
+                        </ul>
+                        <ul class="span2">
+                            <li class="plain">
+                                Radio
+                            </li>
+                            <li class="checked">
+                                Roof terrace
+                            </li>
+                            <li class="plain">
+                                Smoking allowed
+                            </li>
+                            <li class="checked">
+                                Terrace
+                            </li>
+                            <li class="plain">
+                                Toaster
+                            </li>
+                            <li class="plain">
+                                Towelwes
+                            </li>
+                            <li class="plain">
+                                Use of pool
+                            </li>
+                            <li class="plain">
+                                Video
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2>Map</h2>
+
+                    <div id="property-map"></div><!-- /#property-map -->
+                </div>
+              </div> </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div id="content">
+            </body>
+            </html>
 
-<div class="container col-md-12" >
-      <div class="col-md-12">
-        <div id="main" class="col-md-12">
+             </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                </div><!-- /#content -->
+            </div><!-- /#wrapper-inner -->
+            <div class="modal fade" id="myModal_booking" role="dialog">
+               <div class="modal-dialog modal-sm">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Modal Header</h4>
+                   </div>
+                   <div class="modal-body">
+                     <div class="controls">
+                         <select id="inputOrder">
+                             <option id="asc">Month</option>
+                             <option id="desc">Today</option>
+                         </select>
+                     </div><!-- /.controls -->
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-success">Booking</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+            </div><!-- /#wrapper -->
+            </div><!-- /#wrapper-outer -->
+
+        </div>
+      </div>
+        <div id="footer-inner">
             <div class="row">
-                <div class="span12">
-
-                    <div class="properties-rows jar">
-    <div class="filter">
-        <form action="?" method="get" class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label" for="inputSortBy">
-                    Price IDR.
-                    <span class="form-required" title="This field is required.">*</span>
-                </label>
-                <div class="controls">
-                    <select id="inputSortBy">
-                        <option id="price">Sure</option>
-                        <option id="published">Below</option>
-                        <option id="published">Above</option>
-                    </select>
-                </div><!-- /.controls -->
-            </div><!-- /.control-group -->
-
-            <div class="control-group">
-                <label class="control-label" for="inputOrder">
-                    Near
-                    <span class="form-required" title="This field is required.">*</span>
-                </label>
-                <div class="controls">
-                    <select id="inputOrder">
-                        <option id="asc">All</option>
-                        <option id="desc">Near</option>
-                        <option id="desc">Far</option>
-                    </select>
-                </div><!-- /.controls -->
-            </div><!-- /.control-group -->
-        </form>
-    </div><!-- /.filter -->
-    </div><!-- /.properties-rows -->
-                   <div class="properties-rows">
-        <div class="row">
-
-            <div class="property span12">
-                <div class="row">
-                  <div class="span1"></div>
-                    <div class="image span3">
-                        <div class="content">
-                            <a href="detail.html"></a>
-                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
-                        </div><!-- /.content -->
-                    </div><!-- /.image -->
-
-                    <div class="body span7">
-                        <div class="title-price row">
-                            <div class="title span4">
-                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-                            </div><!-- /.title -->
-
-                            <div class="price">
-                                1 250 000€
-                            </div><!-- /.price -->
-                        </div><!-- /.title -->
-
-                        <div class="location">Palo Alto CA</div><!-- /.location -->
-                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
-                        <div class="area">
-                            <span class="key">Area:</span><!-- /.key -->
-                            <span class="value">120</span><!-- /.value -->
-                        </div><!-- /.area -->
-                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-                    </div><!-- /.body -->
-                </div><!-- /.property -->
-            </div><!-- /.row -->
-            <div class="property span12">
-                <div class="row">
-                  <div class="span1"></div>
-                    <div class="image span3">
-                        <div class="content">
-                            <a href="detail.html"></a>
-                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
-                        </div><!-- /.content -->
-                    </div><!-- /.image -->
-
-                    <div class="body span7">
-                        <div class="title-price row">
-                            <div class="title span4">
-                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-                            </div><!-- /.title -->
-
-                            <div class="price">
-                                1 250 000€
-                            </div><!-- /.price -->
-                        </div><!-- /.title -->
-
-                        <div class="location">Palo Alto CA</div><!-- /.location -->
-                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
-                        <div class="area">
-                            <span class="key">Area:</span><!-- /.key -->
-                            <span class="value">120</span><!-- /.value -->
-                        </div><!-- /.area -->
-                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-                    </div><!-- /.body -->
-                </div><!-- /.property -->
-            </div><!-- /.row -->
-            <div class="property span12">
-                <div class="row">
-                  <div class="span1"></div>
-                    <div class="image span3">
-                        <div class="content">
-                            <a href="detail.html"></a>
-                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
-                        </div><!-- /.content -->
-                    </div><!-- /.image -->
-
-                    <div class="body span7">
-                        <div class="title-price row">
-                            <div class="title span4">
-                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-                            </div><!-- /.title -->
-
-                            <div class="price">
-                                1 250 000€
-                            </div><!-- /.price -->
-                        </div><!-- /.title -->
-
-                        <div class="location">Palo Alto CA</div><!-- /.location -->
-                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
-                        <div class="area">
-                            <span class="key">Area:</span><!-- /.key -->
-                            <span class="value">120</span><!-- /.value -->
-                        </div><!-- /.area -->
-                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-                    </div><!-- /.body -->
-                </div><!-- /.property -->
-            </div><!-- /.row -->
-            <div class="property span12">
-                <div class="row">
-                  <div class="span1"></div>
-                    <div class="image span3">
-                        <div class="content">
-                            <a href="detail.html"></a>
-                            <img src="<?php echo base_url('assets/find/img/property-small-1.png');?>" alt="">
-                        </div><!-- /.content -->
-                    </div><!-- /.image -->
-
-                    <div class="body span7">
-                        <div class="title-price row">
-                            <div class="title span4">
-                                <h2><a href="detail.html">27523 Pacific Coast</a></h2>
-                            </div><!-- /.title -->
-
-                            <div class="price">
-                                1 250 000€
-                            </div><!-- /.price -->
-                        </div><!-- /.title -->
-
-                        <div class="location">Palo Alto CA</div><!-- /.location -->
-                        <p>Etiam at ante id enim dictum posuere id vel est. Praesent at massa quis risus cursus tristique vel non orci. Phasellus ut nisi non odio</p>
-                        <div class="area">
-                            <span class="key">Area:</span><!-- /.key -->
-                            <span class="value">120</span><!-- /.value -->
-                        </div><!-- /.area -->
-                        <div class="bedrooms"><div class="content">4</div></div><!-- /.bedrooms -->
-                        <div class="bathrooms"><div class="content">3</div></div><!-- /.bathrooms -->
-                    </div><!-- /.body -->
-                </div><!-- /.property -->
-            </div><!-- /.row -->
-
-        </div><!-- /.row -->
-    </div><!-- /.properties-rows -->
-                    <div class="pagination pagination-centered">
-        <ul>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li ><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">next</a></li>
-            <li><a href="#">last</a></li>
-        </ul>
-    </div><!-- /.pagination -->            </div>
-
+                <div class="span6 copyright create-jicos">
+                    <p>&copy;2016 Zuiplo. Created by JICOS <a>
                 </div>
             </div>
         </div>
-    </div>
+<style>
+#map{
+  height: 647px;
 
-        </div><!-- /#content -->
-    </div><!-- /#wrapper-inner -->
-
-    <div id="footer-wrapper">
-
-
-        <div id="footer" class="footer container">
-            <div id="footer-inner">
-                <div class="row">
-                    <div class="span6 copyright create-jicos">
-                        <p>&copy;2016 Zuiplo. Created by JICOS <a>
-                    </div>
-
-
-                </div><!-- /.row -->
-            </div><!-- /#footer-inner -->
-        </div><!-- /#footer -->
-    </div><!-- /#footer-wrapper -->
-    </div><!-- /#wrapper -->
-    </div><!-- /#wrapper-outer -->
-</div>
-
-  </body>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=true"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.ezmark.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.currency.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/jquery.cookie.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/retina.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/bootstrap.min.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/carousel.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/gmap3.min.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/gmap3.infobox.min.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/libraries/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/libraries/chosen/chosen.jquery.min.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/libraries/bootstrap-fileupload/bootstrap-fileupload.js');?>"></script>
-  <script type="text/javascript" src="<?php echo base_url('assets/find/js/realia.js');?>"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-40414414-1', 'byaviators.com');
-    ga('send', 'pageview');
-
-  </script>
-
-  <script>
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
-      center: {lat: -6.204831, lng: 106.840848}
-    });
-
-    var geocoder = new google.maps.Geocoder();
-
-    document.getElementById('submit').addEventListener('click', function() {
-      geocodeAddress(geocoder, map);
-    });
-  }
-
-  function geocodeAddress(geocoder, resultsMap) {
-    var address = document.getElementById('address').value;
-    geocoder.geocode({'address': address}, function(results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        resultsMap.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: resultsMap,
-          position: results[0].geometry.location
-        });
-        var lat = results[0].geometry.location.lat();
-        var lng = results[0].geometry.location.lng();
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-      document.getElementById('lat').value = lat;
-      document.getElementById('lng').value=lng;
-    });
-  }
-  var marker = null;
-  function initialize() {
-  var mapOptions = {
-    center: new google.maps.LatLng(-6.175486, 106.825407),
-    zoom: 15
-  };
-  var map = new google.maps.Map(document.getElementById("map-canvas"),
-      mapOptions);
-  google.maps.event.addListener(map, 'click', function(event) {
-    if (marker != undefined){
-      marker.setMap(null);
-      marker=null;
-    }
-    if (marker == null) {
-      marker = new google.maps.Marker({
-        position: event.latLng,
-        map: map,
-        title: 'Your base',
-
-        draggable: true,
-        animation: google.maps.Animation.DROP
-      });
-      updateFieldsAndCenter(map, marker);
-      google.maps.event.addListener(marker, 'dragend', function() {
-        updateFieldsAndCenter(map, marker);
-      });
-    }
-  });
-  }
-
-  function updateMapAndCenter(map, marker) {
-
-  window.setTimeout(function() {
-    map.panTo(marker.getPosition());
-  }, 3000);
-  }
-  function updateFieldsAndCenter(map, marker) {
-
-  window.setTimeout(function() {
-    map.panTo(marker.getPosition());
-  }, 3000);
-
-  document.getElementById("_lat").value = marker.getPosition().lat();
-  document.getElementById("_lng").value = marker.getPosition().lng();
-  }
-  var image = 'assets/find/images/property.png';
-  var image2= 'assets/find/images/lokasi_sekitar.png';
-
-
-  </script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&callback=initMap">
-  </script>
-
-  </html>
-  <style>
-  .properties-rows .property .bedrooms {
-    background-image:url('assets/find/img/icon/bedrooms.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 21px 12px;
-    display: inline-block;
-    margin-right: 10px;
-    padding-left: 30px
-  }
-  </style>
+}
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

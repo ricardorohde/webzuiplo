@@ -13,6 +13,13 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 
+        <link rel="stylesheet" href="<?php echo base_url('assets/find/css/bootstrap.css');?>" type="text/css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/find/css/bootstrap-responsive.css');?>" type="text/css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/chosen/chosen.css');?>" type="text/css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/find/libraries/bootstrap-fileupload/bootstrap-fileupload.css');?>" type="text/css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/find/css/realia-blue.css');?>" type="text/css">
+
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.theme.css');?>">
@@ -21,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css');?>">
 
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/find/find.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/form-register.css');?>">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/find/find.css');?>" rel="stylesheet">
@@ -62,6 +70,5 @@
   })();
 
 </script>
-
   </head>
 </html>

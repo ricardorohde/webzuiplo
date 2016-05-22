@@ -4,7 +4,6 @@
  */
 class Find extends CI_Controller
 {
-
   public function __construct()
     {
       parent::__construct();
@@ -13,7 +12,10 @@ class Find extends CI_Controller
 
     public function find_pemilik()
     {
-      $this->general->load('find/pemilik/find');
 
+      $data['view'] = $this->general->get();
+      $this->general->load('find/pemilik/find',$data);
     }
+
+
 }
