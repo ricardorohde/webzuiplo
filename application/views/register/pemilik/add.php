@@ -116,7 +116,7 @@
 
 										<div class="bedrooms control-group">
 												<label class="control-label" for="inputPropertyBedrooms">
-													Location
+													Coordinates of
 														<span class="form-required" title="This field is required.">*</span>
 												</label>
 												<div class="controls">
@@ -125,7 +125,7 @@
 										</div><!-- /.control-group -->
 										<div class="bedrooms control-group">
 												<label class="control-label" for="inputPropertyBedrooms">
-
+													a Location
 														<span class="form-required" title="This field is required."></span>
 												</label>
 												<div class="controls">
