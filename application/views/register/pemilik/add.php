@@ -141,8 +141,8 @@
 											</label>
 											<div class="controls">
 													<span class="input-group-btn">
-														<a class="btn btn-success btn-lg-find" id="submit" >
-															Find Location &nbsp;
+														<a class="btn btn-success btn-lg-add-reg" id="submit" >
+															Here &nbsp;
 															<i class="fa fa-search" aria-hidden="true"></i>
 
 														</a>
@@ -407,5 +407,8 @@
 .header-register{
 	text-align: center;
 	padding-bottom: 40px;
+}
+.btn-lg-add-reg{
+	padding: 5px 5px;
 }
 </style>
