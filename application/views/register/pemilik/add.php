@@ -114,14 +114,23 @@
                 <div class="span4">
                     <h3><strong>2.</strong> <span>Property info</span></h3>
 
-                    <div class="control-group">
-                        <label class="control-label" for="inputPropertyLocation">
-                            Location
-                            <span class="form-required" title="This field is required.">*</span>
-                        </label>
-                        <div class="controls">
-                            <input type="text" id="inputPropertyLocation">
-                        </div><!-- /.controls -->
+                    <div class="property-type control-group">
+											<label class="control-label" for="inputPropertyArea">
+													Area
+													<span class="form-required" title="This field is required.">*</span>
+											</label>
+											<div class="controls">
+													<input type="text" id="inputPropertyArea">
+											</div><!-- /.controls -->
+                    </div><!-- /.control-group -->
+										<div class="property-type control-group">
+											<label class="control-label" for="inputPropertyArea">
+													Area
+													<span class="form-required" title="This field is required.">*</span>
+											</label>
+											<div class="controls">
+													<input type="text" id="inputPropertyArea">
+											</div><!-- /.controls -->
                     </div><!-- /.control-group -->
 
                     <div class="property-type control-group">
