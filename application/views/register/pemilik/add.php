@@ -136,7 +136,7 @@
 
                     <div class="property-type control-group">
 											<label class="control-label" for="inputPropertyArea">
-													Area
+													Get Your Coordinates
 													<span class="form-required" title="This field is required.">*</span>
 											</label>
 											<div class="controls">
@@ -146,8 +146,8 @@
 
                     <div class="contract-type control-group">
 											<label class="control-label" for="inputPropertyArea">
-													Area
-													<span class="form-required" title="This field is required.">*</span>
+													Read Tutorials
+													<span class="form-required" title="This field is required."></span>
 											</label>
 											<div class="controls">
 													<input type="text" id="inputPropertyArea">
