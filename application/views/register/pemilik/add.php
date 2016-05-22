@@ -394,5 +394,6 @@
 }
 .header-register{
 	text-align: center;
+	margin-bottom: 40px;
 }
 </style>
