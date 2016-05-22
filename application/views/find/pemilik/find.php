@@ -91,7 +91,7 @@
 
                     var latview = '<?php echo $row->lat ?>';
                     var longview = '<?php echo $row->lang ?>';
-                    var messview = '<?php echo $row->nama ?>';
+                    var messview = '<?php echo $row->nama_lokasi ?>';
                       var image = '<?php echo base_url('assets/image/zuiplo/ico.png');?>';
                     var latLng = new google.maps.LatLng(latview,longview);
                     var marker = new google.maps.Marker({

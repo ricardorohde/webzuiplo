@@ -16,7 +16,7 @@ class General extends CI_Model
   }
   public  function get()
     {
-        $query = $this->db->get('polsek');
+        $query = $this->db->get('lokasi_register');
         return $query;
     }
 }
