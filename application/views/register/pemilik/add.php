@@ -143,7 +143,7 @@
 													<span class="input-group-btn">
 														<a class="btn btn-success btn-lg-add-reg" id="submit" >
 															Here &nbsp;
-															<i class="fa fa-search" aria-hidden="true"></i>
+															<i class="fa fa-paper-flight" aria-hidden="true"></i>
 
 														</a>
 												</span>
@@ -156,7 +156,13 @@
 													<span class="form-required" title="This field is required."></span>
 											</label>
 											<div class="controls">
-													<input type="text" id="inputPropertyArea">
+												<span class="input-group-btn">
+													<a class="btn btn-success btn-lg-add-reg" id="submit" >
+														Here &nbsp;
+														<i class="fa fa-paper-flight" aria-hidden="true"></i>
+
+													</a>
+											</span>
 											</div><!-- /.controls -->
                     </div><!-- /.control-group -->
 
@@ -410,5 +416,6 @@
 }
 .btn-lg-add-reg{
 	padding: 8px 8px;
+
 }
 </style>
