@@ -114,37 +114,44 @@
                 <div class="span4">
                     <h3><strong>2.</strong> <span>Property info</span></h3>
 
-										<div class="bedrooms control-group">
-												<label class="control-label" for="inputPropertyBedrooms">
-													Coordinates of
-														<span class="form-required" title="This field is required.">*</span>
-												</label>
-												<div class="controls">
-														<input type="text" id="inputPropertyBedrooms" placeholder="lat">
-												</div><!-- /.controls -->
-										</div><!-- /.control-group -->
-										<div class="bedrooms control-group">
-												<label class="control-label" for="inputPropertyBedrooms">
-													a Location
-														<span class="form-required" title="This field is required."></span>
-												</label>
-												<div class="controls">
-														<input type="text" id="inputPropertyBedrooms" placeholder="Long">
-												</div><!-- /.controls -->
-										</div><!-- /.control-group -->
-										<div class="bedrooms control-group">
-												<label class="control-label" for="inputPropertyBedrooms">
-														Get Your Lat and Long
-														<span class="form-required" title="This field is required.">*</span>
-												</label>
-												<div class="controls">
-														<input type="text" id="inputPropertyBedrooms">
-												</div><!-- /.controls -->
-										</div><!-- /.control-group -->
+                    <div class="control-group">
+                        <label class="control-label" for="inputPropertyLocation">
+                            Location
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <input type="text" id="inputPropertyLocation">
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
+
+                    <div class="property-type control-group">
+                        <label class="control-label" for="inputPropertyPropertyType">
+                            Property type
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <select id="inputPropertyPropertyType">
+                                <option id="apartment1">Apartment</option>
+                            </select>
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
+
+                    <div class="contract-type control-group">
+                        <label class="control-label" for="inputPropertyContractType">
+                            Contract type
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <select id="inputPropertyContractType">
+                                <option id="apartment2">Rent</option>
+                                <option id="apartment3">Sale</option>
+                            </select>
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
 
                     <div class="bedrooms control-group">
                         <label class="control-label" for="inputPropertyBedrooms">
-                            Read Tutorial
+                            Bedrooms
                             <span class="form-required" title="This field is required.">*</span>
                         </label>
                         <div class="controls">
