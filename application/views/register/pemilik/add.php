@@ -143,7 +143,7 @@
 													<span class="input-group-btn">
 														<a class="btn btn-success btn-lg-add-reg" id="submit" >
 															Here &nbsp;
-															<i class="fa fa-paper-plane" aria-hidden="true"></i>
+															<i class="fa fa-arrow-right" aria-hidden="true"></i>
 
 														</a>
 												</span>
@@ -159,7 +159,7 @@
 												<span class="input-group-btn">
 													<a class="btn btn-success btn-lg-add-reg" id="submit" >
 														Here &nbsp;
-														<i class="fa fa-paper-plane" aria-hidden="true"></i>
+														<i class="fa fa-arrow-right" aria-hidden="true"></i>
 
 													</a>
 											</span>
