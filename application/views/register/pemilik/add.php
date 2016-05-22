@@ -127,7 +127,7 @@
                     <div class="contract-type control-group">
 											<label class="control-label" for="inputPropertyArea">
 
-													<span class="form-required" title="This field is required.">*</span>
+													<span class="form-required" title="This field is required.">&nbsp;</span>
 											</label>
 											<div class="controls">
 													<input type="text" id="inputPropertyArea" placeholder="Long">
