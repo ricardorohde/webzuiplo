@@ -426,3 +426,8 @@
 })(jQuery);
 
 </script>
+<style>
+.inputPropertyContractType{
+	width: auto;
+}
+</style>
