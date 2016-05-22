@@ -53,14 +53,14 @@
     <div>
         <div id="main">
             <div class="list-your-property-form">
-    <h2 class="page-header">Register your stopover
+    <h2 class="page-header header-register">Register your stopover
 </h2>
 
     <div class="content">
         <div class="row">
             <div class="span8">
                 <p>
-                  
+
                 </p>
             </div><!-- /.span8 -->
         </div><!-- /.row -->
@@ -391,5 +391,8 @@
 <style>
 .inputPropertyContractType{
 	width: auto;
+}
+.header-register{
+	text-align: center;
 }
 </style>
