@@ -137,7 +137,11 @@
                     <div class="property-type control-group">
 											<label class="control-label" for="inputPropertyArea">
 													Get Your Coordinates
-													<span class="form-required" title="This field is required.">*</span>
+													<span class="btn btn-file">
+															<span class="fileupload-new">Here</span>
+															<span class="fileupload-exists">Change</span>
+															<input type="file" />
+													</span>
 											</label>
 											<div class="controls">
 													<input type="text" id="inputPropertyArea">
