@@ -124,25 +124,30 @@
                         </div><!-- /.controls -->
                     </div><!-- /.control-group -->
 
-										<div class="area control-group">
-												<label class="control-label" for="inputPropertyArea">
-														Area
-														<span class="form-required" title="This field is required.">*</span>
-												</label>
-												<div class="controls">
-														<input type="text" id="inputPropertyArea">
-												</div><!-- /.controls -->
-										</div><!-- /.control-group -->
+                    <div class="property-type control-group">
+                        <label class="control-label" for="inputPropertyPropertyType">
+                            Property type
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <select id="inputPropertyPropertyType">
+                                <option id="apartment1">Apartment</option>
+                            </select>
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
 
-										<div class="price control-group">
-												<label class="control-label" for="inputPropertyPrice">
-														Price
-														<span class="form-required" title="This field is required.">*</span>
-												</label>
-												<div class="controls">
-														<input type="text" id="inputPropertyPrice">
-												</div><!-- /.controls -->
-										</div><!-- /.control-group -->
+                    <div class="contract-type control-group">
+                        <label class="control-label" for="inputPropertyContractType">
+                            Contract type
+                            <span class="form-required" title="This field is required.">*</span>
+                        </label>
+                        <div class="controls">
+                            <select id="inputPropertyContractType">
+                                <option id="apartment2">Rent</option>
+                                <option id="apartment3">Sale</option>
+                            </select>
+                        </div><!-- /.controls -->
+                    </div><!-- /.control-group -->
 
                     <div class="bedrooms control-group">
                         <label class="control-label" for="inputPropertyBedrooms">
