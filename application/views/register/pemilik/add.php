@@ -140,10 +140,12 @@
 													<span class="form-required" title="This field is required.">*</span>
 											</label>
 											<div class="controls">
-												<span class="btn btn-file">
-														<span class="fileupload-new">Here</span>
-														<span class="fileupload-exists">Change</span>
-														<input type="file" />
+													<span class="input-group-btn">
+														<a class="btn btn-success btn-lg-find" id="submit" >
+															Find Location &nbsp;
+															<i class="fa fa-search" aria-hidden="true"></i>
+
+														</a>
 												</span>
 											</div><!-- /.controls -->
                     </div><!-- /.control-group -->
