@@ -409,6 +409,6 @@
 	padding-bottom: 40px;
 }
 .btn-lg-add-reg{
-	padding: 5px 5px;
+	padding: 10px 10px;
 }
 </style>
