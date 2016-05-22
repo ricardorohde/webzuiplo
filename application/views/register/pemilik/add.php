@@ -116,11 +116,11 @@
 
 										<div class="property-type control-group">
 											<label class="control-label" for="inputPropertyArea">
-													Area
+											coordinates of a location
 													<span class="form-required" title="This field is required.">*</span>
 											</label>
 											<div class="controls">
-													<input type="text" id="inputPropertyArea">
+													<input type="text" id="inputPropertyArea"  placeholder="Lat">
 											</div><!-- /.controls -->
                     </div><!-- /.control-group -->
 
@@ -130,7 +130,7 @@
 													<span class="form-required" title="This field is required.">*</span>
 											</label>
 											<div class="controls">
-													<input type="text" id="inputPropertyArea">
+													<input type="text" id="inputPropertyArea" placeholder="Long">
 											</div><!-- /.controls -->
                     </div><!-- /.control-group -->
 
