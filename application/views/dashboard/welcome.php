@@ -1,7 +1,8 @@
 
 <section class="content">
+  <div clas="site">
     <div class="site-wrapper">
-    </div>
+
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
@@ -20,8 +21,8 @@
                 </ul>
               </nav>
             </div>
-
-
+          </div>
+  </div>
   <div class="wrap ">
     <div class="section sTop">
         <div class="inner">
@@ -198,7 +199,7 @@
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
   	background-image : url('assets/image/bg.jpg');
     background-size: cover;
-    opacity: 0.4;
+    opacity: 0.9;
     filter: alpha(opacity=40); /* For IE8 and earlier */
     background-repeat: no-repeat;
     background-position: center;
