@@ -1,5 +1,6 @@
 
 <section class="content">
+  <div class="wrapper-site"
     <img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
     <div class="site-wrapper">
 
@@ -46,6 +47,7 @@
     </div>
       </div>
     </div>
+</div>
 </div>
 
           <div class="npt-format-2 npt-hex-hover">
@@ -210,7 +212,11 @@
   min-height: 100%;
   opacity: 0.8;
 }
-
+.wrapper-site{
+  display: table;
+  width: 100%;
+  height: 780px;
+}
 	</style>
 
   <script type="text/javascript">
