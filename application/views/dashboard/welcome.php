@@ -214,6 +214,7 @@
   height: 780px;
   min-height: 100%;
   opacity: 0.8;
+  position: relative;
 }
 .wrapper-site{
   display: table;
