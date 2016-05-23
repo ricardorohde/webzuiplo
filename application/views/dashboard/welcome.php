@@ -198,6 +198,8 @@
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
   	background-image : url('assets/image/bg.jpg');
     background-size: cover;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
     background-repeat: no-repeat;
     background-position: center;
 }
