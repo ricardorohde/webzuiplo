@@ -48,9 +48,10 @@
     </div>
       </div>
     </div>
-    <img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
 
 </div>
+<img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
+
 </div>
 
           <div class="npt-format-2 npt-hex-hover">
