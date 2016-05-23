@@ -1,6 +1,5 @@
 
 <section class="content">
-    <img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
