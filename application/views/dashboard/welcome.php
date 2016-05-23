@@ -189,6 +189,14 @@
 	<style>
 
   .site-wrapper {
+    padding-top: 0px;
+    padding-bottom: 95px;
+    background-image: -webkit-linear-gradient(45deg, rgba(97, 0, 255, 0.49), rgba(151, 29, 252, 0.49) 22%, rgba(164, 65, 248, 0.49) 50%, rgba(90, 108, 239, 0.49) 72%, rgba(53, 130, 235, 0.49) 86%, rgba(30, 242, 241, 0.49)), url("<?php echo base_url('assets/image/bg.jpg');?>");
+    background-image: linear-gradient(45deg, rgba(97, 0, 255, 0.49), rgba(151, 29, 252, 0.49) 22%, rgba(164, 65, 248, 0.49) 50%, rgba(90, 108, 239, 0.49) 72%, rgba(53, 130, 235, 0.49) 86%, rgba(30, 242, 241, 0.49)), url("<?php echo base_url('assets/image/bg.jpg');?>");
+    background-position: 0% 0%, 50% 50%;
+    background-size: auto, cover;
+    background-attachment: scroll, fixed;
+    /*
     display: table;
     width: 100%;
     height: 780px;
@@ -200,7 +208,7 @@
     opacity: 0.9;
     filter: alpha(opacity=40);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
 }
 
 	</style>
