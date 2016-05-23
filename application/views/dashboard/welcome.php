@@ -1,7 +1,7 @@
 
 <section class="content">
     <div class="site-wrapper">
-
+    </div>
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
@@ -20,7 +20,7 @@
                 </ul>
               </nav>
             </div>
-          </div>
+
 
   <div class="wrap ">
     <div class="section sTop">
