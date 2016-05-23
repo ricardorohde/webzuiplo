@@ -538,7 +538,7 @@ body {
  */
 
 .masthead-brand {
-  margin-top: -150px;
+  margin-top: -70px;
   margin-bottom: 10px;
   width: 240px;
   height: auto;
@@ -608,6 +608,7 @@ font-family: 'Raleway', sans-serif;
 }
 .title-cover{
   color:#fff;
+  margin-top: 20px;
 }
 .screen .attachment {
   margin: 0 auto;
@@ -1228,7 +1229,7 @@ height: 100px;
   .cover h1 {
     font-size: 3.715em !important;
     font-weight: bold;
-    margin-top: -50px;
+    margin-top: 20px;
   }
   .lead {
     padding: 0 100px;
