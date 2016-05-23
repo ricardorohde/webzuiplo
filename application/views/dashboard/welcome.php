@@ -1,7 +1,7 @@
 
 <section class="content">
   <div class="wrapper-site"
-    <img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
+
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -23,6 +23,7 @@
               </nav>
             </div>
           </div>
+
   <div class="wrap ">
     <div class="section sTop">
         <div class="inner">
@@ -48,6 +49,7 @@
       </div>
     </div>
 </div>
+<img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
 </div>
 
           <div class="npt-format-2 npt-hex-hover">
