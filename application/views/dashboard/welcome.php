@@ -8,7 +8,7 @@
 
           <div class="masthead clearfix">
 
-              <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
+
             <div class="inner">
 
               <nav>
@@ -21,6 +21,7 @@
               </nav>
             </div>
           </div>
+            <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
   <div class="wrap ">
     <div class="section sTop">
         <div class="inner">
