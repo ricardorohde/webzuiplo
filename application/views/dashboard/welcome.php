@@ -1,7 +1,6 @@
 
 <section class="content">
-  <div class="wrapper-site">
-
+    <img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -47,10 +46,6 @@
     </div>
       </div>
     </div>
-
-</div>
-<img src="<?php echo base_url('assets/image/bg.jpg');?>" class="site">
-
 </div>
 
           <div class="npt-format-2 npt-hex-hover">
@@ -201,26 +196,14 @@
     min-height: 100%;
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-  	/*background-image : url('assets/image/bg.jpg');
+  	background-image : url('assets/image/bg.jpg');
     background-size: cover;
     opacity: 0.9;
-    filter: alpha(opacity=40);*/
+    filter: alpha(opacity=40);
     background-repeat: no-repeat;
     background-position: center;
 }
-.site{
-  display: table;
-  width: 100%;
-  height: 780px;
-  min-height: 100%;
-  opacity: 0.8;
-  position: relative;
-}
-.wrapper-site{
-  display: table;
-  width: 100%;
-  height: 780px;
-}
+
 	</style>
 
   <script type="text/javascript">
