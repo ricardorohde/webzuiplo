@@ -540,7 +540,7 @@ body {
 .masthead-brand {
   margin-top: -70px;
   margin-bottom: 10px;
-  width: 240px;
+  width:180px;
   height: auto;
 }
 
@@ -888,10 +888,9 @@ body {
  * Header
  */
 .masthead-brand {
-  margin-top: -90px;
+  margin-top: -70px;
   margin-bottom: 10px;
-  width: 240px;
-  height: auto;
+
 }
 
 .masthead-nav > li {

@@ -9,9 +9,11 @@
 
   <div class="wrap ">
     <div class="section sTop">
+        <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
         <div class="inner">
+
           <div class="inner cover">
-              <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
+
             <div class="masthead clearfix">
 
 
