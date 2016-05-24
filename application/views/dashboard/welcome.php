@@ -15,7 +15,7 @@
 
 
               <div class="inner">
-
+                  <img src="<?php echo base_url('assets/image/zuiplo-light.png');?>"
                 <nav>
                   <ul class="nav masthead-nav">
 
@@ -27,7 +27,7 @@
               </div>
             </div>
 
-              <img src="<?php echo base_url('assets/image/zuiplo-light.png');?>" class="masthead-brand">
+             class="masthead-brand">
             <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <h2 class="title-text">
