@@ -1,21 +1,16 @@
 
 <section class="content">
-
     <div class="site-wrapper">
-  <img src="<?php echo base_url('assets/image/zuiplo.jpg');?>" class="masthead-brand">
+
       <div class="site-wrapper-inner">
-  <img src="<?php echo base_url('assets/image/zuiplo.jpg');?>" class="masthead-brand">
+
         <div class="cover-container">
 
-  <img src="<?php echo base_url('assets/image/zuiplo.jpg');?>" class="masthead-brand">
+
   <div class="wrap ">
-  <img src="<?php echo base_url('assets/image/zuiplo.jpg');?>" class="masthead-brand">
     <div class="section sTop">
-
         <div class="inner">
-
           <div class="inner cover">
-
             <div class="masthead clearfix">
 
 
@@ -32,7 +27,7 @@
               </div>
             </div>
 
-
+              <img src="<?php echo base_url('assets/image/zuiplo_light.png');?>" class="masthead-brand">
             <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <h2 class="title-text">
