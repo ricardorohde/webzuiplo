@@ -194,7 +194,7 @@
   .site-wrapper {
     padding-top: 0px;
     padding-bottom: 95px;
-    height: 700px;
+    height: 800px;
     background-image: -webkit-linear-gradient(45deg, rgba(16, 146, 38, 0.49), rgba(92, 138, 105, 0.49) 22%, rgba(93, 93, 93, 0.49) 50%, rgba(110, 204, 72, 0.49) 72%, rgba(35, 189, 29, 0.49) 86%, rgba(43, 230, 26, 0.49)), url("<?php echo base_url('assets/image/bg.jpg');?>");
       background-image: linear-gradient(45deg, rgba(91, 173, 66, 0.49), rgba(108, 169, 97, 0.49) 22%, rgba(117, 158, 105, 0.49) 50%, rgba(40, 185, 66, 0.49) 72%, rgba(54, 160, 69, 0.49) 86%, rgba(136, 187, 187, 0.49)),url("<?php echo base_url('assets/image/bg.jpg');?>");
 
