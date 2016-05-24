@@ -12,10 +12,10 @@
         <div class="inner">
           <div class="inner cover">
             <div class="masthead clearfix">
-
+  <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
 
               <div class="inner">
-  <img src="<?php echo base_url('assets/image/zuiplo-light.png');?>" class="masthead-brand">
+
                 <nav>
                   <ul class="nav masthead-nav">
 
