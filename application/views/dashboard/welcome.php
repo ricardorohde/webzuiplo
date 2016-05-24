@@ -1,13 +1,13 @@
 
 <section class="content">
-      <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
-    <div class="site-wrapper">
 
+    <div class="site-wrapper">
+  <img src="<?php echo base_url('assets/image/zuiplo.png');?>" class="masthead-brand">
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
 
-  
+
   <div class="wrap ">
 
     <div class="section sTop">
