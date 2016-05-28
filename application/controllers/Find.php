@@ -10,11 +10,11 @@ class Find extends CI_Controller
       $this->load->model('General');
     }
 
-    public function find_pemilik()
+    public function find_in_here()
     {
 
       $data['view'] = $this->general->get();
-      $this->general->load('find/pemilik/find',$data);
+      $this->general->load('find/pencari/find',$data);
     }
 
 

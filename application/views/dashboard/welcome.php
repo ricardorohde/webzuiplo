@@ -27,14 +27,14 @@
               </div>
             </div>
 
-              <img src="<?php echo base_url('assets/image/zuiplo_light.png');?>" class="masthead-brand">
+              <img src="<?php echo base_url('assets/image/zuiplo-light.png');?>" class="masthead-brand">
             <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
             <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
             <h2 class="title-text">
     					<p class="lead">
     							<div class="subMenu">
     										<a href="#s1"  class="cover-btn-lg">JOIN</a>
-                        <a href="<?php echo base_url('Find/find_pemilik');?>" target="_blank" class="cover-btn-lg ">FIND</a>
+                        <a href="<?php echo base_url('Find/find_in_here');?>" target="_blank" class="cover-btn-lg ">FIND</a>
     							</div>
 
               </p>
@@ -195,24 +195,12 @@
     padding-top: 0px;
     padding-bottom: 95px;
     height: 760px;
-    background-image: -webkit-linear-gradient(45deg, rgba(97, 156, 129, 0.56), rgba(97, 156, 129, 0.56),rgba(97, 156, 129, 0.56), rgba(97, 156, 129, 0.56),rgba(97, 156, 129, 0.56), rgba(97, 156, 129, 0.56)),url("<?php echo base_url('assets/image/bg.png');?>");
-  background-image: linear-gradient(45deg, rgba(97, 156, 129, 0.56), rgba(97, 156, 129, 0.56),rgba(97, 156, 129, 0.56), rgba(97, 156, 129, 0.56),rgba(97, 156, 129, 0.56), rgba(97, 156, 129, 0.56)),url("<?php echo base_url('assets/image/bg.png');?>");
+    background-image: -webkit-linear-gradient(45deg, rgba(120, 187, 111, 0.56), rgba(71, 121, 98, 0.56),rgba(59, 74, 67, 0.56), rgba(60, 121, 94, 0.56),rgba(45, 146, 100, 0.56), rgba(92, 175, 137, 0.56)),url("<?php echo base_url('assets/image/bg.png');?>");
+  background-image:   linear-gradient(45deg, rgba(120, 187, 111, 0.56), rgba(71, 121, 98, 0.56),rgba(59, 74, 67, 0.56), rgba(60, 121, 94, 0.56),rgba(45, 146, 100, 0.56), rgba(92, 175, 137, 0.56)),url("<?php echo base_url('assets/image/bg.png');?>");
     background-position: 0% 0%, 50% 50%;
     background-size: auto, cover;
     background-attachment: scroll, fixed;
-    /*
-    display: table;
-    width: 100%;
-    height: 780px;
-    min-height: 100%;
-    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-  	background-image : url('assets/image/bg.jpg');
-    background-size: cover;
-    opacity: 0.9;
-    filter: alpha(opacity=40);
-    background-repeat: no-repeat;
-    background-position: center;*/
+
 }
 
 	</style>

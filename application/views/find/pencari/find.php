@@ -38,7 +38,7 @@
         <script>
         var infowindow;
         var circle;
-
+        var image_here = '<?php echo base_url('assets/image/zuiplo/user-pin.png');?>';
           function initMap()
            {
               var map = new google.maps.Map(document.getElementById('map'),
@@ -66,6 +66,7 @@
                 var marker = new google.maps.Marker({
                   map: resultsMap,
                   position: results[0].geometry.location,
+                    icon: image_here,
                   animation:google.maps.Animation.BOUNCE
                 });
 
@@ -80,19 +81,19 @@
                   fillOpacity: 0,
                   map: resultsMap,
                   center: results[0].geometry.location,
-                  radius: 8000
+                  radius: 3000
 
 
                 });
 
                 <?php foreach ($view->result() as $key => $row) {  ?>
-                    var gaji = '<?php echo $row->gaji ?>';
-                    var penghasilanBulanan = $("#salary").val();
+                    var saldo_perbulan = '<?php echo $row->saldo_perbulan ?>';
+                     var penghasilanBulanan = $("#salary").val();
 
                     var latview = '<?php echo $row->lat ?>';
                     var longview = '<?php echo $row->lang ?>';
-                    var messview = '<?php echo $row->nama_lokasi ?>';
-                      var image = '<?php echo base_url('assets/image/zuiplo/ico.png');?>';
+
+                      var image = '<?php echo base_url('assets/image/zuiplo/find-pin.png');?>';
                     var latLng = new google.maps.LatLng(latview,longview);
                     var marker = new google.maps.Marker({
                       position: latLng,
@@ -101,12 +102,12 @@
                     });
                     var distanceInMetres = google.maps.geometry.spherical.computeDistanceBetween(circle.center, latLng);
                     // alert(distanceInMetres);
-                    console.log("gaji :"+gaji);
+                    console.log("saldo_perbulan :"+saldo_perbulan);
                     console.log("penghasilanBulanan :"+penghasilanBulanan);
                     if(distanceInMetres > circle.radius){
                       marker.setMap(null);
                     }
-                    if(gaji <= (penghasilanBulanan * 30) / 100){
+                    if(saldo_perbulan <= (penghasilanBulanan * 30) / 100){
                       marker.setMap(null);
                     }
 
@@ -300,7 +301,7 @@
             <body>
 
             <div class="container">
-            
+
 
               <!-- Modal -->
               <div class="modal fade" id="myModal" role="dialog">
