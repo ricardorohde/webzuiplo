@@ -11,7 +11,7 @@
         <div class="col-md-6 search-loc">
           <div class="col-md-12 title-find-location">Fill in the short form below to find the right location for you<span class="form-required" title="This field is required.">*</span></div>
               <div class="input-group margin-bottom-sm">
-                <div class="col-md-4 class-find">
+                <div class="col-md-4 class-find"> 
                   <input class="form-control find-loc" type="text" placeholder="Salary" id="salary">
                 </div>
                   <div class="col-md-4 class-find">

@@ -16,7 +16,7 @@ class General extends CI_Model
   }
   public  function get()
     {
-        $query = $this->db->get('lokasi_register');
+        $query = $this->db->get('register_pemilik');
         return $query;
     }
 }
