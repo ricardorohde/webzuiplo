@@ -67,7 +67,8 @@
 
         <form method="post" action="/sample" enctype="multipart/form-data">
             <div class="row">
-                <div class="span4">
+							<div class="span3"></div>
+                <div class="span6">
                     <h3><strong>1.</strong> <span>Personal info</span></h3>
 
                     <div class="control-group">
@@ -110,8 +111,12 @@
                         </div><!-- /.controls -->
                     </div><!-- /.control-group -->
                 </div><!-- /.span4 -->
+							<div class="span3"></div>
+							</div><!-- /.row -->
 
-                <div class="span4">
+							<div class="row">
+								<div class="span3"></div>
+                	<div class="span6">
                     <h3><strong>2.</strong> <span>Property info</span></h3>
 
 										<div class="property-type control-group">
@@ -207,8 +212,11 @@
                     </div><!-- /.control-group -->
 
 							  </div><!-- /.span4 -->
-
-                <div class="span4">
+								<div class="span3"></div>
+							</div>
+							<div class="row">
+								<div class="span3"></div>
+                	<div class="span6">
                     <h3><strong>3.</strong> <span>Image upload</span></h3>
 
                     <div class="fileupload fileupload-new control-group" data-provides="fileupload">
@@ -240,7 +248,8 @@
                         </div><!-- /.controls -->
                     </div><!-- /.control-group -->
                 </div><!-- /.span4 -->
-            </div><!-- /.row -->
+								<div class="span3"></div>
+							</div>
         </form>
     </div><!-- /.content -->
 </div><!-- /.list-your-property-form -->        </div>
@@ -406,6 +415,9 @@
 })(jQuery);
 
 </script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+
+</script> -->
 <style>
 .inputPropertyContractType{
 	width: auto;

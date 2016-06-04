@@ -1454,7 +1454,7 @@ input[type="button"].btn-block {
 
 /* line 851, ../../scss/helpers/_commons.scss */
 .list-unstyled a, .list-inline a {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 /* line 854, ../../scss/helpers/_commons.scss */
 .list-unstyled a:hover, .list-inline a:hover {

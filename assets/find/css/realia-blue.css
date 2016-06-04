@@ -815,7 +815,7 @@ iframe.map {
 
 .breadcrumb-wrapper .account ul li a:hover {
   background-color: transparent;
-  text-decoration: underline
+  /*text-decoration: underline*/
 }
 
 .breadcrumb-wrapper .account ul li:last-child a {
@@ -1452,7 +1452,7 @@ iframe.map {
 }
 
 .not-found p a {
-  text-decoration: underline
+  /*text-decoration: underline*/
 }
 
 .list-your-property-form h3 {
@@ -4006,7 +4006,7 @@ body a {
 
 body a:hover {
   color: #0584b8;
-  text-decoration: underline
+  /*text-decoration: underline*/
 }
 
 body p {

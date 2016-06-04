@@ -37,7 +37,7 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><img src="<?php echo base_url('assets/image/zuiplo/key.png');?>" width="20px;" height="30px;"></span>
       <!-- logo for regular state and mobile devices -->
@@ -577,3 +577,7 @@
   <div class="control-sidebar-bg"></div>
 
 </div>
+<style>
+.fa{
+  color: #252525;
+}</style>

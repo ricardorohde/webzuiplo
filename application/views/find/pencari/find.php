@@ -11,7 +11,7 @@
         <div class="col-md-6 search-loc">
           <div class="col-md-12 title-find-location">Fill in the short form below to find the right location for you<span class="form-required" title="This field is required.">*</span></div>
               <div class="input-group margin-bottom-sm">
-                <div class="col-md-4 class-find"> 
+                <div class="col-md-4 class-find">
                   <input class="form-control find-loc" type="text" placeholder="Salary" id="salary">
                 </div>
                   <div class="col-md-4 class-find">
@@ -37,6 +37,7 @@
 
         <script>
         var infowindow;
+
         var circle;
         var image_here = '<?php echo base_url('assets/image/zuiplo/user-pin.png');?>';
           function initMap()
@@ -46,7 +47,8 @@
                 zoom: 10,
                 center: {lat: -6.204831, lng: 106.840848}
                 });
-
+                //infowindow
+                //end infowindow
             var geocoder = new google.maps.Geocoder();
 
             document.getElementById('submit').addEventListener('click', function()
@@ -67,8 +69,18 @@
                   map: resultsMap,
                   position: results[0].geometry.location,
                     icon: image_here,
-                  animation:google.maps.Animation.BOUNCE
+                    zoom:90,
+                    animation: google.maps.Animation.DROP
                 });
+
+                  var infowindow = new google.maps.InfoWindow();
+
+                google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent('<div><strong>Youre Location</strong><br>'+ address  + '<br>' + '</div>');
+                infowindow.open(resultsMap, this);
+              });
+
+
 
                 var lat = results[0].geometry.location.lat();// mendapatkan latitude
                 var lng = results[0].geometry.location.lng();// mendapatkan longitude
@@ -100,6 +112,12 @@
                         icon: image,
                       map: resultsMap
                     });
+                    var infowindow = new google.maps.InfoWindow();
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent('<div><strong>Price / Month</strong><br><p><br><strong>Rp. </strong>'+ saldo_perbulan  + '<br>' + '</div>');
+                    infowindow.open(resultsMap, this);
+                  });
                     var distanceInMetres = google.maps.geometry.spherical.computeDistanceBetween(circle.center, latLng);
                     // alert(distanceInMetres);
                     console.log("saldo_perbulan :"+saldo_perbulan);
@@ -107,9 +125,11 @@
                     if(distanceInMetres > circle.radius){
                       marker.setMap(null);
                     }
-                    if(saldo_perbulan <= (penghasilanBulanan * 30) / 100){
+                    if(saldo_perbulan >= (penghasilanBulanan * 30) / 100){
                       marker.setMap(null);
+
                     }
+
 
                   //  createMarker2(latview, longview,messview);
             <?php } ?>
@@ -117,9 +137,13 @@
               } else {
                 alert('Geocode was not successful for the following reason: ' + status);
               }
+
               document.getElementById('lat').value = lat;
               document.getElementById('lng').value=lng;
             });
+
+
+
           }
           var marker = null;
         function initialize() {

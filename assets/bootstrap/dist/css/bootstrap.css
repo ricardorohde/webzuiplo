@@ -186,7 +186,6 @@ th {
   *:before,
   *:after {
     color: #000 !important;
-    text-shadow: none !important;
     background: transparent !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
@@ -4593,18 +4592,21 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #fff;
   background-color: transparent;
+  text-shadow: none;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #fff;
   background-color: #080808;
+  text-shadow: none;
 }
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
 .navbar-inverse .navbar-nav > .disabled > a:focus {
   color: #444;
   background-color: transparent;
+
 }
 .navbar-inverse .navbar-toggle {
   border-color: #333;
@@ -5827,7 +5829,6 @@ button.list-group-item-danger.active:focus {
   font-weight: bold;
   line-height: 1;
   color: #000;
-  text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
   opacity: .2;
 }
@@ -5922,7 +5923,7 @@ button.close {
 }
 .modal-title {
   margin: 0;
-  
+
 }
 .modal-body {
   position: relative;
@@ -5978,7 +5979,6 @@ button.close {
   text-align: left;
   text-align: start;
   text-decoration: none;
-  text-shadow: none;
   text-transform: none;
   letter-spacing: normal;
   word-break: normal;
@@ -6097,7 +6097,6 @@ button.close {
   text-align: left;
   text-align: start;
   text-decoration: none;
-  text-shadow: none;
   text-transform: none;
   letter-spacing: normal;
   word-break: normal;
@@ -6303,7 +6302,6 @@ button.close {
   font-size: 20px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
   background-color: rgba(0, 0, 0, 0);
   filter: alpha(opacity=50);
   opacity: .5;
@@ -6406,10 +6404,8 @@ button.close {
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 .carousel-caption .btn {
-  text-shadow: none;
 }
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
@@ -6514,7 +6510,6 @@ button.close {
 .text-hide {
   font: 0/0 a;
   color: transparent;
-  text-shadow: none;
   background-color: transparent;
   border: 0;
 }
