@@ -1358,12 +1358,17 @@ input[type="button"].btn-block {
 .preview {
   display: block;
   text-align: center;
+  width: 800px;
+
 }
 /* line 770, ../../scss/helpers/_commons.scss */
 .preview img {
   display: block;
   margin-bottom: 40px;
   position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
+  height: 420px;
   top: 0px;
   -webkit-transition: top 0.2s linear;
   -moz-transition: top 0.2s linear;
@@ -1579,11 +1584,7 @@ input[type="button"].btn-block {
 }
 /* line 964, ../../scss/helpers/_commons.scss */
 .carousel.slide .carousel-indicators {
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(100%, transparent));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6), transparent);
-  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.6), transparent);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), transparent);
-  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.6), transparent);
+
   bottom: 0px;
   left: 0px;
   margin: 0px;
@@ -1593,7 +1594,7 @@ input[type="button"].btn-block {
 }
 /* line 973, ../../scss/helpers/_commons.scss */
 .carousel.slide .carousel-indicators li {
-  background-color: rgba(255, 255, 255, 0.3);
+
   border: 0px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1606,7 +1607,6 @@ input[type="button"].btn-block {
 }
 /* line 981, ../../scss/helpers/_commons.scss */
 .carousel.slide .carousel-indicators li.active {
-  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* line 988, ../../scss/helpers/_commons.scss */

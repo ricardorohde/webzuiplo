@@ -4,6 +4,11 @@
  */
 class General extends CI_Model
 {
+  public function __construct()
+   {
+       parent::__construct();
+       $this->load->database();
+   }
 
   public function load($page, $data = array())
   {
@@ -19,4 +24,6 @@ class General extends CI_Model
         $query = $this->db->get('register_pemilik');
         return $query;
     }
+
+
 }

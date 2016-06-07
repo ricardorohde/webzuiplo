@@ -250,7 +250,8 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url('assets/admin/dist/img/user2-160x160.jpg');?>" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php
+               echo $this->session->userdata('username'); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -283,7 +284,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href='<?php echo base_url()."main/logout"  ?>' class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -307,8 +308,9 @@
           <img src="<?php echo base_url('assets/admin/dist/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p><?php
+           echo $this->session->userdata('username'); ?></p>
+          <a href="#"><i class="fa fa-circle text-success sidebar_admin" ></i> Online</a>
         </div>
       </div>
       <!-- search form -->
@@ -319,52 +321,52 @@
         <li class="header">MAIN NAVIGATION</li>
         <li>
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Activity</span>
+            <i class="fa fa-dashboard sidebar"></i> <span>Activity</span>
 
           </a>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-money"></i>
+            <i class="fa fa-money sidebar"></i>
             <span>Manage Finance</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-bookmark"></i>  Report Finance </a></li>
-            <li><a href="#"><i class="fa fa-tag"></i>  Cek Bill</a></li>
-            <li><a href="#"><i class="fa fa-dollar"></i> Send Invoice</a></li>
+            <li><a href="#"><i class="fa fa-bookmark sidebar"></i>  Report Finance </a></li>
+            <li><a href="#"><i class="fa fa-tag sidebar"></i>  Cek Bill</a></li>
+            <li><a href="#"><i class="fa fa-dollar sidebar"></i> Send Invoice</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-desktop"></i>
-            <span>Manage Home</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-desktop sidebar"></i>
+            <span>Manage Stopover</span>
+            <i class="fa fa-angle-left pull-right sidebar"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list"></i> Master Home</a></li>
+            <li><a href="manage_stopover"><i class="fa fa-list sidebar"></i> Master Stopover</a></li>
 
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-user"></i> <span>Manage User</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-user sidebar"></i> <span>Manage User</span>
+            <i class="fa fa-angle-left pull-right sidebar"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-list"></i> Master User</a></li>
-            <li><a href="#"><i class="fa fa-at"></i>Send E-mail</a></li>
+            <li><a href="#"><i class="fa fa-list sidebar"></i> Master User</a></li>
+            <li><a href="#"><i class="fa fa-at sidebar"></i>Send E-mail</a></li>
 
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-cogs"></i> <span>Manage Setting</span>
-            <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-cogs sidebar"></i> <span>Manage Setting</span>
+            <i class="fa fa-angle-left pull-right sidebar"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-edit"></i> Edit Profile</a></li>
-            <li><a href="#"><i class="fa fa-cog"></i> Zuiplo Setting</a></li>
+            <li><a href="#"><i class="fa fa-edit sidebar"></i> Edit Profile</a></li>
+            <li><a href="#"><i class="fa fa-cog sidebar"></i> Zuiplo Setting</a></li>
           </ul>
         </li>
         <li>
@@ -378,6 +380,327 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+        	<a class="cover-btn-lg free-button-reg" onclick="add_person()">ADD </a>
+          <script type="text/javascript">
+
+          var save_method; //for save method string
+          var table;
+
+          $(document).ready(function() {
+
+              //datatables
+              table = $('#table').DataTable({
+
+                  "processing": true, //Feature control the processing indicator.
+                  "serverSide": true, //Feature control DataTables' server-side processing mode.
+                  "order": [], //Initial no order.
+
+                  // Load data for the table's content from an Ajax source
+                  "ajax": {
+                      "url": "<?php echo site_url('registerfree/ajax_list')?>",
+                      "type": "POST"
+                  },
+
+                  //Set column definition initialisation properties.
+                  "columnDefs": [
+                  {
+                      "targets": [ -1 ], //last column
+                      "orderable": false, //set not orderable
+                  },
+                  ],
+
+              });
+
+              //datepicker
+              $('.datepicker').datepicker({
+                  autoclose: true,
+                  format: "yyyy-mm-dd",
+                  todayHighlight: true,
+                  orientation: "top auto",
+                  todayBtn: true,
+                  todayHighlight: true,
+              });
+
+          });
+
+
+
+          function add_person()
+          {
+              save_method = 'add';
+              $('#form')[0].reset(); // reset form on modals
+              $('.form-group').removeClass('has-error'); // clear error class
+              $('.help-block').empty(); // clear error string
+              $('#modal_form').modal('show'); // show bootstrap modal
+          }
+
+          function edit_person(id)
+          {
+              save_method = 'update';
+              $('#form')[0].reset(); // reset form on modals
+              $('.form-group').removeClass('has-error'); // clear error class
+              $('.help-block').empty(); // clear error string
+
+              //Ajax Load data from ajax
+              $.ajax({
+                  url : "<?php echo site_url('registerfree/ajax_edit/')?>/" + id,
+                  type: "GET",
+                  dataType: "JSON",
+                  success: function(data)
+                  {
+
+                      $('[name="id"]').val(data.id);
+                      $('[name="informasi_lanjutan"]').val(data.informasi_lanjutan);
+                      $('[name="photo_url"]').val(data.photo_url);
+                      $('[name="created"]').val(data.created);
+                      $('[name="nama_depan"]').val(data.nama_depan);
+                        $('[name="nama_belakang"]').val(data.nama_belakang);
+                      $('[name="email"]').val(data.email);
+                      $('[name="no_telp"]').val(data.no_telp);
+                      $('[name="lat"]').val(data.lat);
+                      $('[name="lang"]').val(data.lang);
+                      $('[name="kamar_tidur"]').val(data.kamar_tidur);
+                      $('[name="kamar_mandi"]').val(data.kamar_mandi);
+                      $('[name="luas_area"]').val(data.luas_area);
+                      $('[name="saldo_perbulan"]').val(data.saldo_perbulan);
+                      $('[name="type_register"]').val(data.type_register);
+
+                      $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
+                      $('.modal-title').text('Edit Person'); // Set title to Bootstrap modal title
+
+                  },
+                  error: function (jqXHR, textStatus, errorThrown)
+                  {
+                      alert('Error get data from ajax');
+                  }
+              });
+          }
+
+          function reload_table()
+          {
+              table.ajax.reload(null,false); //reload datatable ajax
+          }
+
+          function save()
+          {
+              $('#btnSave').text('saving...'); //change button text
+              $('#btnSave').attr('disabled',true); //set button disable
+              var url;
+
+              if(save_method == 'add') {
+                  url = "<?php echo site_url('registerfree/ajax_add')?>";
+
+              } else {
+                  url = "<?php echo site_url('registerfree/ajax_update')?>";
+              }
+
+              // ajax adding data to database
+              $.ajax({
+                  url : url,
+                  type: "POST",
+                  data: $('#form').serialize(),
+                  dataType: "JSON",
+                  success: function(data)
+                  {
+
+                      if(data.status) //if success close modal and reload ajax table
+                      {
+                          $('#modal_form').modal('hide');
+                          // redirect('Manage/owner_admin', $data);
+                            window.location.href = 'owner_admin';
+
+                      }
+
+                      $('#btnSave').text('save'); //change button text
+                      $('#btnSave').attr('disabled',false); //set button enable
+
+                  },
+                  error: function (jqXHR, textStatus, errorThrown)
+                  {
+                      alert('Error adding / update data');
+                      $('#btnSave').text('save'); //change button text
+                      $('#btnSave').attr('disabled',false); //set button enable
+
+                  }
+              });
+          }
+
+          function delete_person(id)
+          {
+              if(confirm('Are you sure delete this data?'))
+              {
+                  // ajax delete data to database
+                  $.ajax({
+                      url : "<?php echo site_url('registerfree/ajax_delete')?>/"+id,
+                      type: "POST",
+                      dataType: "JSON",
+                      success: function(data)
+                      {
+                          //if success reload ajax table
+                          $('#modal_form').modal('hide');
+                          reload_table();
+                      },
+                      error: function (jqXHR, textStatus, errorThrown)
+                      {
+                          alert('Error deleting data');
+                      }
+                  });
+
+              }
+          }
+
+          </script>
+
+          <!-- Bootstrap modal -->
+          <div class="modal fade" id="modal_form" role="dialog">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h3 class="modal-title">Register Free</h3>
+                      </div>
+
+                      <div class="modal-body form">
+                          <form action="#" id="form" class="form-horizontal">
+                              <input type="hidden" value="" name="id"/>
+                              <div class="form-body">
+
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        First Name
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="nama_depan" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Last Name
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="nama_belakang" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        E- Mail
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="email" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Phone
+
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="no_telp" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                          Address
+
+                                    </label>
+                                      <div class="col-md-7">
+                                          <textarea name="informasi_lanjutan" class="form-control"></textarea>
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Lat
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="lat" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div><div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Long
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="lang" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div><div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Bedroom
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="kamar_tidur" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div><div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Bathroom
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="kamar_mandi" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Area (m<sup>2</sup>)
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="luas_area" placeholder="" class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                        Price @ Month
+                                        <span class="form-required" title="This field is required.">*</span>
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="saldo_perbulan" placeholder="Rp. " class="form-control" type="text">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="control-label" for="inputPropertySurname">
+                                      Type Register
+
+                                    </label>
+                                      <div class="col-md-7">
+                                          <input name="type_register" placeholder="Free" class="form-control" type="text" disabled="disabled">
+                                          <span class="help-block"></span>
+                                      </div>
+                                  </div>
+
+                              </div>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" id="btnSave" onclick="save()" class="btn btn-primary">Save</button>
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                      </div>
+                  </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <!-- End Bootstrap modal -->
+          <style>
+            h3.modal-title{
+              color: rgba(#43aa4d, 0.89);
+            }
+          </style>
 
   </div>
   <!-- /.content-wrapper -->
@@ -580,4 +903,22 @@
 <style>
 .fa{
   color: #252525;
+}
+.sidebar{
+  color: #fff;
+}
+.sidebar_admin{
+  color: #2c3;
 }</style>
+<link rel="stylesheet" href="<?php echo base_url('assets/css/owner.css');?>" type="text/css">
+
+  <link href="<?php echo base_url('assets/bootstrap/dist/css/bootstrap.min.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/assets/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/assets/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')?>" rel="stylesheet">
+
+
+<script src="<?php echo base_url('assets/assets/jquery/jquery-2.1.4.min.js')?>"></script>
+<script src="<?php echo base_url('assets/bootstrap/dist/js/bootstrap.min.js')?>"></script>
+<script src="<?php echo base_url('assets/assets/datatables/js/jquery.dataTables.min.js')?>"></script>
+<script src="<?php echo base_url('assets/assets/datatables/js/dataTables.bootstrap.js')?>"></script>
+<script src="<?php echo base_url('assets/assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js')?>"></script>

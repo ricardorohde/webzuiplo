@@ -20,6 +20,14 @@
   background-color: #fff;
   height: 100px;
 }
+.booking{
+  width: 110px;
+    height: 50px;
+}
+.request{
+  width: 205px;
+  height: 45px;
+}
 .find-loc{
   margin-top:40px;
 }

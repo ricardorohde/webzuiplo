@@ -27,9 +27,12 @@
               </div>
             </div>
 
+
+
+
               <img src="<?php echo base_url('assets/image/zuiplo-light.png');?>" class="masthead-brand">
-            <h1 class="cover-heading title-cover">Let's meet and build<br>a supportive network<br>for women in tech</h1>
-            <p class="lead">We will be holding a meetup every month. If you're interested to participate, please-i fill in the survey form first.</p>
+            <h1 class="cover-heading title-cover">  Come Join now!<br>Let the relationship<br>through cooperation between the two sides.</h1>
+            <p class="lead">Zuiplo will assist you in finding a home stopover, and help you in marketing the house stopover.</p>
             <h2 class="title-text">
     					<p class="lead">
     							<div class="subMenu">
@@ -92,7 +95,7 @@
                   </ul>
                 </div>
                 <div class="npt-plan-bottom">
-                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Sign Up</a>
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Registerfree');?>">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -104,7 +107,7 @@
                               <div class="npt-hex">
                     <div class="npt-plan-cost">
 
-                      <span class="npt-cost">69</span>
+                      <span class="npt-cost">70</span>
                           <span class="npt-currency"><sup><sup>.000</sup></sup></span>
                       <span class="npt-duration">Monthly</span>
                     </div>
@@ -135,7 +138,7 @@
                   </ul>
                 </div>
                 <div class="npt-plan-bottom">
-                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Sign Up</a>
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('RegisterPremium');?>">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -148,7 +151,7 @@
                   <div class="npt-hex">
                     <div class="npt-plan-cost">
 
-                      <span class="npt-cost">99</span>
+                      <span class="npt-cost">100</span>
                           <span class="npt-currency"><sup><sup>.000</sup></sup></span>
                       <span class="npt-duration">Monthly</span>
                     </div>
@@ -179,7 +182,7 @@
                   </ul>
                 </div>
                 <div class="npt-plan-bottom">
-                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner');?>">Sign Up</a>
+                  <a class="btn npt-btn npt-pricing-btn" href="<?php echo base_url('Register/owner_gold');?>">Sign Up</a>
                 </div>
               </div>
             </div>

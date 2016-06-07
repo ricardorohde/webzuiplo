@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight:400;
   overflow-x: hidden;
   overflow-y: auto
 }
@@ -242,7 +242,7 @@ a:hover, a:active, a:focus {
 }
 
 .main-header .sidebar-toggle:before {
-  content: "\f0b9"
+  content: "\f142"
 }
 
 .main-header .sidebar-toggle:hover {

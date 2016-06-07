@@ -5,17 +5,17 @@
 class Register extends CI_Controller
 {
 
-  public function __construct()
+
+    //owner premium
+
+
+    //owner gold
+    public function owner_gold()
     {
-      parent::__construct();
-      $this->load->model('General');
+    $this->general->load('register/pemilik/gold/add');
+
     }
 
-    public function owner()
-    {
-    $this->general->load('register/pemilik/add');
-
-    }
     public function tenant(){
       $this->general->load('register/pencari/add');
     }
