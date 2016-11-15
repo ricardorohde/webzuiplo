@@ -14,7 +14,7 @@ class Manage extends CI_Controller
     //admin
     public function owner_admin()
     {
-    $this->general->load('manage/admin_pemilik/dashboard');
+    $this->general->load('account_admin/template/menu');
 
     }
     //super_admin

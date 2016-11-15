@@ -73,10 +73,11 @@
                 <div class="npt-plan-details">
                   <ul>
                     <li>
-                      <p>Disk usage</p>
+                      <p>Be on top</p>
                        <div class="npt-offer-limit">
-                        <span class="npt-count"> 11 </span>
-                        GB
+                        <span class="npt-count"></span>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                        <i class="fa fa-check" aria-hidden="true"></i>
                       </div>
                     </li>
                     <li>
@@ -359,3 +360,9 @@
 })(jQuery);
 
 </script>
+
+<style media="screen">
+  .fa{
+    color: #939393;
+  }
+</style>
