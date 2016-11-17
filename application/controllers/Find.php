@@ -14,7 +14,7 @@ class Find extends CI_Controller
     {
 
       $data['view'] = $this->general->get();
-      $this->general->load('find/pencari/find-test',$data);
+      $this->general->load('find/pencari/find',$data);
     }
 
 

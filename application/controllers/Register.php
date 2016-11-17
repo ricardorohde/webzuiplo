@@ -12,7 +12,7 @@ class Register extends CI_Controller
     //owner gold
     public function owner_gold()
     {
-    $this->general->load('register/pemilik/gold/add');
+    $this->general->load('register/pemilik/free/add');
 
     }
 
