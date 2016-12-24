@@ -1,0 +1,38 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Welcome extends CI_Controller {
+	public function __construct()
+	{
+			parent::__construct();
+			$this->load->model('General');
+		}
+
+	public function index()
+	{
+		$this->general->load('dashboard/menu');
+	}
+	public function property_detail()
+	{
+		$this->general->load('dashboard/property_detail');
+	}
+	public function agent(){
+		$this->general->load('dashboard/agent');
+	}
+	public function blog()
+	{
+		$this->general->load('dashboard/blog');
+	}
+	public function login()
+	{
+		$this->general->load('admin/login');
+	}
+	public function register()
+	{
+		$this->general->load('admin/register');
+	}
+	public function submit()
+	{
+		$this->general->load('admin/submit');
+	}
+}

@@ -1,29 +1,18 @@
 <?php
-/**
- *
- */
-class General extends CI_Model
-{
-  public function __construct()
-   {
-       parent::__construct();
-       $this->load->database();
-   }
+defined('BASEPATH') OR exit('No direct script access allowed');
 
+class General extends CI_Model{
+
+  public function __construct()
+  {
+    parent::__construct();
+  }
   public function load($page, $data = array())
   {
       $this->load->view('dashboard/header');
-      // $this->load->view('dashboard/menu');
       $this->load->view($page, $data);
-      // $this->load->view('dashboard/footer');
-  // $this->general->logdata($page,$data);
-
+      $this->load->view('dashboard/footer');
   }
-  public  function get()
-    {
-        $query = $this->db->get('register_pemilik');
-        return $query;
-    }
-
+//-------------------------Agent------------------------------------------------
 
 }
