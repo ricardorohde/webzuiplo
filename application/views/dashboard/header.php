@@ -6,7 +6,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/libraries/font-awesome/css/font-awesome.css');?>" media="screen, projection">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/libraries/jquery-bxslider/jquery.bxslider.css');?>" media="screen, projection">
@@ -168,11 +168,11 @@
                           <a href="<?php echo base_url('Welcome');?>" class="home">Home</a>
 
                       </li>
-                      <li class="menuparent">
+                      <li class="menuparent properties">
                           <a href="#">Properties</a>
 
                       </li>
-                      <li class="menuparent">
+                      <li class="menuparent agents">
                           <a href="#">Agents</a>
 
                       </li>

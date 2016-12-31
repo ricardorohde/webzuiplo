@@ -14,7 +14,7 @@ class Main extends CI_Controller {
             $this->status = $this->config->item('status');
             $this->roles = $this->config->item('roles');
         }
-
+//-----------------------------------Admin--------------------------------------
 	public function index()
 	{
             if(empty($this->session->userdata['email'])){
@@ -246,24 +246,27 @@ class Main extends CI_Controller {
                 redirect(site_url().'/main/login');
             }
         }
+        public function base64url_encode($data) {
+          return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
+        }
+
+        public function base64url_decode($data) {
+          return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT));
+        }
+
+//----------------------------MASTER--------------------------------------------
+        public function master_home()
+        {
+          $this->load->view('admin/lte_header');
+          $this->load->view('admin/master/home/all');
+          $this->load->view('admin/lte_footer');
+        }
 // --------------------------Super Admin----------------------------------------
     public function all_users()
     {
       $data['users'] = $this->db->get('users')->result_array();
     $this->load->view('super_admin/all_users', $data);
     }
-// --------------------------Super Admin----------------------------------------
-    public function base64url_encode($data) {
-      return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
-    }
+// -----------------------------------------------------------------------------
 
-    public function base64url_decode($data) {
-      return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT));
-    }
-    public function master_home()
-    {
-      $this->load->view('admin/lte_header');
-      $this->load->view('admin/master_rumah');
-      $this->load->view('admin/lte_footer');
-    }
 }

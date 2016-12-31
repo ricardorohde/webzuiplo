@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/datepicker/datepicker3.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/daterangepicker/daterangepicker.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/select2/select2.min.css')?>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <script src="<?php echo base_url('assets/js/jquery-2.2.3.min.js')?>"></script>
@@ -22,6 +23,9 @@
     $.widget.bridge('uibutton', $.ui.button);
   </script>
   <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/iCheck/icheck.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/select2/select2.full.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/input-mask/jquery.inputmask.js')?>"></script>
   <script src="<?php echo base_url('assets/js/morris.min.js')?>"></script>
   <script src="<?php echo base_url('assets/js/sparkline/jquery.sparkline.min.js')?>"></script>
   <script src="<?php echo base_url('assets/js/jquery-jvectormap-1.2.2.min.js')?>"></script>
@@ -370,7 +374,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="master_home"><i class="fa fa-circle-o"></i> Master</a></li>
+          <li><a href="<?php echo base_url('main/master_home');?>"><i class="fa fa-circle-o"></i> Master</a></li>
         </ul>
       </li>
       <li class="treeview">
