@@ -6,7 +6,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/libraries/font-awesome/css/font-awesome.css');?>" media="screen, projection">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/libraries/jquery-bxslider/jquery.bxslider.css');?>" media="screen, projection">
@@ -134,8 +134,8 @@
                 </div><!-- /.header-infobox-->
 
                 <ul class="header-bar-nav nav nav-register">
-                  <li><a href="<?php echo base_url('Main/login');?>">Login</a></li>
-                  <li><a href="<?php echo base_url('Main/register');?>">Register</a></li>
+                  <li><a href="<?php echo base_url('Main/login');?>">Masuk Akun</a></li>
+                  <li><a href="<?php echo base_url('Main/register');?>">Daftarkan Akun</a></li>
                 </ul>
                   </div><!-- /.container -->
         </div><!-- /.header-bar -->
@@ -165,41 +165,34 @@
                 <div class="row">
                     <ul class="header-nav nav nav-pills">
                       <li class="menuparent home">
-                          <a href="<?php echo base_url('Welcome');?>" class="home">Home</a>
+                          <a href="<?php echo base_url('Welcome');?>" class="home">Beranda</a>
+
+                      </li>
+                      <li class="menuparent agents">
+                          <a href="<?php echo base_url('Admin/all_pemilik_rumah');?>">Pemilik</a>
 
                       </li>
                       <li class="menuparent">
-                          <a href="#">Properties</a>
+                          <a href="<?php echo base_url('Welcome/Blog');?>">Info</a>
 
                       </li>
                       <li class="menuparent">
-                          <a href="#">Agents</a>
-
+                          <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Ketentuan &amp; Persyaratan</a>
                       </li>
-                      <li class="menuparent">
-                          <a href="#">Blog</a>
-
-                      </li>
-                      <li class="menuparent">
-                          <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Terms &amp; Condition</a>
-
-                      </li>
-
-
-</ul><!-- /.header-nav -->
+                    </ul>
                     <div class="form-search-wrapper col-sm-3">
-                        <form method="post" action="http://preview.byaviators.com/template/realocation/header-social-icons.html?" class="form-horizontal form-search">
                             <div class="form-group has-feedback no-margin">
-                                <input type="text" class="form-control" placeholder="Search">
-
-                                <span class="form-control-feedback">
-                                    <i class="fa fa-search"></i>
-                                </span><!-- /.form-control-feedback -->
-                            </div><!-- /.form-group -->
-                        </form>
+                              <input  id="address" class="form-control find-loc" type="text" placeholder="Cari Rumah Singgah disini ">
+                              <!-- <input class="form-control find-loc" type="text" placeholder="Salary" id="salary"> -->
+                              <a class="btn btn-success btn-lg-find" id="submit">
+                                Find Location &nbsp;
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                              </a>
+                            </div>
                     </div>
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div><!-- /.header-navigation -->
     </div><!-- /.header-inner -->
-</div><!-- /#header -->    </div><!-- /#header-wrapper -->
+</div><!-- /#header -->
+   </div><!-- /#header-wrapper -->

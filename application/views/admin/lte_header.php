@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/css/AdminLTE.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/skins/_all-skins.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/iCheck/flat/blue.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/colorpicker/bootstrap-colorpicker.min.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/timepicker/bootstrap-timepicker.min.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/iCheck/flat/_all.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/morris/morris.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/jvectormap/jquery-jvectormap-1.2.2.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/plugins/datepicker/datepicker3.css')?>">
@@ -25,7 +28,11 @@
   <script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
   <script src="<?php echo base_url('assets/css/plugins/iCheck/icheck.min.js')?>"></script>
   <script src="<?php echo base_url('assets/css/plugins/select2/select2.full.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/input-mask/jquery.inputmask.date.extensions.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/input-mask/jquery.inputmask.extensions.js')?>"></script>
   <script src="<?php echo base_url('assets/css/plugins/input-mask/jquery.inputmask.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/colorpicker/bootstrap-colorpicker.min.js')?>"></script>
+  <script src="<?php echo base_url('assets/css/plugins/timepicker/bootstrap-timepicker.min.js')?>"></script>
   <script src="<?php echo base_url('assets/js/morris.min.js')?>"></script>
   <script src="<?php echo base_url('assets/js/sparkline/jquery.sparkline.min.js')?>"></script>
   <script src="<?php echo base_url('assets/js/jquery-jvectormap-1.2.2.min.js')?>"></script>
@@ -50,9 +57,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>Z</b><img src="<?php echo base_url('assets/images/zuiplo/key.png');?>" class="key"></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>ZUIPLO</b>&nbsp;<img src="<?php echo base_url('assets/images/zuiplo/key.png');?>"></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -65,83 +72,13 @@
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="<?php echo base_url('admin/mess');?>" >
               <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
+              <span class="label label-danger">4</span>
             </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li><!-- start message -->
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="<?php echo base_url('assets/images/user/user2-160x160.jpg')?>" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <!-- end message -->
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="<?php echo base_url('assets/images/user/user3-128x128.jpg')?>" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        AdminLTE Design Team
-                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="<?php echo base_url('assets/images/user/user4-128x128.jpg')?>" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Developers
-                        <small><i class="fa fa-clock-o"></i> Today</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="<?php echo base_url('assets/images/user/user3-128x128.jpg')?>" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="<?php echo base_url('assets/images/user/user4-128x128.jpg')?>" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Reviewers
-                        <small><i class="fa fa-clock-o"></i> 2 days</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
+
           </li>
-          <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
+          <!-- <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
               <span class="label label-warning">10</span>
@@ -149,7 +86,6 @@
             <ul class="dropdown-menu">
               <li class="header">You have 10 notifications</li>
               <li>
-                <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li>
                     <a href="#">
@@ -182,7 +118,6 @@
               <li class="footer"><a href="#">View all</a></li>
             </ul>
           </li>
-          <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
@@ -191,9 +126,8 @@
             <ul class="dropdown-menu">
               <li class="header">You have 9 tasks</li>
               <li>
-                <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li><!-- Task item -->
+                  <li>
                     <a href="#">
                       <h3>
                         Design some buttons
@@ -206,8 +140,7 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
+                  <li>
                     <a href="#">
                       <h3>
                         Create a nice theme
@@ -220,8 +153,7 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
+                  <li>
                     <a href="#">
                       <h3>
                         Some task I need to do
@@ -234,8 +166,7 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
+                  <li>
                     <a href="#">
                       <h3>
                         Make beautiful transitions
@@ -248,25 +179,13 @@
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
                 </ul>
               </li>
               <li class="footer">
                 <a href="#">View all tasks</a>
               </li>
             </ul>
-          </li>
-          <?php
-          $query = $this->db->query('SELECT first_name FROM users WHERE status ');
-
-          foreach ($query->result() as $row)
-          {
-                  echo $row->first_name;
-          }
-
-          $query->free_result();  // The $query result object will no longer be available
-
-         ?>
+          </li> -->
             <!-- <h5>Hello <span><?php echo $firstName; ?></span>. Your username is <span><?php echo $email;?></span></h5> -->
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
@@ -305,7 +224,7 @@
                   <a href="<?php echo base_url('Admin');?>" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo base_url('Main/logout');?>" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -373,8 +292,15 @@
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
+
         <ul class="treeview-menu">
-          <li><a href="<?php echo base_url('main/master_home');?>"><i class="fa fa-circle-o"></i> Master</a></li>
+          <li><a><i class="fa fa-circle-o"></i> Master</a>
+            <ul class="treeview-menu">
+              <li><a href="<?php echo base_url('main/list_rumah');?>"><i class="fa fa-circle-o"></i> All</a>
+              <li><a href="<?php echo base_url('main/add_rumah');?>"><i class="fa fa-circle-o"></i> Add</a>
+              <li><a href="<?php echo base_url('main/master_home');?>"><i class="fa fa-circle-o"></i> Edit</a>
+            </ul>
+          </li>
         </ul>
       </li>
       <li class="treeview">
@@ -390,6 +316,16 @@
           <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Send Email</a></li>
         </ul>
       </li>
+        <!-- <li class="treeview">
+          <a href="<?php echo base_url('admin/mess');?>">
+            <i class="fa fa-dashboard"></i>
+            <span>Message</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+
+        </li> -->
       <li class="treeview">
         <a href="#">
           <i class="fa fa-cog"></i>
@@ -406,8 +342,77 @@
       </ul>
     </section>
   </aside>
-  <script type="text/javascript">
-  // To make Pace works on Ajax calls
-  $(document).ajaxStart(function() { Pace.restart(); });
+  <script>
+    $(function () {
+      //iCheck for checkbox and radio inputs
+      $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+        checkboxClass: 'icheckbox_minimal-blue',
+        radioClass: 'iradio_minimal-blue'
+      });
+      //Red color scheme for iCheck
+      $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+        checkboxClass: 'icheckbox_minimal-red',
+        radioClass: 'iradio_minimal-red'
+      });
+      //Flat red color scheme for iCheck
+      $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+        checkboxClass: 'icheckbox_flat-green',
+        radioClass: 'iradio_flat-green'
+      });
+      //Initialize Select2 Elements
+      $(".select2").select2();
 
+      //Datemask dd/mm/yyyy
+      $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+      //Datemask2 mm/dd/yyyy
+      $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+      //Money Euro
+      $("[data-mask]").inputmask();
+
+      //Date range picker
+      $('#reservation').daterangepicker();
+      //Date range picker with time picker
+      $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+      //Date range as a button
+      $('#daterange-btn').daterangepicker(
+          {
+            ranges: {
+              'Today': [moment(), moment()],
+              'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+              'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+              'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+              'This Month': [moment().startOf('month'), moment().endOf('month')],
+              'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            startDate: moment().subtract(29, 'days'),
+            endDate: moment()
+          },
+          function (start, end) {
+            $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          }
+      );
+
+      //Date picker
+      $('#datepicker').datepicker({
+        autoclose: true
+      });
+
+
+
+      //Colorpicker
+      $(".my-colorpicker1").colorpicker();
+      //color picker with addon
+      $(".my-colorpicker2").colorpicker();
+
+      //Timepicker
+      $(".timepicker").timepicker({
+        showInputs: false
+      });
+    });
   </script>
+<style media="screen">
+  .key{
+    width: 10px;
+    height: 10px;
+  }
+</style>

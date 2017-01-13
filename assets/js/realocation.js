@@ -94,23 +94,23 @@ $(document).ready(function() {
         images.push('<img src="assets/img/icons/' + icon_name + '.png" alt="">');
     }
 
-    if ($('#map').length !== 0) {
-        var map = $('#map').aviators_map({
-            locations: locations,
-            contents: contents,
-            types: types,
-            images: images,
-            transparentMarkerImage: 'assets/img/marker-transparent.png',
-            transparentClusterImage: 'assets/img/clusterer-transparent.png',
-            zoom: 11,
-            center: {
-                latitude: 40.67,
-                longitude: -73.94
-            },
-            enableGeolocation: false,
-            styles: styles[$('#map').data('style')]
-        });
-    }
+    // if ($('#map').length !== 0) {
+    //     var map = $('#map').aviators_map({
+    //         locations: locations,
+    //         contents: contents,
+    //         types: types,
+    //         images: images,
+    //         transparentMarkerImage: 'assets/img/marker-transparent.png',
+    //         transparentClusterImage: 'assets/img/clusterer-transparent.png',
+    //         zoom: 11,
+    //         center: {
+    //             latitude: 40.67,
+    //             longitude: -73.94
+    //         },
+    //         enableGeolocation: false,
+    //         styles: styles[$('#map').data('style')]
+    //     });
+    // }
 
     /***********************************************************
      * PROPERTY MAP

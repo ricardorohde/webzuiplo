@@ -375,13 +375,25 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-money"></i>
-            <span>Manage Terms & Condition</span>
+            <span>Manage Terms &amp; Condition</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url('Super_admin/termscondition');?>"><i class="fa fa-circle-o"></i> Master Terms & Condition</a></li>
+            <li><a href="<?php echo base_url('Super_admin/termscondition');?>"><i class="fa fa-circle-o"></i> Master Terms &amp; Condition</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-money"></i>
+            <span>Manage FAQ &amp; Help</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url('Super_admin/faqandhelp');?>"><i class="fa fa-circle-o"></i> Master FAQ &amp; Help</a></li>
           </ul>
         </li>
       </ul>

@@ -55,8 +55,6 @@ class Super_admin extends CI_Controller{
 			$this->SuperAdmin_model->load('super_admin/master/TermsCondition/edit',$data);
 
 		}
-
-
 		public function save_master_termscondition_update()
 					{
 						$data['master_termscondition'] = $this->db->get('master_termscondition')->result_array();
@@ -72,5 +70,56 @@ class Super_admin extends CI_Controller{
 			        $this->SuperAdmin_model->load('super_admin/master/TermsCondition/add', $data);
 			    }
 //------------------------------------------------------------------------------
+//----------------------------------FAQ And HELP--------------------------------
+    public function faqandhelp()
+    {
+      $data['master_faqhelp'] = $this->db->get('master_faqhelp')->result_array();
+      $this->SuperAdmin_model->load('super_admin/master/FaqAndHelp/all',$data);
+
+    }
+    public function save_master_faqandhelp()
+    {
+      $data = array (
+
+          'id'=>$this->input->post('id'),
+          'judul'=>$this->input->post('judul'),
+          'isi'=>$this->input->post('isi'));
+
+      $this->SuperAdmin_model->save_master_faqandhelp($data);
+      redirect('Super_admin/faqandhelp', $data);
+    }
+    public function delete_master_faqandhelp($id)
+    {
+            $this->db->where('id',$id);
+            $this->db->delete('master_faqhelp');
+            redirect(base_url('Super_admin/termscondition'));
+    }
+    public function edit_master_faqandhelp($id)
+    {
+      $data = array();
+      $data['master_faqhelp'] = $this->db->get('master_faqhelp')->result_array();
+      $data['master_faqhelp'] = $this->db->where_in('id',$id)->get('master_faqhelp')->row_array();
+
+      $this->SuperAdmin_model->load('super_admin/master/FaqAndHelp/edit',$data);
+
+    }
+    // public function save_master_termscondition_update()
+    //       {
+    //         $data['master_faqhelp'] = $this->db->get('master_faqhelp')->result_array();
+    //         $data = $this->input->post();
+    //         $this->db->where('id', $data['id']);
+    //         $this->db->update('master_faqhelp',$data);
+    //         $this->SuperAdmin_model->load('super_admin/master/FaqAndHelp/all', $data);
+    //         redirect(base_url('Super_admin/termscondition/all', $data));
+    //       }
+          // public function get_master_termscondition_add()
+          // {
+          //     $data['master_termscondition'] = $this->db->get('master_termscondition')->result_array();
+          //     $this->SuperAdmin_model->load('super_admin/master/TermsCondition/add', $data);
+          // }
+
+//----------------------------------------------------------------------------
+
+
 
 }

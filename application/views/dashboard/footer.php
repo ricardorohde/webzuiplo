@@ -6,7 +6,7 @@
   <div class="container">
       <div class="row">
   <div class="widget col-sm-8">
-      <h2>Template Features</h2>
+      <h2>Disediakan Oleh ZUIPLO</h2>
 
       <div class="row">
           <div class="feature col-xs-12 col-sm-6">
@@ -17,10 +17,10 @@
               </div><!-- /.feature-icon -->
 
               <div class="feature-content col-xs-10 col-sm-10">
-                  <h3 class="feature-title">Portal Ready Solution</h3>
+                  <h3 class="feature-title">Solusi Pengelolaan Efisien</h3>
 
                   <p class="feature-body">
-                      Donec vel tortor eros. Morbi non purus vitae enim semper vehicula.
+                      Solusi Tepat untuk mengelola Rumah Kos / Kontrakan milik Anda.
                   </p>
               </div><!-- /.feature-content -->
           </div><!-- /.feature -->
@@ -29,15 +29,31 @@
           <div class="feature col-xs-12 col-sm-6">
               <div class="feature-icon col-xs-2 col-sm-2">
                   <div class="feature-icon-inner">
-                      <i class="fa fa-map-marker"></i>
+                      <i class="fa fa-search"></i>
                   </div><!-- /.feature-icon-inner -->
               </div><!-- /.feature-icon -->
 
               <div class="feature-content col-xs-10 col-sm-10">
-                  <h3 class="feature-title">Directory Features</h3>
+                <h3 class="feature-title">Solusi yang Tepat untuk Pencarian</h3>
+
+                <p class="feature-body">
+                    Solusi Tepat untuk Pencarian Rumah Kontrakan / Kos sesuai keinginan Anda.
+                </p>
+              </div><!-- /.feature-content -->
+          </div><!-- /.feature -->
+
+          <div class="feature col-xs-12 col-sm-6">
+              <div class="feature-icon col-xs-2 col-sm-2">
+                  <div class="feature-icon-inner">
+                      <i class="fa fa-users"></i>
+                  </div><!-- /.feature-icon-inner -->
+              </div><!-- /.feature-icon -->
+
+              <div class="feature-content col-xs-10 col-sm-10">
+                  <h3 class="feature-title">Interaksi lewat Informasi yang Akurat</h3>
 
                   <p class="feature-body">
-                      Donec vel tortor eros. Morbi non purus vitae enim semper vehicula.
+                      Berinteraksi langsung dengan calon Penyewa Rumah Kontrakan / Kos milik Anda.
                   </p>
               </div><!-- /.feature-content -->
           </div><!-- /.feature -->
@@ -45,32 +61,16 @@
           <div class="feature col-xs-12 col-sm-6">
               <div class="feature-icon col-xs-2 col-sm-2">
                   <div class="feature-icon-inner">
-                      <i class="fa fa-code"></i>
+                      <i class="fa fa-home"></i>
                   </div><!-- /.feature-icon-inner -->
               </div><!-- /.feature-icon -->
 
               <div class="feature-content col-xs-10 col-sm-10">
-                  <h3 class="feature-title">Superb Source Code</h3>
+                <h3 class="feature-title">Informasi Rumah yang Akurat</h3>
 
-                  <p class="feature-body">
-                      Donec vel tortor eros. Morbi non purus vitae enim semper vehicula.
-                  </p>
-              </div><!-- /.feature-content -->
-          </div><!-- /.feature -->
-
-          <div class="feature col-xs-12 col-sm-6">
-              <div class="feature-icon col-xs-2 col-sm-2">
-                  <div class="feature-icon-inner">
-                      <i class="fa fa-flask"></i>
-                  </div><!-- /.feature-icon-inner -->
-              </div><!-- /.feature-icon -->
-
-              <div class="feature-content col-xs-10 col-sm-10">
-                  <h3 class="feature-title">Most Recent Bootstrap</h3>
-
-                  <p class="feature-body">
-                      Donec vel tortor eros. Morbi non purus vitae enim semper vehicula.
-                  </p>
+                <p class="feature-body">
+                    Informasi Akurat yang ditampilkan, karena data diperoleh dari Pemilik Rumah langsung.
+                </p>
               </div><!-- /.feature-content -->
           </div><!-- /.feature -->
 
@@ -82,26 +82,26 @@
               </div><!-- /.feature-icon -->
 
               <div class="feature-content col-xs-10 col-sm-10">
-                  <h3 class="feature-title">Full Responsive Design</h3>
+                <h3 class="feature-title">Strategi Pemasaran</h3>
 
-                  <p class="feature-body">
-                      Donec vel tortor eros. Morbi non purus vitae enim semper vehicula.
-                  </p>
+                <p class="feature-body">
+                    Strategi untuk memasarkan Rumah Kontrakan / Kos milik Anda.
+                </p>
               </div><!-- /.feature-content -->
           </div><!-- /.feature -->
 
           <div class="feature col-xs-12 col-sm-6">
               <div class="feature-icon col-xs-2 col-sm-2">
                   <div class="feature-icon-inner">
-                      <i class="fa fa-search"></i>
+                      <i class="fa fa-map-marker"></i>
                   </div><!-- /.feature-icon-inner -->
               </div><!-- /.feature-icon -->
 
               <div class="feature-content col-xs-10 col-sm-10">
-                  <h3 class="feature-title">Retina Ready</h3>
+                  <h3 class="feature-title">Lokasi Rumah yang terintegrasi dengan Google Maps</h3>
 
                   <p class="feature-body">
-                      Donec vel tortor eros. Morbi non purus vitae enim semper vehicula.
+                      Lokasi Rumah yang akurat, karena terintgrasi dengan Google Maps.
                   </p>
               </div><!-- /.feature-content -->
           </div><!-- /.feature -->
@@ -109,21 +109,22 @@
   </div><!-- /.widget -->
 
   <div class="widget col-sm-4">
-      <h2>Why Choose Us</h2>
+      <h2>Kenapa Pilih ZUIPLO?</h2>
 
       <div class="panel-group" id="accordion">
           <div class="panel panel-default">
               <div class="panel-heading active">
                   <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                          Property Management
+                        Efisiensi bagi Pencari Rumah Kontrakan/Kos
+
                       </a>
                   </h4>
               </div><!-- /.panel-heading -->
 
               <div id="collapseOne" class="panel-collapse collapse in">
                   <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                      Solusi Tepat untuk Pencarian Rumah Kontrakan / Kos sesuai keinginan Anda.
                   </div><!-- /.panel-body -->
               </div><!-- /.panel-heading -->
           </div><!-- /.panel -->
@@ -132,14 +133,14 @@
               <div class="panel-heading">
                   <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                          Lifetime Updates
+                          Menjadi Pemilik Kos/Kontrakan yang dikenal
                       </a>
                   </h4>
               </div><!-- /.panel-heading -->
 
               <div id="collapseTwo" class="panel-collapse collapse">
                   <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                      Anda akan menjadi Pemilik Kos / Kontrakan yang dikenal oleh calon Penyewa Rumah milik Anda.
                   </div><!-- /.panel-body -->
               </div><!-- /.panel-collapse -->
           </div><!-- /.panel -->
@@ -148,37 +149,22 @@
               <div class="panel-heading">
                   <h4 class="panel-title">
                       <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                          Free Theme Support
+                            Pengelolaan Rumah Kontrakan/ Kos
                       </a>
                   </h4>
               </div><!-- /.panel-heading -->
 
               <div id="collapseThree" class="panel-collapse collapse">
                   <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    Anda bisa mengelola Rumah Kontrakan milik Anda menjadi sangat efisien.
+
                   </div><!-- /.panel-body -->
               </div><!-- /.panel-collapse -->
           </div><!-- /.panel -->
 
-          <div class="panel panel-default">
-              <div class="panel-heading">
-                  <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-                          Rich Documentation
-                      </a>
-                  </h4>
-              </div><!-- /.panel-heading -->
-
-              <div id="collapseFour" class="panel-collapse collapse">
-                  <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                  </div><!-- /.panel-body -->
-              </div><!-- /.panel-collapse -->
-          </div><!-- /.panel -->
       </div><!-- /.panel-group -->
   </div><!-- /.widget-->
 </div><!-- /.row -->
-
       <hr>
 
       <div class="row">

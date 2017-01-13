@@ -1,0 +1,232 @@
+
+<div id="main-wrapper">
+    <div id="main">
+        <div id="main-inner">
+
+            <!-- MAP -->
+<div class="block-content no-padding">
+    <div class="block-content-inner">
+        <div class="map-wrapper">
+            <div id="map" data-style="1"></div>
+
+        </div><!-- /.map-wrapper -->
+    </div><!-- /.block-content-inner -->
+</div><!-- /.block-content -->
+            <div class="container">
+                <!-- SLOGAN -->
+<div class="block-content background-primary background-map block-content-small-padding fullwidth">
+    <div class="block-content-inner">
+        <h2 class="no-margin center caps">Cara Cepat Mencari / Mempromosikan Rumah Singgah Milik Anda </h2>
+    </div><!-- /.block-content-iner -->
+</div><!-- /.block-content-->                <!-- ISOTOPE GRID -->
+<div class="block-content block-content-small-padding">
+<div class="block-content-inner">
+<h2 class="center">Rumah Kontrakan/Kos Teratas</h2>
+
+<ul class="properties-filter">
+    <li class="selected"><a href="#" data-filter="*"><span>Semua</span></a></li>
+    <li><a href="#" data-filter=".property-featured"><span>Rumah Kontrakan</span></a></li>
+    <li><a href="#" data-filter=".property-rent"><span>Rumah Kos</span></a></li>
+</ul>
+
+
+<div class="properties-items">
+<div class="row">
+    <div class="property-item property-featured col-sm-6 col-md-3">
+      <?php
+        foreach($get_rumah_kontrakan->result() as $row):?>
+          <div class="property-box">
+            <div class="property-box-inner">
+                <h3 class="property-box-title"><a href="<?php echo base_url('Detail/detail_rumah');?>"><?php echo $row->nama_rumah ?></a></h3>
+                <h5 class="property-box-subtitle"><a href="<?php echo base_url('Detail/detail_rumah');?>"><?php echo $row->alamat ?></a></h5>
+
+                <!-- <div class="property-box-label"><?php echo $row->jenis_rumah ?></div> -->
+                <!-- /.property-box-label -->
+
+                <div class="property-box-picture">
+                    <div class="property-box-price"><?php echo $row->harga_sewa ?></div>
+                    <!-- /.property-box-price -->
+                    <div class="property-box-picture-inner">
+                        <a href="<?php echo base_url('Detail/detail_rumah');?>" class="property-box-picture-target">
+                          <?php
+                             $image = array(
+                                'src' => 'uploads/'.($row->img1),
+                                'class' =>'img-responsive'
+                              );
+                              echo img($image); ?>
+                        </a><!-- /.property-box-picture-target -->
+                    </div>
+                    <!-- /.property-picture-inner -->
+                </div>
+                <!-- /.property-picture -->
+
+                <div class="property-box-meta">
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">
+                        <strong><?php echo $row->jum_kamar_mandi ?></strong>
+                        <span>Kamar Mandi</span>
+                    </div>
+                    <!-- /.col-sm-3 -->
+
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">
+                        <strong><?php echo $row->jum_kamar_tidur ?></strong>
+                        <span>Kamar Tidur</span>
+                    </div>
+                    <!-- /.col-sm-3 -->
+
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">
+                        <strong><?php echo $row->luas_rumah ?>m<sup>2</sup></strong>
+                        <span>Area</span>
+                    </div>
+                </div>
+                <!-- /.property-box-meta -->
+            </div>
+            <!-- /.property-box-inner -->
+        </div>
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="property-item property-rent col-sm-6 col-md-3">
+      <?php
+        foreach($get_rumah_kos->result() as $row):?>
+          <div class="property-box">
+            <div class="property-box-inner">
+                <h3 class="property-box-title"><a href="property-detail.html"><?php echo $row->nama_rumah ?></a></h3>
+                <h4 class="property-box-subtitle"><a href="property-detail.html"><?php echo $row->alamat ?></a></h4>
+
+                <div class="property-box-label property-box-label-primary"><?php echo $row->jenis_rumah ?></div>
+                <!-- /.property-box-label -->
+
+                <div class="property-box-picture">
+                    <div class="property-box-price"><?php echo $row->harga_sewa ?></div>
+                    <!-- /.property-box-price -->
+                    <div class="property-box-picture-inner">
+                        <a href="<?php echo base_url('Detail/detail_rumah');?>" class="property-box-picture-target">
+                          <?php
+                             $image = array(
+                                'src' => 'uploads/'.($row->img1),
+                                'class' =>'img-responsive'
+                              );
+                              echo img($image); ?>
+                        </a><!-- /.property-box-picture-target -->
+                    </div>
+                    <!-- /.property-picture-inner -->
+                </div>
+                <!-- /.property-picture -->
+
+                <div class="property-box-meta">
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">
+                        <strong><?php echo $row->fasilitas_kasur ?></strong>
+                        <span>Tempat Tidur</span>
+                    </div>
+                    <!-- /.col-sm-3 -->
+
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">
+                        <strong><?php echo $row->jenis_penghuni ?></strong>
+                        <span>Penghuni</span>
+                    </div>
+                    <!-- /.col-sm-3 -->
+
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">
+                        <strong><?php echo $row->luas_kamar ?>m<sup>2</sup></strong>
+                        <span>Area</span>
+                    </div>
+                </div>
+                <!-- /.property-box-meta -->
+            </div>
+            <!-- /.property-box-inner -->
+        </div>
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
+
+<!-- /.row -->
+</div>
+<!-- /.properties-items -->
+
+</div>
+<!-- /.block-content-inner -->
+</div><!-- /.block-content -->
+<!-- CAROUSEL -->
+             <!-- STATISTICS -->
+<div class="block-content fullwidth background-primary background-map clearfix">
+    <div class="block-content-inner row">
+        <div class="hex-wrapper col-sm-4 center">
+            <div class="clearfix">
+                <div class="hex col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                    <div class="hex-inner">
+                        <img src="<?php echo base_url('assets/img/hex.png');?>" alt="" class="hex-image">
+
+                        <div class="hex-content">
+                            <i class="fa fa-group"></i>
+                        </div><!-- /.hex-content -->
+                    </div><!-- /.hex-inner -->
+                </div><!-- /.hex -->
+            </div><!-- /.clearfix -->
+
+            <h3>15 000+ Satisfied Users</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur diping elit. Curabitur non gravida nisi. Nam vel magna
+            </p>
+
+
+        </div>
+
+        <div class="hex-wrapper col-sm-4 center">
+            <div class="clearfix">
+                <div class="hex col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                    <div class="hex-inner">
+                        <img src="<?php echo base_url('assets/img/hex.png');?>" alt="" class="hex-image">
+
+                        <div class="hex-content">
+                            <i class="fa fa-search"></i>
+                        </div><!-- /.hex-content -->
+                    </div><!-- /.hex-inner -->
+                </div><!-- /.hex -->
+            </div><!-- /.clearfix -->
+
+            <h3>Smart Property Search</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur diping elit. Curabitur non gravida nisi. Nam vel magna
+            </p>
+
+
+        </div>
+
+        <div class="hex-wrapper col-sm-4 center">
+            <div class="clearfix">
+                <div class="hex col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                    <div class="hex-inner">
+                        <img src="<?php echo base_url('assets/img/hex.png');?>" alt="" class="hex-image">
+
+                        <div class="hex-content">
+                            <i class="fa fa-compass"></i>
+                        </div><!-- /.hex-content -->
+                    </div><!-- /.hex-inner -->
+                </div><!-- /.hex -->
+            </div><!-- /.clearfix -->
+
+            <h3>We Are Here To Help You</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur diping elit. Curabitur non gravida nisi. Nam vel magna
+            </p>
+
+
+        </div>
+    </div><!-- /.block-content-inner -->
+</div><!-- /.block-content -->            </div><!-- /.container -->
+        </div><!-- /#main-inner -->
+    </div><!-- /#main -->
+</div><!-- /#main-wrapper -->
+
+<style media="screen">
+  .img-responsive{
+    height: 245px;
+  }
+</style>

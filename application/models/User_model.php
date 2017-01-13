@@ -3,6 +3,7 @@ class User_model extends CI_Model {
 
     public $status;
     public $roles;
+    	public $variable;
 
     function __construct(){
         // Call the Model constructor
@@ -10,7 +11,6 @@ class User_model extends CI_Model {
         $this->status = $this->config->item('status');
         $this->roles = $this->config->item('roles');
     }
-
     public function insertUser($d)
     {
             $string = array(
@@ -159,6 +159,60 @@ class User_model extends CI_Model {
         }
         return true;
     }
+    public function logout()
+    {
+      # code...
+    }
+// -----------------------------Master home ------------------------------------
+  public function detail($id)
+  {
+    # code...
+  }
+  public function insert_rumah_kos($data)
+  {
+    $this->db->insert('master_rumah_kos', $data);
+    if ($this->db->affected_rows() > 0)
+    {
+      return true;
+      } else
+        {
+          return false;
+        }
+  }
 
+  public function get_rumah_kos()
+  {
+  $this->db->order_by('id', 'DESC');
+    $query = $getData = $this->db->get('master_rumah_kos');
+
+    if ($getData->num_rows() > 0) {
+        return $query;
+    } else {
+        return;
+    }
+  }
+  //---------------------------------kontrakan----------------------------------
+    public function get_rumah_kontrakan()
+    {
+    $this->db->order_by('id', 'DESC');
+      $query = $getData = $this->db->get('master_rumah_kontrakan');
+
+      if ($getData->num_rows() > 0) {
+          return $query;
+      } else {
+          return;
+      }
+    }
+
+  public function insert_rumah_kontrakan($data){
+		$this->db->insert('master_rumah_kontrakan', $data);
+		if ($this->db->affected_rows() > 0) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+// -----------------------------------------------------------------------------
 
 }

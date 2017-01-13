@@ -17,4 +17,23 @@ class Admin extends CI_Controller{
       $this->load->view('admin/lte_footer');
   }
 
+  public function Mess()
+  {
+    $this->load->view('admin/lte_header');
+    $this->load->view('admin/master/mess/all');
+    $this->load->view('admin/lte_footer');
+  }
+  public function Read_mess()
+  {
+    $this->load->view('admin/lte_header');
+    $this->load->view('admin/master/mess/read');
+    $this->load->view('admin/lte_footer');
+  }
+//---------------------------------Agen Pemilik Rumah---------------------------
+  public function all_pemilik_rumah()
+  {
+    $this->general->load('admin/agen/all');
+  }
+
+//------------------------------------------------------------------------------
 }
