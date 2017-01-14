@@ -18,4 +18,39 @@
                   Anda adalah Admin. Silahkan kelola Rumah Kontrakan anda, yang sudah terintegrasi dengan kami.
               </div>
       </section>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"><center>Pilih Jenis Pembaruan Akun</center></h4>
+            </div>
+            <div class="modal-body">
+              <div class="col-md-12">
+                <p><br><p>
+                <div class="col-md-3">
+
+                </div>
+
+                <div class="col-md-6">
+                  <a href="<?php echo base_url('Tipe/premium');?>" class="btn btn-block btn-social btn-bitbucket bg-maroon btn-lg">
+                    <i class="fa fa-money"></i> Berbayar
+                  </a>
+                  <a class="btn btn-block btn-social btn-bitbucket btn-lg">
+                    <i class="fa fa-diamond"></i> Istimewa
+                  </a>
+                </div>
+                <div class="col-md-3">
+                </div>
+              </div>
+            </div><p><br><p><br><p><br><p><br><p><br><p><br>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>

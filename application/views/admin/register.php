@@ -33,6 +33,16 @@
                                         $fattr = array('class' => 'form-signin');
                                         echo form_open('/main/register', $fattr); ?>
                                           <div class="form-group">
+                                                <label>Tipe Pendaftaran</label>
+                                                <div class="select-wrapper">
+                                                    <select id="select-country" class="form-control" name="tipe_status">
+                                                        <option <?php echo ($this->input->post("tipe_status")=="Free")?"selected":"";?> value="1">Free</option>
+                                                        <option <?php echo ($this->input->post("tipe_status")=="Premium")?"selected":"";?> value="2">Premium</option>
+                                                        <option <?php echo ($this->input->post("tipe_status")=="Gold")?"selected":"";?> value="3">Gold</option>
+                                                    </select>
+                                                </div>
+                                          </div>
+                                          <div class="form-group">
                                               <label>First Name</label>
                                               <?php echo form_input(array('name'=>'firstname', 'id'=> 'firstname', 'placeholder'=>'First Name', 'class'=>'form-control', 'value' => set_value('firstname'))); ?>
                                               <?php echo form_error('firstname');?>

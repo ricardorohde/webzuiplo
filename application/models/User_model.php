@@ -14,6 +14,7 @@ class User_model extends CI_Model {
     public function insertUser($d)
     {
             $string = array(
+              'tipe_status'=>$d['tipe_status'],
                 'first_name'=>$d['firstname'],
                 'last_name'=>$d['lastname'],
                 'email'=>$d['email'],

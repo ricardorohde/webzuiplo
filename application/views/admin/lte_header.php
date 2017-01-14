@@ -41,6 +41,9 @@
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <script src="<?php echo base_url('assets/js/daterangepicker.js')?>"></script>
   <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js')?>"></script>
   <script src="<?php echo base_url('assets/js/bootstrap3-wysihtml5.all.min.js')?>"></script>
@@ -316,6 +319,18 @@
           <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Send Email</a></li>
         </ul>
       </li>
+      <li class="treeview">
+        <a href="#" data-toggle="modal" data-target="#myModal">
+          <i class="fa fa-user"></i>
+          <span>Perbarui Akun</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+  
+
+      </li>
+
         <!-- <li class="treeview">
           <a href="<?php echo base_url('admin/mess');?>">
             <i class="fa fa-dashboard"></i>

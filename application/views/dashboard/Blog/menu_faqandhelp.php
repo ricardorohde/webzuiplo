@@ -9,7 +9,7 @@
                                 <div class="sidebar">
                                     <div class="sidebar-inner">
                                         <div class="widget">
-                                            <h3 class="widget-title">Useful Links</h3>
+                                            <!-- <h3 class="widget-title">Useful Links</h3> -->
 
                                             <div class="widget-content">
                                                 <ul class="nav nav-pills nav-stacked">
@@ -30,53 +30,82 @@
 
                                 <div class="posts">
                                   <div class="row">
-                                      <h2 class="center">FAQ</h2>
+                                <h2 class="center">Pertanyaan Umum</h2>
 
-                                      <p class="block-slogan center">
-                                          Sed dapibus, ante non pulvinar dictum, dui elit fermentum est, ac auctor sem arcu eget<br>
-                                          tortor. Praesent odio lectus, dapibus sed sapien in, ullamcorper congue elit. Cras porttitor rhoncus sem ac sollicitudin.
-                                      </p>
+                                <!-- <p class="block-slogan center">
+                                    Sed dapibus, ante non pulvinar dictum, dui elit fermentum est, ac auctor sem arcu eget<br>
+                                    tortor. Praesent odio lectus, dapibus sed sapien in, ullamcorper congue elit. Cras porttitor rhoncus sem ac sollicitudin.
+                                </p> -->
 
-                                      <div class="panel-group" id="accordion">
-                                        <?php
-                                        foreach ($master_faqhelp as $key) {
-                                            ?>
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading active">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                    Apa itu ZUIPLO ?
+                                                </a>
+                                            </h4>
+                                        </div><!-- /.panel-heading -->
 
-                                          <div class="panel panel-default">
-                                              <div class="panel-heading">
-                                                  <h4 class="panel-title">
-                                                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                                          <?php echo $key['judul']; ?>
-                                                      </a>
-                                                  </h4>
-                                              </div><!-- /.panel-heading -->
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                ZUIPLO adalah situs untuk pencarian Rumah Kontrakan atau Kos sekaligus sebagai tempat Pengelolaan Rumah Kontrakan atau Rumah Kos bagi Pemilik Rumah yang ingin memasarkan Rumah Kontrakan atau Kos lebih luas lagi.
+                                            </div><!-- /.panel-body -->
+                                        </div><!-- /.panel-heading -->
+                                    </div><!-- /.panel -->
 
-                                              <div id="collapseTwo" class="panel-collapse collapse">
-                                                  <div class="panel-body">
-                                                      <?php echo $key['isi']; ?>
-                                                  </div><!-- /.panel-body -->
-                                              </div><!-- /.panel-collapse -->
-                                          </div><!-- /.panel -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                                    Kenapa Cari Rumah Kontrakan / Kos di ZUIPLO ?
+                                                </a>
+                                            </h4>
+                                        </div><!-- /.panel-heading -->
 
-                                          <?php
-                                            }
-                                          ?>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Perkembangan teknologi menjadi alasan ZUIPLO untuk ikut andil dalam mempermudah pihak pencari Rumah Kontrakan / Kos untuk menemukan Rumah Kontrakan / Kos yang sesuai, ZUIPLO mmberikan informasi yang Akurat karena Data yang ditampilkan diisi langsung oleh Pengelola Rumah Kontrakan / Kos yang bersangkutan.
+                                            </div><!-- /.panel-body -->
+                                        </div><!-- /.panel-collapse -->
+                                    </div><!-- /.panel -->
 
-                                      </div><!-- /.panel-group -->
-                                  </div><!-- /.row -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                                    Kenapa harus mendaftarkan Rumah Kontrakan / Kos di ZUIPLO ?
+                                                </a>
+                                            </h4>
+                                        </div><!-- /.panel-heading -->
+
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Menjadikan Rumah Kontrakan / Kos  mudah didapat dan mudah ditemukan oleh pihak Pencari adalah tujuan utama dari pembuatan situs ZUIPLO. Karena bukan hanya memajukan perkembangan teknologi, ZUIPLO juga menjadikan Rumah Kontrakan / Kos dapat dikenal oleh masyarakat yang lebih luas lagi.
+                                            </div><!-- /.panel-body -->
+                                        </div><!-- /.panel-collapse -->
+                                    </div><!-- /.panel -->
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                                    Bagaimana Cara Kerja ZUIPLO ?
+                                                </a>
+                                            </h4>
+                                        </div><!-- /.panel-heading -->
+
+                                        <div id="collapseFour" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Pencari menemukan Rumah Kontrakan atau Kos yang sesuai, Sedang Pemilik diberi akses olh ZUIPLO untuk mengelola Rumah Kontrakan / Kos miliknya. Bagi Pemilik yang memiliki Akses Berbayar maka Rumah Kontrakan / Kos ditampilkan berbeda dengan Rumah Kontrakan / Kos yang hanya memiliki akses Gratis. Sedang Pemilik yang memilik Akses Istimewa akan ditampilkan pada list teratas dan yang berbeda dengan akses lainnya.
+                                            </div><!-- /.panel-body -->
+                                        </div><!-- /.panel-collapse -->
+                                    </div><!-- /.panel -->
+                                </div><!-- /.panel-group -->
+                            </div><!-- /.row -->
                                 </div><!-- /.posts -->
 
-                                <div class="center">
-                                    <ul class="pagination">
-                                        <li><a href="#">&laquo;</a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li class="active"><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">&raquo;</a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div><!-- /.row -->
                     </div><!-- /.block-content-inner -->

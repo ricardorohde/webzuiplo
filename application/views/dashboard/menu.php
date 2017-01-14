@@ -55,8 +55,9 @@
                     radius: 3000
                   });
                     <?php foreach ($view->result() as $key => $row) {  ?>
-                      var saldo_perbulan = '<?php echo $row->saldo_perbulan ?>';
-                      var penghasilanBulanan = $("#salary").val();
+                      // var saldo_perbulan = '<?php echo $row->saldo_perbulan ?>';
+                      // var informasi_lanjutan = '<?php echo $row->informasi_lanjutan ?>';
+                      // var penghasilanBulanan = $("#salary").val();
                       var latview = '<?php echo $row->lat ?>';
                       var longview = '<?php echo $row->lang ?>';
                       var image = '<?php echo base_url('assets/images/zuiplo/find-pin.png');?>';
@@ -68,18 +69,19 @@
                       });
                       var infowindow = new google.maps.InfoWindow();
                         google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.setContent('<div><strong>Price / Month</strong><br><p><br><strong>Rp. </strong>'+ saldo_perbulan  + '<br>' + '</div>');
+                        infowindow.setContent('<div><strong>Price / Month</strong><br><p><br><strong>Rp. </strong>'+ '<br>' + '</div>');
+                          // infowindow.setContent('<div><strong>Price / Month</strong><br><p><br><strong>Rp. </strong>'+ saldo_perbulan  + '<br>' + '</div>');
                         infowindow.open(resultsMap, this);
                     });
                       var distanceInMetres = google.maps.geometry.spherical.computeDistanceBetween(circle.center, latLng);
-                        console.log("saldo_perbulan :"+saldo_perbulan);
-                        console.log("penghasilanBulanan :"+penghasilanBulanan);
+                        // console.log("saldo_perbulan :"+saldo_perbulan);
+                        // console.log("penghasilanBulanan :"+penghasilanBulanan);
                           if(distanceInMetres > circle.radius){
                             marker.setMap(null);
                           }
-                          if(saldo_perbulan >= (penghasilanBulanan * 30) / 100){
-                            marker.setMap(null);
-                          }
+                          // if(saldo_perbulan >= (penghasilanBulanan * 30) / 100){
+                          //   marker.setMap(null);
+                          // }
                           <?php } ?>
                         } else {
                             alert('Geocode was not successful for the following reason: ' + status);

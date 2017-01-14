@@ -15,7 +15,7 @@ class Welcome extends CI_Controller{
     $data = array();
     $data['get_rumah_kos'] = $this->user_model->get_rumah_kos();
     $data['get_rumah_kontrakan'] = $this->user_model->get_rumah_kontrakan();
-    $data['view'] = $this->general->get();
+    $data['view'] = $this->general->get_rumah_kontrakan();
     $this->general->load('dashboard/menu',$data );
 
     // $data['get_rumah_kos'] = $this->db->get('master_rumah_kos')->result_array();
@@ -60,9 +60,11 @@ class Welcome extends CI_Controller{
   }
   public function Blog_faqandhelp()
   {
-    $data['master_faqhelp'] = $this->db->get('master_faqhelp')->result_array();
-    $this->general->load('dashboard/Blog/menu_faqandhelp', $data);
+    $this->general->load('dashboard/Blog/menu_faqandhelp');
   }
 //------------------------------------------------------------------------------
-
+public function tesmaps()
+{
+  $this->load->view('tesmaps');
+}
 }
