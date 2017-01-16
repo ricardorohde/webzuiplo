@@ -9,15 +9,13 @@
                                 <div class="sidebar">
                                     <div class="sidebar-inner">
                                         <div class="widget">
-                                            <h3 class="widget-title">Useful Links</h3>
-
                                             <div class="widget-content">
                                                 <ul class="nav nav-pills nav-stacked">
                                                   <li><a href="<?php echo base_url('Welcome/Blog');?>">Semua Rumah</a></li>
                                                   <li><a href="<?php echo base_url('Welcome/Blog_kontrakan');?>">Rumah Kontrakan</a></li>
                                                   <li><a href="<?php echo base_url('Welcome/Blog_kos');?>">Rumah Kos</a></li>
-                                                  <li><a href="<?php echo base_url('Welcome/Blog_termsandcondition');?>">Terms &amp; Condition</a></li>
-                                                  <li><a href="#">FAQ and Help</a></li>
+                                                  <li><a href="<?php echo base_url('Welcome/Blog_termsandcondition');?>">Syarat &amp; Ketentuan</a></li>
+                                                    <li><a href="<?php echo base_url('Welcome/Blog_faqandhelp');?>">FAQ</a></li>
                                                 </ul>
                                             </div>
                                           </div>

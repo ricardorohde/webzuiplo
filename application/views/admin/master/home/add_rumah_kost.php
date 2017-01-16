@@ -38,9 +38,10 @@
                           <label>E-mail</label>
                         </div>
                         <div class="col-sm-12">
-                          <input type="text" class="form-control" id="" disabled>
+                          <input type="text" class="form-control" id="" name="email_pemilik" value="<?php echo $users['email'];?>">
                         </div>
                       </div>
+                      <input type="text" name="id_pemilik" value="<?php echo $users['id'];?>" class="form-control">
                       <div class="form-group">
                         <div class="col-md-12">
                           <br>
@@ -165,33 +166,6 @@
                             <div class="form-group">
                               <div class="col-md-12">
                                 <br>
-                                <label for="exampleInputFile">Gambar Fasilitas Rumah Kos<label class="required">*</label></label>
-                              </div>
-                              <div class="col-sm-12">
-                                <input type="file" id="exampleInputFile" name="imgName5">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-md-12">
-                                <br>
-                                <label for="exampleInputFile">Gambar Fasilitas Rumah Kos</label>
-                              </div>
-                              <div class="col-sm-12">
-                                <input type="file" id="exampleInputFile" name="imgName6">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-md-12">
-                                <br>
-                                <label for="exampleInputFile">Gambar Fasilitas Rumah Kos</label>
-                              </div>
-                              <div class="col-sm-12">
-                                <input type="file" id="exampleInputFile" name="imgName7">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-md-12">
-                                <br>
                                 <button type="submit" class="btn bg-green btn-lg col-md-12" >
                                     <i class="fa fa-fw fa-send"></i> Kirim Data
                                 </button>
@@ -200,110 +174,102 @@
 
                           </div>
                           <div class="col-md-8">
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <br>
+                                <label>Koordinat<label class="required">*</label></label>
 
+                              </div>
+                              <br><br><p>
+                              <div class="col-sm-2">
+                                <label>Latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: </label>
+                              </div>
+                              <div class="col-sm-4">
+                                <input type="text" class="form-control" id="" name="lat" >
+                              </div>
+                              <div class="col-sm-2">
+                                <label>Longitude &nbsp; &nbsp; &nbsp;: </label>
+                              </div>
+                              <div class="col-sm-4">
+                                <input type="text"  class="form-control" id="" name="lng">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <br>
+                              </div>
+                              <div class="col-sm-2">
+                                <label>Kode Pos &nbsp; &nbsp; &nbsp;: </label>
+                              </div>
+                              <div class="col-sm-4">
+                                <input type="text" class="form-control" id=""  name="postal_code" >
+                              </div>
+                              <div class="col-sm-2">
+                                <label>Kota &nbsp; &nbsp; &nbsp;: </label>
+                              </div>
+                              <div class="col-sm-4">
+                                <input type="text"  class="form-control" id=""  name="country" >
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <br>
+                                <label>Lokasi<label class="required">*</label></label>
+                              </div>
+                              <div class="col-sm-11">
+                                <input id="geocomplete" type="text" class="form-control col-md-10" placeholder="Type in an address" value="Empire State Bldg" >
+
+                              </div>
+                              <div class="col-sm-1">
+                              <a class="btn btn-social-icon btn-dropbox col-sm-1" id="find" value="find"><i class="fa fa-search"></i></a>
+                              </div>
+                            </div>
                                   <div class="form-group">
-                                    <div class="col-md-12">
-                                      <br>
-                                      <label>Koordinat<label class="required">*</label></label>
-                                    </div>
-                                    <div class="col-sm-6">
-                                      <input type="text" class="form-control" id="" placeholder="Latitude" name="lat" disabled>
-                                    </div>
-                                    <div class="col-sm-6">
-                                      <input type="text"  class="form-control" id="" placeholder="Longitude" name="long" disabled>
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <div class="col-md-12">
-                                      <br>
-                                      <label>Lokasi<label class="required">*</label></label>
-                                    </div>
                                     <div class="col-sm-12">
-                                      <input id="pac-input" type="text" class="form-control"
-                                          placeholder="Cari Lokasi">
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <div class="col-sm-12">
 
-                                      <div id="map">
+                                      <div class="map_canvas"></div>
 
-                                      </div>
+                                        <fieldset>
+                                          <input name="name" type="hidden" value="" disabled="">
+                                          <input name="point_of_interest" type="hidden" value="">
+                                          <input name="location" type="hidden" value="">
+                                          <input name="location_type" type="hidden" value="">
+                                          <input name="formatted_address" type="hidden" value="">
+                                          <input name="bounds" type="hidden" value="">
+                                          <input name="viewport" type="hidden" value="">
+                                          <input name="route" type="hidden" value="">
+                                          <input name="street_number" type="hidden" value="">
+                                          <input name="locality" type="hidden" value="">
+                                          <input name="sublocality" type="hidden" value="">
+                                          <input name="country_short" type="hidden" value="">
+                                          <input name="administrative_area_level_1" type="hidden" value="">
+                                          <input name="place_id" type="hidden" value="">
+                                          <input name="id" type="hidden" value="">
+                                          <input name="reference" type="hidden" value="">
+                                          <input name="url" type="hidden" value="">
+                                          <input name="website" type="hidden" value="">
+                                        </fieldset>
+                                      <!-- </form> -->
+                                      <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&sensor=false&amp;libraries=places"></script>
+                                      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+                                      <script src="<?php echo base_url('assets/js/maps/jquery.geocomplete.js');?>"></script>
+                                      <script src="<?php echo base_url('assets/js/maps/jquery.geocomplete.min.js');?>"></script>
                                       <script>
 
-                                        function initMap() {
-                                          var map = new google.maps.Map(document.getElementById('map'), {
-                                            center: {lat: -6.210975, lng: 106.848744},
-                                            zoom: 13
-                                          });
-                                          var input = /** @type {!HTMLInputElement} */(
-                                              document.getElementById('pac-input'));
-
-                                          var types = document.getElementById('type-selector');
-                                          map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-                                          map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
-
-                                          var autocomplete = new google.maps.places.Autocomplete(input);
-                                          autocomplete.bindTo('bounds', map);
-
-                                          var infowindow = new google.maps.InfoWindow();
-                                          var marker = new google.maps.Marker({
-                                            map: map,
-                                            anchorPoint: new google.maps.Point(0, -29)
+                                        $(function(){
+                                          $("#geocomplete").geocomplete({
+                                            map: ".map_canvas",
+                                            details: "form",
+                                            types: ["geocode", "establishment"],
                                           });
 
-                                          autocomplete.addListener('place_changed', function() {
-                                            infowindow.close();
-                                            marker.setVisible(false);
-                                            var place = autocomplete.getPlace();
-                                            if (!place.geometry) {
-                                              window.alert("No details available for input: '" + place.name + "'");
-                                              return;
-                                            }
-                                            if (place.geometry.viewport) {
-                                              map.fitBounds(place.geometry.viewport);
-                                            } else {
-                                              map.setCenter(place.geometry.location);
-                                              map.setZoom(17);
-                                            }
-                                            marker.setIcon(({
-                                              url: place.icon,
-                                              size: new google.maps.Size(71, 71),
-                                              origin: new google.maps.Point(0, 0),
-                                              anchor: new google.maps.Point(17, 34),
-                                              scaledSize: new google.maps.Size(35, 35)
-                                            }));
-                                            marker.setPosition(place.geometry.location);
-                                            marker.setVisible(true);
-
-                                            var address = '';
-                                            if (place.address_components) {
-                                              address = [
-                                                (place.address_components[0] && place.address_components[0].short_name || ''),
-                                                (place.address_components[1] && place.address_components[1].short_name || ''),
-                                                (place.address_components[2] && place.address_components[2].short_name || '')
-                                              ].join(' ');
-                                            }
-
-                                            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-                                            infowindow.open(map, marker);
+                                          $("#find").click(function(){
+                                            $("#geocomplete").trigger("geocode");
                                           });
-
-                                          function setupClickListener(id, types) {
-                                            var radioButton = document.getElementById(id);
-                                            radioButton.addEventListener('click', function() {
-                                              autocomplete.setTypes(types);
-                                            });
-                                          }
-
-                                          setupClickListener('changetype-all', []);
-                                          setupClickListener('changetype-address', ['address']);
-                                          setupClickListener('changetype-establishment', ['establishment']);
-                                          setupClickListener('changetype-geocode', ['geocode']);
-                                        }
+                                        });
                                       </script>
-                                      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&libraries=places&callback=initMap"
-                                          async defer></script>
                                     </div>
                                   </div>
                                   <div class="form-group">
@@ -533,14 +499,7 @@
       });
       </script>
 <style media="screen">
-#map{
-  height: 400px;
-}
-.fas:active{
-  background-color: #2c3e50;
-}
-.required{
-  color:red;
-  font-style: normal;
-}
+  .jar{height: 20px;}
+  .required{color:red;font-style: normal;}
+  .map_canvas{height: 400px;}
 </style>

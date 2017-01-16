@@ -10,7 +10,7 @@ class Welcome extends CI_Controller{
   }
 
   function index()
-  {
+  { 
     $this->load->model('user_model');
     $data = array();
     $data['get_rumah_kos'] = $this->user_model->get_rumah_kos();
@@ -67,4 +67,5 @@ public function tesmaps()
 {
   $this->load->view('tesmaps');
 }
+
 }

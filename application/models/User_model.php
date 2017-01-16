@@ -213,7 +213,28 @@ class User_model extends CI_Model {
 			return false;
 		}
 	}
+  public function master_pesan_pencari_kontrakan()
+  {
+  $this->db->order_by('id', 'DESC');
+    $query = $getData = $this->db->get('master_pesan_pencari_kontrakan');
+
+    if ($getData->num_rows() > 0) {
+        return $query;
+    } else {
+        return;
+    }
+  }
 
 // -----------------------------------------------------------------------------
+public function get_users()
+{
+  $this->db->order_by('id', 'DESC');
+    $query = $getData = $this->db->get('users');
 
+    if ($getData->num_rows() > 0) {
+        return $query;
+    } else {
+        return;
+    }
+}
 }

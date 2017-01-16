@@ -30,7 +30,6 @@
                                           <span><?php echo $master_rumah_kontrakan['jenjang_waktu'];?> </span>
 
                                         </div><!-- /.property-detail-overview-item -->
-
                                         <div class="property-detail-overview-item col-sm-6 col-md-2">
                                           <strong>Luas Rumah:</strong>
                                           <span><?php echo $master_rumah_kontrakan['luas_rumah'];?> m<sup>2</sup></span>
@@ -160,7 +159,20 @@
                 <div class="agent-small-picture col-sm-12">
                     <div class="agent-small-picture-inner">
                         <a href="#" class="agent-small-picture-inner ">
-                            <img src="<?php echo base_url('assets/img/tmp/agents/medium/3.jpg');?>" alt="">
+                          <?php
+                              if ($master_rumah_kontrakan['foto_profil_pemilik'] != null)
+                              {
+                                echo "haha";
+                              }else {
+                                $image = array(
+                                   'src' => 'assets/images/user/avatar2.png',
+                                   'class' =>'profile-user-img img-responsive img-circle',
+                                   'alt' => 'User profile picture'
+                                 );
+
+                                 echo img($image);
+                              }
+                           ?>
                         </a><!-- /.agent-small-picture-target -->
                     </div><!-- /.agent-small-picture-inner -->
                 </div><!-- /.agent-small-picture -->
@@ -169,8 +181,11 @@
 
         <div class="agent-small-bottom">
             <ul class="list-unstyled">
-                <li><i class="fa fa-phone"></i> <?php echo $master_rumah_kontrakan['nomor_kontak_pemilik'];?></li>
-                <li><i class="fa fa-envelope-o"></i> <a href="#">hi@company.com</a></li>
+                <li><i class="fa fa-phone"></i>
+                    <!-- <?php echo $master_rumah_kontrakan['id_pemilik'];?> -->
+                   <?php echo $master_rumah_kontrakan['nomor_kontak_pemilik'];?>
+                 </li>
+                <li><i class="fa fa-envelope-o"></i> <a><?php echo $master_rumah_kontrakan['email_pemilik'];?></a></li>
             </ul>
         </div><!-- /.agent-small-bottom -->
     </div>

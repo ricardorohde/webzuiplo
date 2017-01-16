@@ -19,13 +19,26 @@
         <!-- Profile Image -->
         <div class="box box-success">
           <div class="box-body box-profile">
-            <img class="profile-user-img img-responsive img-circle" src="<?php echo base_url('assets/images/user/user2-160x160.jpg')?>" alt="User profile picture">
+            <?php
+                  if ($users['foto_profil'] != null)
+                  {
+                    echo "haha";
+                  }else {
+                    $image = array(
+                       'src' => 'assets/images/user/avatar2.png',
+                       'class' =>'profile-user-img img-responsive img-circle',
+                       'alt' => 'User profile picture'
+                     );
 
-            <h3 class="profile-username text-center">Nina Mcintire</h3>
+                     echo img($image);
+                  }
+               ?>
 
-            <p class="text-muted text-center">Software Engineer</p>
+            <h3 class="profile-username text-center"><?php echo $users['first_name'];?>&nbsp;<?php echo $users['last_name'];?></h3>
 
-            <ul class="list-group list-group-unbordered">
+            <p class="text-muted text-center">Pemilik Rumah</p>
+            <p class="text-muted text-center"><?php echo $users['tipe_status'];?></p>
+            <!-- <ul class="list-group list-group-unbordered">
               <li class="list-group-item">
                 <b>Followers</b> <a class="pull-right">1,322</a>
               </li>
@@ -37,7 +50,7 @@
               </li>
             </ul>
 
-            <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+            <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> -->
           </div>
           <!-- /.box-body -->
         </div>
@@ -52,45 +65,48 @@
 
         <div class="box box-success">
           <div class="box-body box-profile">
-            <form class="form-horizontal">
+            <form method="POST" class="form-horizontal" action="<?php echo base_url("Admin/pemilik_update");?>">
               <div class="form-group">
                 <h3 class="profile-username text-center">Profil</h3>
-                  <img class="profile-user-img img-responsive img-circle" src="<?php echo base_url('assets/images/user/user2-160x160.jpg')?>" alt="User profile picture"><br>
+                <?php
+                      if ($users['foto_profil'] != null)
+                      {
+                        echo "haha";
+                      }else {
+                        $image = array(
+                           'src' => 'assets/images/user/avatar2.png',
+                           'class' =>'profile-user-img img-responsive img-circle',
+                           'alt' => 'User profile picture'
+                         );
 
+                         echo img($image);
+                      }
+                   ?><br><br>
                 <label for="inputName" class="col-sm-2 control-label">First Name</label>
 
                 <div class="col-sm-10">
-                  <input type="email" name="first_name" class="form-control" id="inputName" placeholder="First Name">
+                  <input type="text" name="first_name" class="form-control" id="inputName" value="<?php echo $users['first_name'];?>">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputName" class="col-sm-2 control-label">Last Name</label>
 
                 <div class="col-sm-10">
-                  <input type="text" name="last_name" class="form-control" id="inputName" placeholder="Last Name">
+                  <input type="text" name="last_name" class="form-control" id="inputName" placeholder="Last Name" value="<?php echo $users['last_name'];?>">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                 <div class="col-sm-10">
-                  <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-              </div>
-
-
-              <div class="form-group">
-                <label for="inputSkills" class="col-sm-2 control-label">Last Login</label>
-
-                <div class="col-sm-10">
-                  <input type="text" name="last_login" class="form-control" id="inputSkills" placeholder="Last Login">
+                  <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" value="<?php echo $users['email'];?>">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputSkills" class="col-sm-2 control-label">Status</label>
+                <label for="inputSkills" class="col-sm-2 control-label">Foto Profil</label>
 
                 <div class="col-sm-10">
-                  <input type="text" name="status" class="form-control" id="inputSkills" placeholder="Status">
+                  <input type="file" name="foto_profil" class="form-control">
                 </div>
               </div>
 

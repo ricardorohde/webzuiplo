@@ -30,35 +30,12 @@
             <ul class="nav nav-pills nav-stacked">
               <li class="active"><a href="#"><i class="fa fa-inbox"></i> Inbox
                 <span class="label label-primary pull-right">12</span></a></li>
-              <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
-              <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
-              <li><a href="#"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a>
-              </li>
+
               <li><a href="#"><i class="fa fa-trash-o"></i> Trash</a></li>
             </ul>
           </div>
           <!-- /.box-body -->
         </div>
-        <!-- /. box -->
-        <div class="box box-solid">
-          <div class="box-header with-border">
-            <h3 class="box-title">Labels</h3>
-
-            <div class="box-tools">
-              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="box-body no-padding">
-            <ul class="nav nav-pills nav-stacked">
-              <li><a href="#"><i class="fa fa-circle-o text-red"></i> Important</a></li>
-              <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Promotions</a></li>
-              <li><a href="#"><i class="fa fa-circle-o text-light-blue"></i> Social</a></li>
-            </ul>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
       </div>
       <!-- /.col -->
       <div class="col-md-9">
@@ -98,13 +75,14 @@
               <!-- /.pull-right -->
             </div>
             <div class="table-responsive mailbox-messages">
+              <?php
+                 foreach($master_pesan_pencari_kontrakan->result() as $row):?>
               <table class="table table-hover table-striped">
                 <tbody>
                 <tr>
                   <td><input type="checkbox"></td>
-                  <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
-                  <td class="mailbox-name"><a href="<?php echo base_url('Admin/Read_mess');?>">Alexander Pierce</a></td>
-                  <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                  <td class="mailbox-name"><a href="<?php echo base_url('Admin/Read_mess');?>"><?php echo $row->email ?></a></td>
+                  <td class="mailbox-subject"><b><?php echo $row->nama ?></b> - <?php echo $row->pesan ?>
                   </td>
                   <td class="mailbox-attachment"></td>
                   <td class="mailbox-date">5 mins ago</td>
@@ -113,6 +91,7 @@
                 </tbody>
               </table>
               <!-- /.table -->
+              <?php endforeach; ?>
             </div>
             <!-- /.mail-box-messages -->
           </div>

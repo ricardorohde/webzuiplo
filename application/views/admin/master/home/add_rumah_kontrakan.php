@@ -34,9 +34,10 @@
                     <label>E-mail</label>
                   </div>
                   <div class="col-sm-12">
-                    <input type="text" class="form-control" id="" disabled>
+                    <input type="text" class="form-control" id="" name="email_pemilik" value="<?php echo $users['email'];?>">
                   </div>
                 </div>
+                <input type="text" name="id_pemilik" value="<?php echo $users['id'];?>" class="form-control">
                 <div class="form-group">
                   <div class="col-md-12">
                     <br>
@@ -134,13 +135,13 @@
                     <label>Latitude &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: </label>
                   </div>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="" name="lat" disabled/>
+                    <input type="text" class="form-control" id="" name="lat" >
                   </div>
                   <div class="col-sm-2">
                     <label>Longitude &nbsp; &nbsp; &nbsp;: </label>
                   </div>
                   <div class="col-sm-4">
-                    <input type="text"  class="form-control" id="" name="lng" disabled/>
+                    <input type="text"  class="form-control" id="" name="lng">
                   </div>
                 </div>
                 <div class="form-group">
@@ -151,16 +152,16 @@
                     <label>Kode Pos &nbsp; &nbsp; &nbsp;: </label>
                   </div>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id=""  name="postal_code" disabled/>
+                    <input type="text" class="form-control" id=""  name="postal_code" >
                   </div>
                   <div class="col-sm-2">
                     <label>Kota &nbsp; &nbsp; &nbsp;: </label>
                   </div>
                   <div class="col-sm-4">
-                    <input type="text"  class="form-control" id=""  name="country" disabled/>
+                    <input type="text"  class="form-control" id=""  name="country" >
                   </div>
                 </div>
-                <form>
+
                   <div class="form-group">
                     <div class="col-md-12">
                       <br>
@@ -199,7 +200,7 @@
           <input name="url" type="hidden" value="">
           <input name="website" type="hidden" value="">
         </fieldset>
-      </form>
+      <!-- </form> -->
       <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAz7xYV8gxtSq4_IE8aGv2L6Wx9vyzQtnc&sensor=false&amp;libraries=places"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 

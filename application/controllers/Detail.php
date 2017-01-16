@@ -16,6 +16,9 @@ class Detail extends CI_Controller{
     $data = array();
     $data['master_rumah_kontrakan'] = $this->db->get('master_rumah_kontrakan')->result_array();
     $data['master_rumah_kontrakan'] = $this->db->where_in('id' ,$id)->get('master_rumah_kontrakan')->row_array();
+
+    $data['users'] = $this->db->get('users')->result_array();
+    $data['users'] = $this->db->where('id')->get('users')->row_array();
     $this->general->load('DetailRumah/detail_kontrakan',$data);
   }
 //---------------------------detail rumah kos-----------------------------------

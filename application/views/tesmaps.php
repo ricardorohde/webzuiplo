@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>$.geocomplete()</title>
@@ -142,4 +142,4 @@ text-decoration: underline;
     </style>
 
   </body>
-</html>
+</html> -->

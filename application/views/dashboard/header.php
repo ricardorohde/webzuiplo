@@ -1,5 +1,5 @@
 <html>
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -19,12 +19,7 @@
 
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/isotope/jquery.isotope.min.js');?>"></script>
-
-
-    <!-- <script type="text/javascript" src="../webzuiplo/assets/maps.googleapis.com/maps/api/jsd7d7?v=3&amp;sensor=true"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/js/gmap3.clusterer.js');?>"></script> -->
-    <!-- <script type="text/javascript" src="<?php echo base_url('assets/js/map.js');?>"></script> -->
-
+    
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/jquery-bxslider/jquery.bxslider.min.js');?>"></script>
@@ -49,7 +44,7 @@
             <div class="palette-toggle-inner">
                 <span><i class="fa fa-cog"></i>Options</span>
             </div>
-        </div><!-- /.palette-toggle -->
+        </div>
 
         <h2 class="palette-title">Color Variant</h2>
 
@@ -114,53 +109,52 @@
             <option value="footer-dark" selected="selected">Dark</option>
             <option value="footer-light">Light</option>
         </select>
-    </div><!-- /.palette-inner -->
-</div><!-- /.palette-wrapper -->
+    </div>
+</div>
 
 
 <div id="wrapper">
 
     <div id="header-wrapper">
         <div id="header">
-    <div id="header-inner">
-        <div class="header-bar">
+          <div id="header-inner">
+            <div class="header-bar">
             <div class="container">
                 <div class="header-infobox">
                     <strong>E-mail:</strong> <a href="#">hello@yourcompany.com</a>
-                </div><!-- /.header-infobox-->
+                </div>
 
                 <div class="header-infobox">
                     <strong>Phone:</strong> 800-123-4567
-                </div><!-- /.header-infobox-->
+                </div>
 
                 <ul class="header-bar-nav nav nav-register">
                   <li><a href="<?php echo base_url('Main/login');?>">Masuk Akun</a></li>
                   <li><a href="<?php echo base_url('Main/register');?>">Daftarkan Akun</a></li>
                 </ul>
-                  </div><!-- /.container -->
-        </div><!-- /.header-bar -->
+                  </div>
+        </div>
 
-        <div class="header-top">
+              <div class="header-top">
             <div class="container">
                 <div class="header-identity">
                     <a href="index-2.html" class="header-identity-target">
                         <span class="header-icon"><i class="fa fa-home"></i></span>
-                        <span class="header-title">ZUIPLO</span><!-- /.header-title -->
-                        <span class="header-slogan">Pencarian <br> Rumah Kost &amp; Rumah Kontrakan</span><!-- /.header-slogan -->
-                    </a><!-- /.header-identity-target-->
-                </div><!-- /.header-identity -->
+                        <span class="header-title">ZUIPLO</span>
+                        <span class="header-slogan">Pencarian <br> Rumah Kost &amp; Rumah Kontrakan</span>
+                    </a>
+                </div>
 
                 <div class="pull-right">
                     <ul class="social">
                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                       <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul><!-- /.social -->
+                    </ul>
                 </div>
-            </div><!-- /.container -->
-        </div><!-- .header-top -->
-
-        <div class="header-navigation">
+            </div>
+        </div>
+                <div class="header-navigation">
             <div class="container">
                 <div class="row">
                     <ul class="header-nav nav nav-pills">
@@ -172,27 +166,38 @@
                           <a href="<?php echo base_url('Admin/all_pemilik_rumah');?>">Pemilik</a>
 
                       </li>
-                      <li class="menuparent">
+                      <li class="menuparent blog">
                           <a href="<?php echo base_url('Welcome/Blog');?>">Blog</a>
 
                       </li>
-                      <li class="menuparent">
+                        <li class="menuparent info">
                           <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Syarat &amp; Ketentuan</a>
                       </li>
                     </ul>
-                    <div class="form-search-wrapper col-sm-3">
+                    <div class="form-search-wrapper col-sm-5">
+                        <form class="form-horizontal form-search">
+                            <div class="form-group has-feedback no-margin">
+                                <input id="address" type="text" class="form-control find-loc" placeholder="Temukan Lokasi Sekitar">
+
+                                <span class="form-control-feedback" style="margin-top:6px" id="submit">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="form-search-wrapper col-sm-3">
                             <div class="form-group has-feedback no-margin">
                               <input  id="address" class="form-control find-loc" type="text" placeholder="Temukan Lokasi Sekitar">
-                                <!-- <input class="form-control find-loc" type="text" placeholder="Salary" id="salary"> -->
+
                               <a class="btn btn-success btn-lg-find" id="submit">
                                 Find Location &nbsp;
                                 <i class="fa fa-search" aria-hidden="true"></i>
                               </a>
                             </div>
-                    </div>
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.header-navigation -->
-    </div><!-- /.header-inner -->
-</div><!-- /#header -->
-   </div><!-- /#header-wrapper -->
+                    </div> -->
+                </div>
+            </div>
+        </div>
+          </div>
+        </div>
+    </div>

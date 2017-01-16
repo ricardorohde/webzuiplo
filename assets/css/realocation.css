@@ -5470,6 +5470,24 @@ label {
     padding-left: 15px;
     vertical-align: top
 }
+.header-nav .menuparent.blog>a:after{
+    color: #39b54a;
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    display: inline-block;
+    content: '\f0ae';
+    padding-left: 15px;
+    vertical-align: top
+}
+.header-nav .menuparent.info>a:after{
+    color: #39b54a;
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    display: inline-block;
+    content: '\f05a';
+    padding-left: 15px;
+    vertical-align: top
+}
 .header-nav .menuparent.properties>a:after{
     color: #39b54a;
     font-family: 'FontAwesome';
