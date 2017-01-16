@@ -122,7 +122,8 @@
 
     <div class="widget-content">
         <?php echo form_open('Detail/save_pesan_pencari_kontrakan');?>
-          <input type="hidden" name="id_rumah_kontrakan" value="<?php echo $master_rumah_kontrakan['id'];?>" class="form-control">
+          <input type="text" name="id_rumah_kontrakan" value="<?php echo $master_rumah_kontrakan['id'];?>" class="form-control">
+            <input type="text" name="id_pemilik" value="<?php echo $master_rumah_kontrakan['id_pemilik'];?>" class="form-control">
             <div class="form-group">
                 <label>Nama</label>
                 <input type="text" name="nama" value="" class="form-control">

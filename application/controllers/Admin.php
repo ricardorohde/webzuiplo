@@ -47,8 +47,10 @@ class Admin extends CI_Controller{
       $cleanToken = $this->security->xss_clean($token);
       $user_info = $this->user_model->isTokenValid($cleanToken);
 
-        $data['master_pesan_pencari_kontrakan'] = $this->user_model->master_pesan_pencari_kontrakan();
 
+      $data['master_pesan_pencari_kontrakan'] = $this->user_model->get_pesan_kontrakan();
+          // $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id_pemilik')->get('master_pesan_pencari_kontrakan')->row_array();
+        // $data['us'] = $this->db->where_in('id_pemilik' ,$id)->get('master_rumah_kos')->row_array();
 
     $this->load->view('admin/lte_header', $datanya);
     $this->load->view('admin/master/mess/all',$data);

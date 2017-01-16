@@ -32,6 +32,7 @@ public function index()
 
             $data['master_pesan_pencari_kontrakan'] = $this->db->get('master_pesan_pencari_kontrakan')->result_array();
             $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id_rumah_kontrakan')->get('master_pesan_pencari_kontrakan')->row_array();
+              $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id_pemilik')->get('master_pesan_pencari_kontrakan')->row_array();
 
 
           $this->load->view('admin/lte_header',$data);

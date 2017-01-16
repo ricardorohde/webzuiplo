@@ -237,4 +237,11 @@ public function get_users()
         return;
     }
 }
+public function get_pesan_kontrakan()
+{
+  $query = $this->db->get('master_pesan_pencari_kontrakan');
+  return $query;
+}
+
+
 }

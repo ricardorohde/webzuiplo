@@ -75,23 +75,25 @@
               <!-- /.pull-right -->
             </div>
             <div class="table-responsive mailbox-messages">
-              <?php
-                 foreach($master_pesan_pencari_kontrakan->result() as $row):?>
+
               <table class="table table-hover table-striped">
                 <tbody>
+                  <?php
+                     foreach($master_pesan_pencari_kontrakan->result() as $row):?>
                 <tr>
                   <td><input type="checkbox"></td>
-                  <td class="mailbox-name"><a href="<?php echo base_url('Admin/Read_mess');?>"><?php echo $row->email ?></a></td>
-                  <td class="mailbox-subject"><b><?php echo $row->nama ?></b> - <?php echo $row->pesan ?>
+                  <td class="mailbox-name">
+                    <a href="<?php echo base_url('Admin/Read_mess');?>"></a></td>
+                  <td class="mailbox-subject"><b><?php echo $row->nama ?></b> -
+                    <?php echo $row->nama ?>
                   </td>
                   <td class="mailbox-attachment"></td>
                   <td class="mailbox-date">5 mins ago</td>
                 </tr>
-
+                <?php endforeach; ?>
                 </tbody>
               </table>
               <!-- /.table -->
-              <?php endforeach; ?>
             </div>
             <!-- /.mail-box-messages -->
           </div>

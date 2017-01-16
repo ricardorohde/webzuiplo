@@ -34,4 +34,7 @@ public  function get()
       $query = $this->db->get('master_rumah_kontrakan');
       return $query;
   }
+  //----------------------------------------------------------------------------
+
+  
 }
