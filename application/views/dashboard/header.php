@@ -174,7 +174,17 @@
                           <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Syarat &amp; Ketentuan</a>
                       </li>
                     </ul>
-            
+                    <div class="form-search-wrapper col-sm-5">
+                        <form class="form-horizontal form-search">
+                            <div class="form-group has-feedback no-margin">
+                                <input id="address" type="text" class="form-control find-loc" placeholder="Temukan Lokasi Sekitar">
+
+                                <span class="form-control-feedback" style="margin-top:6px" id="submit">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
