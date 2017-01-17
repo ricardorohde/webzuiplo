@@ -56,7 +56,7 @@
         <ul class="palette-colors clearfix">
             <li class="palette-color-red"><a href="assets/css/variants/red.css"></a></li>
             <li class="palette-color-pink"><a href="assets/css/variants/pink.css"></a></li>
-            <li class="palette-color-blue"><a href="assets/css/variants/blue.css"></a></li>
+             <li class="palette-color-blue"><a href="assets/css/variants/blue.css"></a></li>
             <li class="palette-color-green"><a href="assets/css/variants/green.css"></a></li>
             <li class="palette-color-cyan"><a href="assets/css/variants/cyan.css"></a></li>
             <li class="palette-color-purple"><a href="assets/css/variants/purple.css"></a></li>
@@ -152,47 +152,38 @@
 
                 <div class="pull-right">
                     <ul class="social">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    </ul><!-- /.social -->
-                </div>
+                      <li><a href="http://www.facebook.com/sharer.php?u=http://zuiploweb.tk/"	target="_blank"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="http://twitter.com/share?text=An%20intersting%20website&url=http://zuiploweb.tk/" target="_blank" title="Click to post to Twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="https://plus.google.com/share?url=http://zuiploweb.tk/" target="_blank" title="Click to share"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                  </div>
             </div><!-- /.container -->
         </div><!-- .header-top -->
 
         <div class="header-navigation">
-            <div class="container">
-                <div class="row">
-                    <ul class="header-nav nav nav-pills">
-                      <li class="menuparent home">
-                          <a href="<?php echo base_url('Welcome');?>" class="home">Beranda</a>
+          <div class="container">
+              <div class="row">
+                  <ul class="header-nav nav nav-pills">
+                    <li class="menuparent home">
+                        <a href="<?php echo base_url('Welcome');?>" class="home">Beranda</a>
 
-                      </li>
-                      <li class="menuparent agents">
-                          <a href="<?php echo base_url('Admin/all_pemilik_rumah');?>">Pemilik</a>
+                    </li>
+                    <li class="menuparent agents">
+                        <a href="<?php echo base_url('Admin/all_pemilik_rumah');?>">Pemilik</a>
 
-                      </li>
-                      <li class="menuparent">
-                          <a href="<?php echo base_url('Welcome/Blog');?>">Info</a>
+                    </li>
+                    <li class="menuparent blog">
+                        <a href="<?php echo base_url('Welcome/Blog');?>">Blog</a>
 
-                      </li>
-                      <li class="menuparent">
-                          <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Ketentuan &amp; Persyaratan</a>
-                      </li>
-                    </ul>
-                    <div class="form-search-wrapper col-sm-3">
-                            <div class="form-group has-feedback no-margin">
-                              <input  id="address" class="form-control find-loc" type="text" placeholder="Cari Rumah Singgah disini ">
-                              <!-- <input class="form-control find-loc" type="text" placeholder="Salary" id="salary"> -->
-                              <a class="btn btn-success btn-lg-find" id="submit">
-                                Find Location &nbsp;
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                              </a>
-                            </div>
-                    </div>
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.header-navigation -->
+                    </li>
+                      <li class="menuparent info">
+                        <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Syarat &amp; Ketentuan</a>
+                    </li>
+                  </ul>
+
+              </div>
+          </div>
+        </div>
     </div><!-- /.header-inner -->
 </div><!-- /#header -->
    </div><!-- /#header-wrapper -->

@@ -19,7 +19,7 @@
 
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/isotope/jquery.isotope.min.js');?>"></script>
-    
+
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js');?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/libraries/jquery-bxslider/jquery.bxslider.min.js');?>"></script>
@@ -147,14 +147,14 @@
 
                 <div class="pull-right">
                     <ul class="social">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="http://www.facebook.com/sharer.php?u=http://zuiploweb.tk/"	target="_blank"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="http://twitter.com/share?text=An%20intersting%20website&url=http://zuiploweb.tk/" target="_blank" title="Click to post to Twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="https://plus.google.com/share?url=http://zuiploweb.tk/" target="_blank" title="Click to share"><i class="fa fa-google-plus"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-                <div class="header-navigation">
+          <div class="header-navigation">
             <div class="container">
                 <div class="row">
                     <ul class="header-nav nav nav-pills">
@@ -174,27 +174,7 @@
                           <a href="<?php echo base_url('Welcome/TermsAndCondition');?>">Syarat &amp; Ketentuan</a>
                       </li>
                     </ul>
-                    <div class="form-search-wrapper col-sm-5">
-                        <form class="form-horizontal form-search">
-                            <div class="form-group has-feedback no-margin">
-                                <input id="address" type="text" class="form-control find-loc" placeholder="Temukan Lokasi Sekitar">
-
-                                <span class="form-control-feedback" style="margin-top:6px" id="submit">
-                                    <i class="fa fa-search"></i>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- <div class="form-search-wrapper col-sm-3">
-                            <div class="form-group has-feedback no-margin">
-                              <input  id="address" class="form-control find-loc" type="text" placeholder="Temukan Lokasi Sekitar">
-
-                              <a class="btn btn-success btn-lg-find" id="submit">
-                                Find Location &nbsp;
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                              </a>
-                            </div>
-                    </div> -->
+            
                 </div>
             </div>
         </div>
