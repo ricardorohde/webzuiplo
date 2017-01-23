@@ -34,7 +34,7 @@
                           <div class="row">
                               <div class="col-sm-4 col-sm-offset-4">
                                   <h2 class="center">Login</h2>
-
+                                  
                                   <div class="box">
                                     <?php $fattr = array('class' => 'form-signin');
                                          echo form_open(site_url().'/main/login/', $fattr); ?>
@@ -57,7 +57,7 @@
                                                   'placeholder'=>'Password',
                                                   'class'=>'form-control',
                                                   'value'=> set_value('password'))); ?>
-                                              <?php echo form_error('password') ?>
+                                               <?php echo form_error('password') ?>
                                           </div><!-- /.form-group -->
 
                                           <div class="form-group">

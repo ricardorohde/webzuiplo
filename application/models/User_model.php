@@ -160,15 +160,6 @@ class User_model extends CI_Model {
         }
         return true;
     }
-    public function logout()
-    {
-      # code...
-    }
-// -----------------------------Master home ------------------------------------
-  public function detail($id)
-  {
-    # code...
-  }
   public function insert_rumah_kos($data)
   {
     $this->db->insert('master_rumah_kos', $data);
@@ -192,7 +183,6 @@ class User_model extends CI_Model {
         return;
     }
   }
-  //---------------------------------kontrakan----------------------------------
     public function get_rumah_kontrakan()
     {
     $this->db->order_by('id', 'DESC');
@@ -224,24 +214,20 @@ class User_model extends CI_Model {
         return;
     }
   }
-
-// -----------------------------------------------------------------------------
 public function get_users()
 {
   $this->db->order_by('id', 'DESC');
     $query = $getData = $this->db->get('users');
 
     if ($getData->num_rows() > 0) {
-        return $query;
+          return $query;
     } else {
         return;
     }
 }
 public function get_pesan_kontrakan()
 {
-  $query = $this->db->get('master_pesan_pencari_kontrakan');
+  $query = $this->db->where_in('id_pemilik')->get('master_pesan_pencari_kontrakan');
   return $query;
 }
-
-
 }

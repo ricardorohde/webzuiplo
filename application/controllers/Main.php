@@ -1,159 +1,126 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Controller {
-
-        public $status;
-        public $roles;
-
-        function __construct(){
-            parent::__construct();
-            $this->load->model('User_model', 'user_model', TRUE);
-            $this->load->library('form_validation');
-            $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-            $this->status = $this->config->item('status');
-            $this->roles = $this->config->item('roles');
+class Main extends CI_Controller
+{
+  public $status;
+  public $roles;
+  function __construct()
+    {
+      parent::__construct();
+      $this->load->model('User_model', 'user_model', TRUE);
+      $this->load->library('form_validation');
+      $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+      $this->status = $this->config->item('status');
+      $this->roles = $this->config->item('roles');
+    }
+  public function index()
+    {
+      if(empty($this->session->userdata['email']))
+        {
+          redirect(site_url().'main/login/');
         }
-//-----------------------------------Admin--------------------------------------
-public function index()
-       {
-          if(empty($this->session->userdata['email'])){
-              redirect(site_url().'main/login/');
-          }
-          $data = array();
-          $data = $this->session->userdata;
-          $data['users'] = $this->db->get('users')->result_array();
-            $data['users'] = $this->db->where_in('id')->get('users')->row_array();
-            $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id')->get('master_pesan_pencari_kontrakan')->row_array();
-            $token = base64_decode($this->uri->segment(4));
-            $cleanToken = $this->security->xss_clean($token);
-            $user_info = $this->user_model->isTokenValid($cleanToken);
-
-            $data['master_pesan_pencari_kontrakan'] = $this->db->get('master_pesan_pencari_kontrakan')->result_array();
-            $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id_rumah_kontrakan')->get('master_pesan_pencari_kontrakan')->row_array();
-              $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id_pemilik')->get('master_pesan_pencari_kontrakan')->row_array();
-
-
-          $this->load->view('admin/lte_header',$data);
-          $this->load->view('admin/index', $data);
-          $this->load->view('admin/lte_footer');
-        }
-	// public function index($id)
-	//        {
-  //           if(empty($this->session->userdata['email'])){
-  //               redirect(site_url().'main/login/');
-  //           }
-  //           $data = array();
-  //           $data = $this->session->userdata;
-  //           $data['users'] = $this->db->get('users')->result_array();
-  //           $data['users'] = $this->db->where_in('id' ,$id)->get('users')->row_array();
-  //             // $token = base64_decode($this->uri->segment(4));
-  //             $cleanToken = $this->security->xss_clean($token);
-  //             $user_info = $this->user_model->isTokenValid($cleanToken);
-  //
-  //
-  //
-  //           $this->load->view('admin/lte_header');
-  //           $this->load->view('admin/index', $data);
-  //           $this->load->view('admin/lte_footer');
-	//         }
+        $data = array();
+        $data = $this->session->userdata;
+        $data['users'] = $this->db->get('users')->result_array();
+        $data['users'] = $this->db->where_in('id')->get('users')->row_array();
+        $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id')->get('master_pesan_pencari_kontrakan')->row_array();
+        $token = base64_decode($this->uri->segment(4));
+        $cleanToken = $this->security->xss_clean($token);
+        $user_info = $this->user_model->isTokenValid($cleanToken);
+        $result['master_rumah_kontrakan'] = $this->db->where_in('id_pemilik' )->get('master_rumah_kontrakan')->row_array();
+        $this->load->view('admin/lte_header',$data);
+        $this->load->view('admin/index', $data);
+        $this->load->view('admin/lte_footer');
+    }
   public function register()
+    {
+      $this->form_validation->set_rules('firstname', 'First Name', 'required');
+      $this->form_validation->set_rules('lastname', 'Last Name', 'required');
+      $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+      if ($this->form_validation->run() == FALSE)
+        {
+          $this->load->view('admin/header');
+          $this->load->view('admin/register');
+          $this->load->view('admin/footer');
+        }else
           {
-            $this->form_validation->set_rules('firstname', 'First Name', 'required');
-            $this->form_validation->set_rules('lastname', 'Last Name', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+            if($this->user_model->isDuplicate($this->input->post('email')))
+              {
+                $this->session->set_flashdata('flash_message', 'User email already exists');
+                redirect(site_url().'main/login');
+              }else
+                {
+                  $clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
+                  $id = $this->user_model->insertUser($clean);
+                  $token = $this->user_model->insertToken($id);
+                  $qstring = $this->base64url_encode($token);
+                  $url = site_url() . 'main/complete/token/' . $qstring;
+                  $link = '<a href="' . $url . '">' . $url . '</a>';
+                  $message = '';
+                  $message .= '<strong>You have signed up with our website</strong><br>';
+                  $message .= '<strong>Please click:</strong> ' . $link;
+                  echo $message;
+                  exit;
+                };
+          }
+    }
+  protected function _islocal()
+    {
+      return strpos($_SERVER['HTTP_HOST'], 'local');
+    }
+  public function complete()
+    {
+      $token = base64_decode($this->uri->segment(4));
+      $cleanToken = $this->security->xss_clean($token);
+      $user_info = $this->user_model->isTokenValid($cleanToken);
+        if(!$user_info)
+          {
+            $this->session->set_flashdata('flash_message', 'Token is invalid or expired');
+            redirect(site_url().'main/login');
+          }
+          $data = array(
+            'firstName'=> $user_info->first_name,
+            'email'=>$user_info->email,
+            'user_id'=>$user_info->id,
+            'token'=>$this->base64url_encode($token)
+            );
+          $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
+          $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[password]');
             if ($this->form_validation->run() == FALSE)
             {
-                $this->load->view('admin/header');
-                $this->load->view('admin/register');
-                $this->load->view('admin/footer');
+              $this->load->view('admin/header');
+              $this->load->view('admin/complete', $data);
+              $this->load->view('admin/footer');
             }else
             {
-                if($this->user_model->isDuplicate($this->input->post('email')))
+              $this->load->library('password');
+              $post = $this->input->post(NULL, TRUE);
+              $cleanPost = $this->security->xss_clean($post);
+              $hashed = $this->password->create_hash($cleanPost['password']);
+              $cleanPost['password'] = $hashed;
+              unset($cleanPost['passconf']);
+              $userInfo = $this->user_model->updateUserInfo($cleanPost);
+              if(!$userInfo)
                 {
-                    $this->session->set_flashdata('flash_message', 'User email already exists');
-                    redirect(site_url().'main/login');
-                }else
-                {
-                    $clean = $this->security->xss_clean($this->input->post(NULL, TRUE));
-                    $id = $this->user_model->insertUser($clean);
-                    $token = $this->user_model->insertToken($id);
-                    $qstring = $this->base64url_encode($token);
-                    $url = site_url() . 'main/complete/token/' . $qstring;
-                    $link = '<a href="' . $url . '">' . $url . '</a>';
-                    $message = '';
-                    $message .= '<strong>You have signed up with our website</strong><br>';
-                    $message .= '<strong>Please click:</strong> ' . $link;
-                    echo $message;
-                    exit;
-                };
-            }
-        }
-        protected function _islocal()
-          {
-            return strpos($_SERVER['HTTP_HOST'], 'local');
-          }
-
-        public function complete()
-          {
-            $token = base64_decode($this->uri->segment(4));
-            $cleanToken = $this->security->xss_clean($token);
-            $user_info = $this->user_model->isTokenValid($cleanToken);
-            if(!$user_info)
-            {
-              $this->session->set_flashdata('flash_message', 'Token is invalid or expired');
-                redirect(site_url().'main/login');
-            }
-            $data = array(
-                'firstName'=> $user_info->first_name,
-                'email'=>$user_info->email,
-                'user_id'=>$user_info->id,
-                'token'=>$this->base64url_encode($token)
-            );
-
-            $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
-            $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[password]');
-
-            if ($this->form_validation->run() == FALSE) {
-                $this->load->view('admin/header');
-                $this->load->view('admin/complete', $data);
-                  $this->load->view('admin/footer');
-
-            }else{
-
-                $this->load->library('password');
-                $post = $this->input->post(NULL, TRUE);
-
-                $cleanPost = $this->security->xss_clean($post);
-
-                $hashed = $this->password->create_hash($cleanPost['password']);
-                $cleanPost['password'] = $hashed;
-                unset($cleanPost['passconf']);
-                $userInfo = $this->user_model->updateUserInfo($cleanPost);
-
-                if(!$userInfo){
-                    $this->session->set_flashdata('flash_message', 'There was a problem updating your record');
-                    redirect(site_url().'main/login');
+                  $this->session->set_flashdata('flash_message', 'There was a problem updating your record');
+                  redirect(site_url().'main/login');
                 }
-
                 unset($userInfo->password);
-
-                foreach($userInfo as $key=>$val){
+                foreach($userInfo as $key=>$val)
+                  {
                     $this->session->set_userdata($key, $val);
-                }
-                redirect(site_url().'main/');
-
+                  }
+                  redirect(site_url().'main/');
             }
-        }
-
-        public function login()
+    }
+  public function login()
+    {
+      $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+      $this->form_validation->set_rules('password', 'Password', 'required');
+        if($this->form_validation->run() == FALSE)
         {
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-            $this->form_validation->set_rules('password', 'Password', 'required');
-
-            if($this->form_validation->run() == FALSE) {
-                $this->load->view('admin/header');
+          $this->load->view('admin/header');
                 $this->load->view('admin/login');
                 $this->load->view('admin/footer');
 
@@ -175,14 +142,12 @@ public function index()
             }
 
         }
-
-        public function logout()
+  public function logout()
         {
             $this->session->sess_destroy();
             redirect(site_url().'welcome/index');
         }
-
-        public function forgot()
+  public function forgot()
         {
 
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
@@ -223,8 +188,7 @@ public function index()
             }
 
         }
-
-        public function reset_password()
+  public function reset_password()
         {
             $token = $this->base64url_decode($this->uri->segment(4));
             $cleanToken = $this->security->xss_clean($token);
@@ -265,24 +229,18 @@ public function index()
                 redirect(site_url().'main/login');
             }
         }
-        // public function get_users($id)
-        // {
-        //   $data = array();
-        //   $data['users'] = $this->db->get('users')->result_array();
-        //   $data['users'] = $this->db->where_in('id',$id)->get('users')->row_array();
-        //   $this->general->load('DetailRumah/detail_kontrakan',$data);
-        // }
-        public function base64url_encode($data) {
+  public function base64url_encode($data) {
           return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
         }
-
-        public function base64url_decode($data) {
+  public function base64url_decode($data) {
           return base64_decode(str_pad(strtr($data, '-_', '+/'), strlen($data) % 4, '=', STR_PAD_RIGHT));
         }
-
-//----------------------------MASTER--------------------------------------------
-        public function add_rumah()
+  public function add_rumah()
         {
+          if(empty($this->session->userdata['email']))
+            {
+              redirect(site_url().'main/login/');
+            }
           $data = array();
           $data = $this->session->userdata;
           $data['users'] = $this->db->get('users')->result_array();
@@ -298,6 +256,10 @@ public function index()
         //------------------------rumah kos-------------------------------------
         public function add_rumah_kost()
         {
+          if(empty($this->session->userdata['email']))
+            {
+              redirect(site_url().'main/login/');
+            }
           $data = array();
           $data = $this->session->userdata;
           $data['users'] = $this->db->get('users')->result_array();
@@ -310,9 +272,12 @@ public function index()
           $this->load->view('admin/master/home/add_rumah_kost');
           $this->load->view('admin/lte_footer');
         }
-
-        public function list_rumah()
+  public function list_rumah($id)
         {
+          if(empty($this->session->userdata['email']))
+            {
+              redirect(site_url().'main/login/');
+            }
           $data = array();
           $data = $this->session->userdata;
           $data['users'] = $this->db->get('users')->result_array();
@@ -322,13 +287,42 @@ public function index()
             $user_info = $this->user_model->isTokenValid($cleanToken);
 
           $result['list'] = $this->user_model->get_rumah_kos();
-          // $result['email_pemilik'] = $this->db->where_in('email')->get('users')->result_array();
+
+          $result['master_rumah_kontrakan'] = $this->db->where_in('id_pemilik',$id )->get('master_rumah_kontrakan')->row_array();
+          $result['master_rumah_kos'] = $this->db->where_in('id_pemilik',$id )->get('master_rumah_kos')->row_array();
           $this->load->view('admin/lte_header', $data);
           $this->load->view('admin/master/home/all', $result);
           $this->load->view('admin/lte_footer');
         }
-        public function upload()
+  public function edit_list_rumah($id)
         {
+          if(empty($this->session->userdata['email']))
+            {
+              redirect(site_url().'main/login/');
+            }
+          $data = array();
+          $data['master_rumah_kontrakan'] = $this->db->get('master_rumah_kontrakan')->result_array();
+          $data['master_rumah_kontrakan'] = $this->db->where_in('id',$id)->get('master_rumah_kontrakan')->row_array();
+
+
+            $datanya = array();
+            $datanya = $this->session->userdata;
+            $datanya['users'] = $this->db->get('users')->result_array();
+            $datanya['users'] = $this->db->where_in('id')->get('users')->row_array();
+            $token = base64_decode($this->uri->segment(4));
+            $cleanToken = $this->security->xss_clean($token);
+            $user_info = $this->user_model->isTokenValid($cleanToken);
+
+          $this->load->view('admin/lte_header', $datanya);
+          $this->load->view('admin/master/home/edit', $data);
+          $this->load->view('admin/lte_footer');
+        }
+  public function upload()
+        {
+          if(empty($this->session->userdata['email']))
+            {
+              redirect(site_url().'main/login/');
+            }
           if (empty ($_FILES['imgName']['name'] &&
           $_FILES['imgName2']['name'] && $_FILES['imgName3']['name'] && $_FILES['imgName4']['name'] )  )
             {
@@ -443,9 +437,12 @@ public function index()
 
       			}
       }
-      //------------------------rumah kontrakan---------------------------------
-      public function add_rumah_kontrakan()
+  public function add_rumah_kontrakan()
       {
+        if(empty($this->session->userdata['email']))
+          {
+            redirect(site_url().'main/login/');
+          }
         $data = array();
         $data = $this->session->userdata;
         $data['users'] = $this->db->get('users')->result_array();
@@ -458,9 +455,12 @@ public function index()
         $this->load->view('admin/master/home/add_rumah_kontrakan');
         $this->load->view('admin/lte_footer');
       }
-      public function save_rumah_kontrakan()
+  public function save_rumah_kontrakan()
     {
-
+      if(empty($this->session->userdata['email']))
+        {
+          redirect(site_url().'main/login/');
+        }
     			if (empty ($_FILES['imgName']['name'] &&
     			$_FILES['imgName2']['name'] && $_FILES['imgName3']['name'] && $_FILES['imgName4']['name'] )  )
     				{
@@ -541,12 +541,13 @@ public function index()
     					}
     	}
     }
-// --------------------------Super Admin----------------------------------------
-    public function all_users()
+  public function all_users()
     {
+      if(empty($this->session->userdata['email']))
+        {
+          redirect(site_url().'main/login/');
+        }
       $data['users'] = $this->db->get('users')->result_array();
     $this->load->view('super_admin/all_users', $data);
     }
-// -----------------------------------------------------------------------------
-
 }

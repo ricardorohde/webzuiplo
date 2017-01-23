@@ -10,25 +10,25 @@ class Admin extends CI_Controller{
   }
 
   function index()
-  {
-    $datanya = array();
-    $datanya = $this->session->userdata;
-    $datanya['users'] = $this->db->get('users')->result_array();
+    {
+      if(empty($this->session->userdata['email']))
+        {
+          redirect(site_url().'main/login/');
+        }
+      $datanya = array();
+      $datanya = $this->session->userdata;
+      $datanya['users'] = $this->db->get('users')->result_array();
       $datanya['users'] = $this->db->where_in('id')->get('users')->row_array();
       $token = base64_decode($this->uri->segment(4));
       $cleanToken = $this->security->xss_clean($token);
       $user_info = $this->user_model->isTokenValid($cleanToken);
-
-
-
-    $data['users'] = $this->db->get('users')->result_array();
-    $data['users'] = $this->db->where('id')->get('users')->row_array();
-
+      $data['users'] = $this->db->get('users')->result_array();
+      $data['users'] = $this->db->where('id')->get('users')->row_array();
       $this->load->view('admin/lte_header',$datanya);
       $this->load->view('admin/setting_profile', $data);
       $this->load->view('admin/lte_footer');
-  }
-    public function pemilik_update()
+    }
+  public function pemilik_update()
     {
 
       $data = $this->input->post();
@@ -36,59 +36,54 @@ class Admin extends CI_Controller{
       $this->db->update('users',$data);
       redirect(base_url('Admin'));
     }
-  //---------------------------------------------------------------------------
   public function Mess()
-  {
-    $datanya = array();
-    $datanya = $this->session->userdata;
-    $datanya['users'] = $this->db->get('users')->result_array();
+    {
+      $datanya = array();
+      $datanya = $this->session->userdata;
+      $datanya['users'] = $this->db->get('users')->result_array();
       $datanya['users'] = $this->db->where_in('id')->get('users')->row_array();
       $token = base64_decode($this->uri->segment(4));
       $cleanToken = $this->security->xss_clean($token);
       $user_info = $this->user_model->isTokenValid($cleanToken);
-
-
       $data['master_pesan_pencari_kontrakan'] = $this->user_model->get_pesan_kontrakan();
-          // $data['master_pesan_pencari_kontrakan'] = $this->db->where_in('id_pemilik')->get('master_pesan_pencari_kontrakan')->row_array();
-        // $data['us'] = $this->db->where_in('id_pemilik' ,$id)->get('master_rumah_kos')->row_array();
-
-    $this->load->view('admin/lte_header', $datanya);
-    $this->load->view('admin/master/mess/all',$data);
-    $this->load->view('admin/lte_footer');
-  }
+      $this->load->view('admin/lte_header', $datanya);
+      $this->load->view('admin/master/mess/all',$data);
+      $this->load->view('admin/lte_footer');
+    }
   public function Read_mess()
-  {
-    $datanya = array();
-    $datanya = $this->session->userdata;
-    $datanya['users'] = $this->db->get('users')->result_array();
+    {
+      $datanya = array();
+      $datanya = $this->session->userdata;
+      $datanya['users'] = $this->db->get('users')->result_array();
       $datanya['users'] = $this->db->where_in('id')->get('users')->row_array();
       $token = base64_decode($this->uri->segment(4));
       $cleanToken = $this->security->xss_clean($token);
       $user_info = $this->user_model->isTokenValid($cleanToken);
-    $this->load->view('admin/lte_header',$datanya);
-    $this->load->view('admin/master/mess/read');
-    $this->load->view('admin/lte_footer');
-  }
-//---------------------------------Agen Pemilik Rumah---------------------------
+      $this->load->view('admin/lte_header',$datanya);
+      $this->load->view('admin/master/mess/read');
+      $this->load->view('admin/lte_footer');
+    }
   public function all_pemilik_rumah()
-  {
-    $data = array();
-    $data['get_users'] = $this->user_model->get_users();
-    // $data['get_rumah_kontrakan'] = $this->user_model->get_rumah_kontrakan();
+    {
+      $data = array();
+      $data['get_users'] = $this->user_model->get_users();
 
-    $this->general->load('admin/agen/all',$data);
-  }
+      $this->general->load('admin/agen/all',$data);
+    }
   public function detail_user($id)
+    {
+      $data = array();
+      $data['users'] = $this->db->get('users')->result_array();
+      $data['users'] = $this->db->where_in('id' ,$id)->get('users')->row_array();
+
+  	  $data['master_rumah_kontrakan'] = $this->db->where_in('id_pemilik' ,$id)->get('master_rumah_kontrakan')->row_array();
+
+      $data['master_rumah_kos'] = $this->db->where_in('id_pemilik' ,$id)->get('master_rumah_kos')->row_array();
+
+      $this->general->load('admin/agen/detail',$data);
+    }
+  public function register_admin()
   {
-    $data = array();
-    $data['users'] = $this->db->get('users')->result_array();
-    $data['users'] = $this->db->where_in('id' ,$id)->get('users')->row_array();
-
-	  $data['master_rumah_kontrakan'] = $this->db->where_in('id_pemilik' ,$id)->get('master_rumah_kontrakan')->row_array();
-
-    $data['master_rumah_kos'] = $this->db->where_in('id_pemilik' ,$id)->get('master_rumah_kos')->row_array();
-
-    $this->general->load('admin/agen/detail',$data);
+    # code...
   }
-//------------------------------------------------------------------------------
 }

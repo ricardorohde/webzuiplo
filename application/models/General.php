@@ -13,7 +13,6 @@ class General extends CI_Model{
       $this->load->view($page, $data);
       $this->load->view('dashboard/footer');
   }
-//------------------------pesan pencari-----------------------------------------
   public function save_master_pesan_pencari($data)
   {
     $this->db->insert('master_pesan_pencari', $data);
@@ -23,7 +22,6 @@ class General extends CI_Model{
   {
     $this->db->insert('master_pesan_pencari_kontrakan', $data);
   }
-//------------------------------------------------------------------------------
 public  function get()
 {
     $query = $this->db->get('register_pemilik');
@@ -34,7 +32,4 @@ public  function get()
       $query = $this->db->get('master_rumah_kontrakan');
       return $query;
   }
-  //----------------------------------------------------------------------------
-
-  
 }

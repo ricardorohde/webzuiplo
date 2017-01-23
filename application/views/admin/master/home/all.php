@@ -17,77 +17,122 @@
         <ul class="nav nav-tabs">
           <li class="active"><a href="#list" data-toggle="tab">Daftar Rumah</a></li>
           <li><a href="#detail" data-toggle="tab">Detail Rumah</a></li>
-          <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
         </ul>
         <div class="tab-content">
+
           <div class="active tab-pane" id="list">
-            <!-- <table id="example1" class="table table-bordered table-striped">
-              <thead>
-              <tr>
-                <center>
-                  <th>Email</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Role</th>
-                  <th>Last Login</th>
-                  <th><center>Status</th>
-                  <th class=" no-link last"><span class="nobr"><center> Action</center></span></th>
-                </center>
-              </tr>
+            <div class="box">
+              <div class="box-header with-border">
+                <i class="fa fa-home"></i>
 
-              </thead>
-              <tbody>
-                <?php
-                foreach ($users as $key) {
-              ?>
-                  <tr class="even pointer">
+                <h3 class="box-title">Rumah Kontrakan</h3>
 
-                    <td><?php echo $key['email'];?></td>
-                    <td><?php echo $key['first_name'];?></td>
-                    <td><?php echo $key['last_name'];?></td>
-                    <td><?php echo $key['role'];?></td>
-                    <td><?php echo $key['last_login'];?></td>
-                    <td><?php echo $key['status'];?></td>
-                    <td>
-                      <center>
-                        <a href="<?php echo base_url('Super_admin/delete_master_termscondition/'.$key['id']);
-                                        ?>" onClick="return doconfirm();">
-                          <button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm tooltips btn-success">Approved
-                            <i class="fa fa-send"></i>
-                          </button>
-                        </a>
-                        <a href="<?php echo base_url('Super_admin/delete_master_termscondition/'.$key['id']);
-                                        ?>" onClick="return doconfirm();">
-                          <button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm tooltips btn-danger">Pending
-                            <i class="fa fa-warning"></i>
-                          </button>
-                        </a>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+
+                </div>
+              </div>
+              <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <center>
+                      <th>Nama Rumah</th>
+                      <th>Alamat</th>
+                      <th>Harga Sewa</th>
+                      <th>Jenjang Waktu</th>
+
+                      <th class=" no-link last"><span class="nobr"><center> Aksi</center></span></th>
                     </center>
-                    </td>
-                      <?php
-
-                }
-                      ?>
                   </tr>
+                </thead>
+                <tbody>
+                  <td><?php echo $master_rumah_kontrakan['nama_rumah']; ?></td>
+                  <td><?php echo $master_rumah_kontrakan['alamat']; ?></td>
+                  <td><?php echo $master_rumah_kontrakan['harga_sewa']; ?></td>
+                  <td><?php echo $master_rumah_kontrakan['jenjang_waktu']; ?></td>
+                  <td>
+                    <!-- <a href="<?php echo base_url('Main/cuti_delete/'.$key['id']);?>" onClick="return doconfirm();"> -->
+                    <button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm tooltips btn-danger"><i class="fa fa-trash-o"></i>
+                    </button></a>
+                    <script>
+                    function doconfirm()
+                      {
+                        job=confirm("Are you sure to delete this data?");
+                          if(job!=true)
+                            {
+                              return false;
+                            }
+                      }
+                    </script>
+                  </center>
+                  <a href="<?php echo base_url('Main/edit_list_rumah/'.$master_rumah_kontrakan['id']);?>">
+                    <button title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Edit" class="btn btn-sm tooltips btn-primary"><i class="fa fa-edit"></i>
+                    </button>
+                  </a>
+                  </td>
+                </tbody>
+              </table>
+              </div>
+              <!-- /.box-body-->
+            </div>
+            <!-- /.box -->
+            <div class="box">
+              <div class="box-header with-border">
+                <i class="fa fa-institution"></i>
 
-              </tbody>
+                <h3 class="box-title">Rumah Kos</h3>
 
-            </table>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
 
+                </div>
+              </div>
+              <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <center>
+                      <th>Nama Rumah</th>
+                      <th>Alamat</th>
+                      <th>Harga Sewa</th>
+                      <th>Jenjang Waktu</th>
+                      <th>Jenis Penghuni</th>
+                      <th>Status Kamar</th>
+                      <th class=" no-link last"><span class="nobr"><center> Aksi</center></span></th>
+                    </center>
+                  </tr>
+                </thead>
+                <tbody>
 
-              <?php form_close() ?> -->
+                    <td><?php echo $master_rumah_kos['nama_rumah']; ?></td>
+                    <td><?php echo $master_rumah_kos['alamat']; ?></td>
+                    <td><?php echo $master_rumah_kos['harga_sewa']; ?></td>
+                    <td><?php echo $master_rumah_kos['jenjang_waktu']; ?></td>
+                    <td><?php echo $master_rumah_kos['jenis_penghuni']; ?></td>
+                    <td><?php echo $master_rumah_kos['status_kamar']; ?></td>
+                </tbody>
+
+              </table>
+              </div>
+              <!-- /.box-body-->
+            </div>
           </div>
           <div class="tab-pane" id="detail">
-            <?php
-              foreach($list->result() as $row):?>
-            <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
-                <div class="box box-solid">
+            <div class="box">
               <div class="box-header with-border">
-                <center><h1 class="box-title nama_rumah"><?php echo $row->nama_rumah ?></h1></center>
+                <i class="fa fa-home"></i>
+
+                <h3 class="box-title">Rumah Kontrakan</h3>
+
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+
+                </div>
               </div>
-              <!-- /.box-header -->
               <div class="box-body">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
@@ -96,26 +141,27 @@
                     <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                   </ol>
                   <div class="carousel-inner">
-                    <div class="item active">
+                    <div class="item active"><center>
                       <?php
                          $image = array(
-                            'src' => 'uploads/'.($row->img1),
-                            'alt' =>'First Slide'
+                            'src' => 'uploads/'.($master_rumah_kontrakan['img1']),
+                            'alt' =>'First Slide',
+                            'class'=>'img-carousel'
                           );
-                          echo img($image); ?>"
+                          echo img($image); ?></center>
                       <div class="carousel-caption">
-                        <?php echo $row->nama_rumah ?>
+                        <!-- <?php echo $row->nama_rumah ?> -->
                       </div>
                     </div>
-                    <div class="item">
-                        <img src="<?php echo base_url('assets/images/background/bg.png');?>" alt="Second slide">
+                    <div class="item"><center>
+                        <img src="<?php echo base_url('assets/images/background/bg.png');?>" alt="Second slide" class="img-carousel"></center>
 
                       <div class="carousel-caption">
                         Second Slide
                       </div>
                     </div>
-                    <div class="item">
-                        <img src="<?php echo base_url('assets/images/background/bg.png');?>" alt="Third slide">
+                    <div class="item"><center>
+                        <img src="<?php echo base_url('assets/images/background/bg.png');?>" alt="Third slide" class="img-carousel"></center>
 
                       <div class="carousel-caption">
                         Third Slide
@@ -129,107 +175,205 @@
                     <span class="fa fa-angle-right"></span>
                   </a>
                 </div>
-              </div>
-              <!-- /.box-body -->
+                <div class="col-md-12">
+                   <div class="box-header with-border">
+                     <h3 class="box-title">Data Rumah</h3>
+                   </div>
+                   <form class="form-horizontal">
+                     <div class="box-body">
+                       <div class="form-group">
+                         <label for="inputEmail3" class="col-sm-2 control-label">Nama Rumah</label>
+
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" id="inputEmail3" disabled="" value="<?php echo $master_rumah_kontrakan['nama_rumah'];?>">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" id="inputPassword3" value="<?php echo $master_rumah_kontrakan['alamat'];?>" disabled="">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                          <label for="inputPassword3" class="col-sm-2 control-label">Kode Pos</label>
+                         <div class="col-sm-4">
+                           <input type="text" class="form-control" id="inputPassword3" value="<?php echo $master_rumah_kontrakan['kode_pos'];?>" disabled="">
+                         </div>
+                         <label for="inputPassword3" class="col-sm-2 control-label">Kota</label>
+                       <div class="col-sm-4">
+                         <input type="text" class="form-control" id="inputPassword3" value="<?php echo $master_rumah_kontrakan['alamat'];?>" disabled="">
+                       </div>
+                       </div>
+                       <div class="form-group">
+                           <label class="col-sm-2 control-label">Deskripsi Rumah</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['deskripsi_rumah'];?>" disabled="">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                          <label for="inputPassword3" class="col-sm-2 control-label">Harga Sewa</label>
+                         <div class="col-sm-4">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['harga_sewa'];?>" disabled="">
+                         </div>
+                         <label class="col-sm-2 control-label">Jenjang Waktu</label>
+                       <div class="col-sm-4">
+                         <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['jenjang_waktu'];?>" disabled="">
+                       </div>
+                       </div>
+                       <div class="form-group">
+                           <label class="col-sm-2 control-label">Keterangan Biaya</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['ket_biaya'];?>" disabled="">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                          <label for="inputPassword3" class="col-sm-2 control-label">Luas Rumah</label>
+                         <div class="col-sm-2">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['luas_rumah'];?>" disabled="">
+                         </div>
+                         <label class="col-sm-2 control-label">Jumlah Kamar Tidur</label>
+                       <div class="col-sm-2">
+                         <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['jum_kamar_tidur'];?>" disabled="">
+                       </div>
+                       <label class="col-sm-2 control-label">Jumlah Kamar Mandi</label>
+                       <div class="col-sm-2">
+                         <input type="text" class="form-control" value="<?php echo $master_rumah_kontrakan['jum_kamar_mandi'];?>" disabled="">
+                       </div>
+                       </div>
+
+                     </div>
+                   </form>
+                </div>
+              <!-- /.box-body-->
             </div>
-              </div>
             </div>
-            <?php endforeach; ?>
+            <div class="box">
+              <div class="box-header with-border">
+                <i class="fa fa-home"></i>
+
+                <h3 class="box-title">Rumah Kos</h3>
+
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+
+                </div>
+              </div>
+              <div class="box-body">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="item active"><center>
+                      <?php
+                         $image = array(
+                            'src' => 'uploads/'.($master_rumah_kos['img1']),
+                            'alt' =>'First Slide',
+                            'class'=>'img-carousel'
+                          );
+                          echo img($image); ?></center>
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                    <div class="item"><center>
+                        <img src="<?php echo base_url('assets/images/background/bg.png');?>" alt="Second slide" class="img-carousel"></center>
+
+                      <div class="carousel-caption">
+                        Second Slide
+                      </div>
+                    </div>
+                    <div class="item"><center>
+                        <img src="<?php echo base_url('assets/images/background/bg.png');?>" alt="Third slide" class="img-carousel"></center>
+
+                      <div class="carousel-caption">
+                        Third Slide
+                      </div>
+                    </div>
+                  </div>
+                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="fa fa-angle-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="fa fa-angle-right"></span>
+                  </a>
+                </div>
+                <div class="col-md-12">
+                   <div class="box-header with-border">
+                     <h3 class="box-title">Data Rumah</h3>
+                   </div>
+                   <form class="form-horizontal">
+                     <div class="box-body">
+                       <div class="form-group">
+                         <label for="inputEmail3" class="col-sm-2 control-label">Nama Rumah</label>
+
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" id="inputEmail3" disabled="" value="<?php echo $master_rumah_kos['nama_rumah'];?>">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" id="inputPassword3" value="<?php echo $master_rumah_kos['alamat'];?>" disabled="">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                          <label for="inputPassword3" class="col-sm-2 control-label">Kode Pos</label>
+                         <div class="col-sm-4">
+                           <input type="text" class="form-control" id="inputPassword3" value="<?php echo $master_rumah_kos['kode_pos'];?>" disabled="">
+                         </div>
+                         <label for="inputPassword3" class="col-sm-2 control-label">Kota</label>
+                       <div class="col-sm-4">
+                         <input type="text" class="form-control" id="inputPassword3" value="<?php echo $master_rumah_kos['alamat'];?>" disabled="">
+                       </div>
+                       </div>
+                       <div class="form-group">
+                           <label class="col-sm-2 control-label">Deskripsi Rumah</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kos['deskripsi_rumah'];?>" disabled="">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                          <label for="inputPassword3" class="col-sm-2 control-label">Harga Sewa</label>
+                         <div class="col-sm-4">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kos['harga_sewa'];?>" disabled="">
+                         </div>
+                         <label class="col-sm-2 control-label">Jenjang Waktu</label>
+                       <div class="col-sm-4">
+                         <input type="text" class="form-control" value="<?php echo $master_rumah_kos['jenjang_waktu'];?>" disabled="">
+                       </div>
+                       </div>
+                       <div class="form-group">
+                           <label class="col-sm-2 control-label">Keterangan Biaya</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kos['ket_biaya'];?>" disabled="">
+                         </div>
+                       </div>
+                       <div class="form-group">
+                          <label for="inputPassword3" class="col-sm-2 control-label">Luas Rumah</label>
+                         <div class="col-sm-2">
+                           <input type="text" class="form-control" value="<?php echo $master_rumah_kos['luas_kamar'];?>" disabled="">
+                         </div>
+                         <label class="col-sm-2 control-label">Status Kamar</label>
+                       <div class="col-sm-2">
+                         <input type="text" class="form-control" value="<?php echo $master_rumah_kos['status_kamar'];?>" disabled="">
+                       </div>
+                       <label class="col-sm-2 control-label">Jenis Penghuni</label>
+                       <div class="col-sm-2">
+                         <input type="text" class="form-control" value="<?php echo $master_rumah_kos['jenis_penghuni'];?>" disabled="">
+                       </div>
+                       </div>
+
+                     </div>
+                   </form>
+                </div>
+              <!-- /.box-body-->
+            </div>
+            </div>
           </div>
-          <div class="tab-pane" id="timeline">
-            <ul class="timeline timeline-inverse">
-              <!-- timeline time label -->
-              <li class="time-label">
-                    <span class="bg-red">
-                      10 Feb. 2014
-                    </span>
-              </li>
-              <!-- /.timeline-label -->
-              <!-- timeline item -->
-              <li>
-                <i class="fa fa-envelope bg-blue"></i>
 
-                <div class="timeline-item">
-                  <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-
-                  <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                  <div class="timeline-body">
-                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                    weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                    jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                    quora plaxo ideeli hulu weebly balihoo...
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-primary btn-xs">Read more</a>
-                    <a class="btn btn-danger btn-xs">Delete</a>
-                  </div>
-                </div>
-              </li>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-              <li>
-                <i class="fa fa-user bg-aqua"></i>
-
-                <div class="timeline-item">
-                  <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-
-                  <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request
-                  </h3>
-                </div>
-              </li>
-              <!-- END timeline item -->
-              <!-- timeline item -->
-              <li>
-                <i class="fa fa-comments bg-yellow"></i>
-
-                <div class="timeline-item">
-                  <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
-                  <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                  <div class="timeline-body">
-                    Take me to your leader!
-                    Switzerland is small and neutral!
-                    We are more like Germany, ambitious and misunderstood!
-                  </div>
-                  <div class="timeline-footer">
-                    <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                  </div>
-                </div>
-              </li>
-              <!-- END timeline item -->
-              <!-- timeline time label -->
-              <li class="time-label">
-                    <span class="bg-green">
-                      3 Jan. 2014
-                    </span>
-              </li>
-              <!-- /.timeline-label -->
-              <!-- timeline item -->
-              <li>
-                <i class="fa fa-camera bg-purple"></i>
-
-                <div class="timeline-item">
-                  <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-
-                  <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                  <div class="timeline-body">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                    <img src="http://placehold.it/150x100" alt="..." class="margin">
-                  </div>
-                </div>
-              </li>
-              <!-- END timeline item -->
-              <li>
-                <i class="fa fa-clock-o bg-gray"></i>
-              </li>
-            </ul>
-          </div>
-          <!-- /.tab-pane -->
         </div>
         <!-- /.tab-content -->
       </div>
@@ -246,6 +390,13 @@
   }
   .nama_rumah{
     color:#00a65a;
-
+  }
+  .dt-img{
+    width: 140px;
+    height: 90px;
+  }
+  .img-carousel{
+    width: 650px;
+    height: 350px;
   }
 </style>
